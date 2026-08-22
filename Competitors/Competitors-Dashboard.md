@@ -13,6 +13,7 @@ Panel de seguimiento de competidores en Full Body Tracking.
 | Somatic VR | Trackers comerciales FBT | Pendiente |
 | Body Immerse | Trackers FBT | Pendiente |
 | JoyVR | Trackers FBT | Pendiente |
+| [[UsagiVR]] | Clones SlimeVR listos para usar, México | ✅ Ficha completa 2026-08-22 |
 
 ## Qué monitorear
 Precios · contenido · comunidad (Discord/TikTok) · lanzamientos · tecnología (senores, firmware).
