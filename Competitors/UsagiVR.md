@@ -8,7 +8,7 @@ UsagiVR es el competidor directo más cercano de Beekonz: marca independiente me
 ## Perfil general
 - **Sitio:** usagivr.com + shop.usagivr.com (Shopify)
 - **Origen:** México (términos legales sujetos a jurisdicción mexicana)
-- **Canales de venta:** tienda propia Shopify + eBay (histórico principal, "best-selling set" con +6,000 kits) + presencia en Amazon/Etsy según reportes de comunidad
+- **Canales de venta:** tienda propia Shopify + eBay "DIY SlimeVR Trackers" (99.8% feedback, 5.7K vendidos, 1.3K seguidores) + presencia en Amazon/Etsy según reportes de comunidad (Etsy sin tienda propia verificada)
 - **Soporte:** Discord por DM directa del dueño ("agrega UsagiVR") — sin servidor comunitario visible
 - **YouTube:** canal "Usagi VR" con solo 124 suscriptores
 - **Redes:** links de Facebook/Instagram/TikTok en la tienda apuntan a "#" (sin configurar)
@@ -40,6 +40,32 @@ UsagiVR es el competidor directo más cercano de Beekonz: marca independiente me
 - También venden kit ICM45686+QMC6309 de 8 trackers por $459
 
 **Todos los productos figuran como "Sold Out" al momento del análisis.**
+
+## Presencia en eBay (verificado 2026-08-22)
+
+Tienda: **"DIY SlimeVR Trackers"** — feedback **99.8% positivo**, **5.7K items vendidos**, 1.3K seguidores.
+
+| Listing | Precio USD |
+|---|---|
+| Smol individual BMI160 | $35 |
+| Smol individual ICM45686 | $57 |
+| "Budget Friendly" 6-pack | $199 |
+| "Budget Friendly" 8-pack | $279.99 |
+| LSM6DSV 5p | $255 |
+| LSM6DSV 6p | $299 |
+| LSM6DSV 7p | $340 |
+| BNO085 ULTIMATE 6p | $399 |
+| BNO085 / ICM45686 10p | $519 |
+| ICM45686 4p | $260 |
+
+Observaciones eBay:
+- Vende en **3 líneas de sensor distintas** (BMI160, ICM45686, LSM6DSV, BNO085) — confirma la crítica de comunidad sobre mezclar calidades sin claridad.
+- La línea "Budget Friendly" ($199/6p) probablemente es la de sensores baratos: compite por precio bajo.
+- También venden accesorios: dongle nRF52840 E104-BT504U, router GL.iNet para VR, cargadores, incluso plushies de VRChat.
+- Klarna/financiamiento a plazos activo ("as low as $X/mo").
+
+## Presencia en Etsy
+Sin tienda propia detectada. Existe solo una página de marketplace genérica (etsy.com/market/usagivr_slimevr_trackers) con resultados de terceros. Su canal real fuera de Shopify es eBay.
 
 ## Comparación directa vs Beekonz
 
