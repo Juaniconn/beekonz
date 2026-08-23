@@ -190,6 +190,8 @@
   },
   "active": "9b5755ede2e2da24",
   "lastOpenFiles": [
+    "scripts/discord_consolidate.py",
+    "Discord/2026-08-22-Auditoria.md",
     "scripts/discord_audit_full.py",
     "scripts/ebay_scrape.py",
     "Competitors/Competitors-Dashboard.md",
