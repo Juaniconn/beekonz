@@ -1,0 +1,41 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Base title="Política de Venta | Beekonz" description="Política de venta de Beekonz. Condiciones de compra, pagos y procesamiento de pedidos.">
+  <Header />
+  <main class="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:px-6">
+    <p class="text-center text-xs font-semibold tracking-widest text-bee-400 uppercase">Políticas</p>
+    <h1 class="font-display mt-3 text-center text-3xl font-bold sm:text-5xl">Política de <span class="text-gradient-bee">Venta</span></h1>
+
+    <div class="mt-12 space-y-8 text-neutral-300">
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-xl font-bold text-white">1. Condiciones de compra</h2>
+        <p class="mt-4">Al realizar una compra en Beekonz, aceptas nuestros términos y condiciones. Todos los precios están en pesos mexicanos (MXN) e incluyen IVA cuando aplique.</p>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-xl font-bold text-white">2. Pagos</h2>
+        <p class="mt-4">Los pagos se procesan de forma segura a través de Stripe. Aceptamos tarjetas de crédito y débito, pago en OXXO, transferencia bancaria y otros métodos disponibles en la pasareja de pago.</p>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-xl font-bold text-white">3. Procesamiento de pedidos</h2>
+        <p class="mt-4">Los pedidos se procesan en un plazo de 24-48 horas hábiles. Recibirás un correo de confirmación con los detalles de tu pedido y el número de seguimiento una vez que sea enviado.</p>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-xl font-bold text-white">4. Facturación</h2>
+        <p class="mt-4">Si requieres factura, envíanos un correo a redes@beekonz.shop con tus datos fiscales y el número de pedido. La factura se emite en un plazo de 5 días hábiles.</p>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-xl font-bold text-white">5. Cancelaciones</h2>
+        <p class="mt-4">Puedes solicitar la cancelación de tu pedido dentro de las primeras 24 horas después de realizar la compra, antes de que sea enviado. Contáctanos en Discord o por correo.</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Base>

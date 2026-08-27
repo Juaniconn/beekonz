@@ -1,0 +1,44 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Base title="Política de Envíos | Beekonz" description="Política de envíos de Beekonz. Tiempos de entrega, costos y cobertura.">
+  <Header />
+  <main class="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:px-6">
+    <p class="text-center text-xs font-semibold tracking-widest text-bee-400 uppercase">Políticas</p>
+    <h1 class="font-display mt-3 text-center text-3xl font-bold sm:text-5xl">Política de <span class="text-gradient-bee">Envíos</span></h1>
+
+    <div class="mt-12 space-y-8 text-neutral-300">
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-xl font-bold text-white">1. Cobertura</h2>
+        <p class="mt-4">Enviamos a toda la República Mexicana (32 estados) y a más de 12 países internacionalmente. Nuestro centro logístico está en Ciudad de México.</p>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-xl font-bold text-white">2. Tiempos de entrega</h2>
+        <ul class="mt-4 list-inside list-disc space-y-2">
+          <li><strong>Nacional:</strong> 2-5 días hábiles</li>
+          <li><strong>Internacional:</strong> 5-7 días hábiles</li>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-xl font-bold text-white">3. Costo de envío</h2>
+        <p class="mt-4">El costo de envío varía según el destino y se muestra al momento de pagar. En México, el envío puede ser gratuito dependiendo del paquete o promociones activas.</p>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-xl font-bold text-white">4. Número de rastreo</h2>
+        <p class="mt-4">Cada envío incluye número de rastreo. Recibirás un correo con el tracking una vez que tu pedido salga de nuestro taller. También puedes consultar el estado en la sección de <a href="/seguimiento-pedidos" class="text-bee-400 hover:underline">Seguimiento de Pedidos</a>.</p>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-xl font-bold text-white">5. Paqueterías</h2>
+        <p class="mt-4">Trabajamos con DHL y FedEx para envíos nacionales e internacionales. No nos hacemos responsables por retrasos causados por la paquetería o aduanas.</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Base>
