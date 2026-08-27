@@ -1,0 +1,36 @@
+---
+import { SITE, PACKS } from "../data/store";
+---
+
+<footer class="border-t border-white/5 bg-hive-900/60">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+    <div class="grid gap-10 md:grid-cols-3">
+      <div>
+        <p class="font-display text-xl font-bold"><span class="text-bee-400">🐝</span> BEEK<span class="text-gradient-bee">ONZ</span></p>
+        <p class="mt-3 max-w-xs text-sm text-neutral-400">
+          Tracking VR de nueva generación, diseñado para la comunidad hispanohablante. CDMX · HQ.
+        </p>
+      </div>
+      <div>
+        <p class="font-display font-semibold text-white">Explora</p>
+        <ul class="mt-3 space-y-2 text-sm text-neutral-400">
+          <li><a href="/#packs" class="hover:text-bee-400">Packs</a></li>
+          <li><a href={`/#face-tracking`} class="hover:text-bee-400">Face Tracking</a></li>
+          <li><a href="/#faq" class="hover:text-bee-400">Preguntas Frecuentes</a></li>
+          <li><a href="/seguimiento-pedidos" class="hover:text-bee-400">Seguimiento de Pedidos</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="font-display font-semibold text-white">Comunidad</p>
+        <ul class="mt-3 space-y-2 text-sm text-neutral-400">
+          <li><a href={SITE.discord} target="_blank" rel="noopener" class="hover:text-bee-400">Discord</a></li>
+          <li><a href={PACKS[1].stripe} target="_blank" rel="noopener" class="hover:text-bee-400">Comprar Advanced Hive</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-8 text-xs text-neutral-500 sm:flex-row">
+      <p>© {new Date().getFullYear()} Beekonz. Hecho para la comunidad hispana.</p>
+      <p>Pago seguro con Stripe · Envíos a todo el mundo 🌎</p>
+    </div>
+  </div>
+</footer>

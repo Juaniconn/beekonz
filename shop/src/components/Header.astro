@@ -1,0 +1,56 @@
+---
+import { SITE, PACKS, FACE_TRACKING } from "../data/store";
+const links = [
+  { href: "/#packs", label: "Packs" },
+  { href: "/#face-tracking", label: "Face Tracking" },
+  { href: "/#tecnologia", label: "Tecnología" },
+  { href: "/#galeria", label: "Galería" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/seguimiento-pedidos", label: "Seguimiento" },
+];
+---
+
+<header class="fixed top-0 inset-x-0 z-50 border-b border-white/5 bg-hive-950/80 backdrop-blur-lg">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+    <a href="/" class="font-display text-xl font-bold tracking-tight">
+      <span class="text-bee-400">🐝</span> <span class="text-white">BEEK</span><span class="text-gradient-bee">ONZ</span>
+    </a>
+    <div class="hidden items-center gap-6 lg:flex">
+      {links.map((l) => (
+        <a href={l.href} class="text-sm text-neutral-300 transition-colors hover:text-bee-400">{l.label}</a>
+      ))}
+    </div>
+    <div class="flex items-center gap-3">
+      <a
+        href={PACKS[1].stripe}
+        target="_blank"
+        rel="noopener"
+        class="hidden rounded-full bg-bee-400 px-5 py-2 text-sm font-semibold text-hive-950 transition hover:bg-bee-300 sm:inline-block"
+      >
+        Comprar
+      </a>
+      <button id="menu-btn" class="lg:hidden rounded-md p-2 text-neutral-300 hover:text-bee-400" aria-label="Abrir menú">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="hidden border-t border-white/5 bg-hive-950/95 px-4 py-4 lg:hidden">
+    {links.map((l) => (
+      <a href={l.href} class="block py-2 text-neutral-200 hover:text-bee-400">{l.label}</a>
+    ))}
+    <a
+      href={PACKS[1].stripe}
+      class="mt-3 block rounded-full bg-bee-400 px-5 py-2 text-center font-semibold text-hive-950"
+    >
+      Comprar Ahora
+    </a>
+  </div>
+</header>
+
+<script>
+  document.getElementById("menu-btn")?.addEventListener("click", () => {
+    document.getElementById("mobile-menu")?.classList.toggle("hidden");
+  });
+</script>
