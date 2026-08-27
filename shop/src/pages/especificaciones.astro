@@ -1,0 +1,81 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Base title="Especificaciones Técnicas | Beekonz" description="Especificaciones técnicas de los trackers Beekonz: sensor LSM6DSV, batería, peso, latencia y más.">
+  <Header />
+  <main class="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:px-6">
+    <p class="text-center text-xs font-semibold tracking-widest text-bee-400 uppercase">Recursos</p>
+    <h1 class="font-display mt-3 text-center text-3xl font-bold sm:text-5xl">Especificaciones <span class="text-gradient-bee">Técnicas</span></h1>
+
+    <div class="mt-12 space-y-8 text-neutral-300">
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-2xl font-bold text-white">Beekonz Smols LSM6DSV</h2>
+        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-lg border border-white/5 p-4">
+            <p class="text-xs text-neutral-500">Sensor</p>
+            <p class="mt-1 font-semibold">LSM6DSV (IMU 6-axis)</p>
+          </div>
+          <div class="rounded-lg border border-white/5 p-4">
+            <p class="text-xs text-neutral-500">Peso</p>
+            <p class="mt-1 font-semibold">~10 g</p>
+          </div>
+          <div class="rounded-lg border border-white/5 p-4">
+            <p class="text-xs text-neutral-500">Batería</p>
+            <p class="mt-1 font-semibold">401230, 3.7V, 115 mAh</p>
+          </div>
+          <div class="rounded-lg border border-white/5 p-4">
+            <p class="text-xs text-neutral-500">Autonomía</p>
+            <p class="mt-1 font-semibold">35–45 h</p>
+          </div>
+          <div class="rounded-lg border border-white/5 p-4">
+            <p class="text-xs text-neutral-500">Latencia</p>
+            <p class="mt-1 font-semibold">25–35 ms</p>
+          </div>
+          <div class="rounded-lg border border-white/5 p-4">
+            <p class="text-xs text-neutral-500">Conectividad</p>
+            <p class="mt-1 font-semibold">nRF52840 USB Dongle</p>
+          </div>
+          <div class="rounded-lg border border-white/5 p-4">
+            <p class="text-xs text-neutral-500">Firmware</p>
+            <p class="mt-1 font-semibold">Basado en SlimeVR</p>
+          </div>
+          <div class="rounded-lg border border-white/5 p-4">
+            <p class="text-xs text-neutral-500">Compatibilidad</p>
+            <p class="mt-1 font-semibold">VRChat, SteamVR, NeosVR, ChilloutVR</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-2xl font-bold text-white">Beekonz Face Tracking</h2>
+        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-lg border border-white/5 p-4">
+            <p class="text-xs text-neutral-500">Tipo</p>
+            <p class="mt-1 font-semibold">Tracking facial USB-C</p>
+          </div>
+          <div class="rounded-lg border border-white/5 p-4">
+            <p class="text-xs text-neutral-500">Software</p>
+            <p class="mt-1 font-semibold">Babble</p>
+          </div>
+          <div class="rounded-lg border border-white/5 p-4">
+            <p class="text-xs text-neutral-500">Conexión</p>
+            <p class="mt-1 font-semibold">USB-C a PC</p>
+          </div>
+          <div class="rounded-lg border border-white/5 p-4">
+            <p class="text-xs text-neutral-500">Compatibilidad</p>
+            <p class="mt-1 font-semibold">VRChat</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
+        <h2 class="font-display text-2xl font-bold text-white">Dongle nRF52840</h2>
+        <p class="mt-4">Cada pack incluye un dongle Holyiot nRF52840 optimizado para bajo consumo y máxima estabilidad. Cada tracker se conecta por un canal dedicado, eliminando interferencias.</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Base>
