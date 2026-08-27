@@ -20,78 +20,85 @@ import {
 
   <main>
     <!-- ═══════════ HERO ═══════════ -->
-    <section class="relative min-h-screen overflow-hidden pt-32 pb-20 sm:pt-40">
-      <!-- Background con modelo 3D o imagen -->
-      <div class="pointer-events-none absolute inset-0">
-        <img
-          src="/images/hero-tracker-CAzRrDY8.jpg"
-          alt=""
-          class="h-full w-full object-cover opacity-30"
-        />
-        <div class="absolute inset-0 bg-gradient-to-b from-hive-950/50 via-hive-950/80 to-hive-950"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-bee-400/5 via-transparent to-transparent"></div>
+    <section class="relative min-h-screen overflow-hidden flex items-center justify-center pt-20">
+      <!-- Background animado -->
+      <div class="absolute inset-0 bg-[#050505]">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#0a1628_0%,_#050505_50%)]"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_center,_rgba(0,255,200,0.08)_0%,_transparent_70%)]"></div>
+        <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-[radial-gradient(ellipse_at_center,_rgba(0,200,255,0.05)_0%,_transparent_70%)]"></div>
       </div>
       
+      <!-- Grid pattern -->
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+      
       <div class="relative mx-auto max-w-7xl px-4 text-center sm:px-6">
-        <p class="inline-block rounded-full border border-bee-400/30 bg-bee-400/10 px-4 py-1 text-xs font-semibold tracking-widest text-bee-400 uppercase animate-fade-in">
-          Tracking VR de Nueva Generación
-        </p>
-        <h1 class="font-display mx-auto mt-6 max-w-5xl text-6xl leading-[1.05] font-bold tracking-tight sm:text-8xl animate-slide-up">
-          FULL BODY<br />TRACKING <span class="text-gradient-bee">SIN LÍMITES.</span>
+        <div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-5 py-2 mb-8">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-sm font-medium text-emerald-400 tracking-wider uppercase">Tracking VR de Nueva Generación</span>
+        </div>
+        
+        <h1 class="font-display text-6xl sm:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9]">
+          <span class="text-white">FULL BODY</span><br />
+          <span class="text-white">TRACKING</span><br />
+          <span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">SIN LÍMITES.</span>
         </h1>
-        <p class="mx-auto mt-6 max-w-2xl text-xl text-neutral-300 animate-slide-up-delay">
-          Captura cada movimiento con precisión cinematográfica. Trackers Beekonz y Face Tracking
-          diseñados para creadores serios de VRChat.
+        
+        <p class="mx-auto mt-8 max-w-2xl text-xl text-gray-400 leading-relaxed">
+          Captura cada movimiento con precisión cinematográfica. Trackers Beekonz y Face Tracking diseñados para creadores serios de VRChat.
         </p>
-        <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up-delay-2">
+        
+        <div class="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href={PACKS[2].stripe}
             target="_blank"
             rel="noopener"
-            class="glow-bee rounded-full bg-bee-400 px-10 py-4 font-display font-bold text-hive-950 transition hover:bg-bee-300 hover:scale-105"
+            class="group relative px-10 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full font-bold text-black text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(0,255,200,0.4)]"
           >
-            Comprar Ahora
+            <span class="relative z-10">Comprar Ahora</span>
           </a>
-          <a href="#tecnologia" class="rounded-full border border-white/20 px-10 py-4 font-display font-semibold text-white transition hover:border-bee-400 hover:text-bee-400 hover:scale-105">
+          <a href="#tecnologia" class="px-10 py-4 border border-white/20 rounded-full font-semibold text-white text-lg transition-all hover:border-emerald-400 hover:text-emerald-400 hover:shadow-[0_0_20px_rgba(0,255,200,0.2)]">
             Cómo Funciona
           </a>
         </div>
         
-        <!-- Stats con animación -->
-        <div class="mx-auto mt-20 grid max-w-4xl grid-cols-2 gap-8 sm:grid-cols-4">
-          {STATS.map((s, i) => (
-            <div class="animate-fade-in" style={`animation-delay: ${i * 100}ms`}>
-              <p class="font-display text-4xl font-bold text-bee-400 sm:text-5xl">{s.value}</p>
-              <p class="mt-2 text-sm tracking-wide text-neutral-400 uppercase">{s.label}</p>
+        <!-- Stats -->
+        <div class="mx-auto mt-24 grid max-w-4xl grid-cols-2 gap-8 sm:grid-cols-4">
+          {STATS.map((s) => (
+            <div class="text-center">
+              <p class="font-display text-4xl sm:text-5xl font-black text-emerald-400">{s.value}</p>
+              <p class="mt-2 text-sm text-gray-500 uppercase tracking-wider">{s.label}</p>
             </div>
           ))}
         </div>
       </div>
       
-      <!-- Indicador de scroll -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <svg class="w-6 h-6 text-bee-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        <span class="text-xs text-gray-500 uppercase tracking-widest">Scroll</span>
+        <div class="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center pt-2">
+          <div class="w-1.5 h-3 bg-emerald-400 rounded-full animate-bounce"></div>
+        </div>
       </div>
     </section>
 
     <!-- ═══════════ CARACTERÍSTICAS ═══════════ -->
-    <section id="tecnologia" class="py-32 bg-hive-950">
+    <section id="tecnologia" class="py-32 bg-[#050505]">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="text-center">
-          <p class="text-xs font-semibold tracking-widest text-bee-400 uppercase">Especificaciones</p>
-          <h2 class="font-display mt-3 text-4xl font-bold sm:text-6xl">
-            Características <span class="text-gradient-bee">Principales</span>
+          <p class="text-sm font-semibold tracking-widest text-emerald-400 uppercase mb-4">Especificaciones</p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">
+            Características <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Principales</span>
           </h2>
-          <p class="mt-4 text-lg text-neutral-400">Especificaciones que marcan la diferencia.</p>
         </div>
         <div class="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {FEATURES.map((f) => (
-            <div class="group rounded-2xl border border-white/10 bg-hive-900/50 p-8 transition-all duration-300 hover:border-bee-400/50 hover:bg-hive-800/60 hover:scale-105 hover:shadow-lg hover:shadow-bee-400/10">
-              <p class="font-display text-3xl font-bold text-bee-400 transition-transform group-hover:scale-110">{f.stat}</p>
-              <h3 class="font-display mt-4 font-semibold text-white text-lg">{f.title}</h3>
-              <p class="mt-3 text-sm text-neutral-400">{f.desc}</p>
+            <div class="group relative rounded-2xl border border-white/5 bg-[#0a0a0a] p-8 transition-all duration-300 hover:border-emerald-500/30 hover:bg-[#0f0f0f] hover:shadow-[0_0_30px_rgba(0,255,200,0.1)]">
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="relative">
+                <p class="font-display text-3xl font-black text-emerald-400">{f.stat}</p>
+                <h3 class="font-display mt-4 font-bold text-white text-lg">{f.title}</h3>
+                <p class="mt-3 text-sm text-gray-500">{f.desc}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -99,31 +106,31 @@ import {
     </section>
 
     <!-- ═══════════ FACE TRACKING ═══════════ -->
-    <section id="face-tracking" class="relative overflow-hidden py-32 bg-gradient-to-b from-hive-900/70 to-hive-950">
+    <section id="face-tracking" class="relative overflow-hidden py-32 bg-gradient-to-b from-[#0a0a0a] to-[#050505]">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="text-center">
-          <p class="inline-block rounded-full bg-bee-400 px-5 py-1.5 text-xs font-bold tracking-widest text-hive-950 uppercase">
+          <p class="inline-block rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 px-6 py-2 text-sm font-bold text-black mb-6">
             🐝 Nuevo Producto
           </p>
-          <h2 class="font-display mt-5 text-4xl font-bold sm:text-6xl">Beekonz <span class="text-gradient-bee">Face Tracking</span></h2>
-          <p class="mx-auto mt-5 max-w-2xl text-lg text-neutral-300">{FACE_TRACKING.description}</p>
-          <p class="font-display mt-8 text-5xl font-bold text-bee-400">{FACE_TRACKING.price}<span class="text-xl font-medium text-neutral-400"> MXN</span></p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">Beekonz <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Face Tracking</span></h2>
+          <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-400">{FACE_TRACKING.description}</p>
+          <p class="font-display mt-8 text-5xl font-black text-white">{FACE_TRACKING.price}<span class="text-xl font-medium text-gray-500"> MXN</span></p>
         </div>
 
         <div class="mt-16 grid gap-8 lg:grid-cols-2 items-center">
           <div class="grid gap-4 sm:grid-cols-2">
             {FACE_TRACKING.images.slice(0, 4).map((img) => (
-              <figure class="overflow-hidden rounded-2xl border border-white/10 transition-transform hover:scale-105">
-                <img src={img.src} alt={img.alt} loading="lazy" class="aspect-[4/3] w-full object-cover" />
+              <figure class="overflow-hidden rounded-2xl border border-white/10 transition-all hover:border-emerald-500/30 hover:shadow-[0_0_20px_rgba(0,255,200,0.1)]">
+                <img src={img.src} alt={img.alt} loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105" />
               </figure>
             ))}
           </div>
           <div>
-            <h3 class="font-display text-2xl font-semibold text-white">El paquete incluye</h3>
+            <h3 class="font-display text-2xl font-bold text-white">El paquete incluye</h3>
             <ul class="mt-6 space-y-4">
               {FACE_TRACKING.includes.map((item) => (
-                <li class="flex items-center gap-4 text-neutral-200">
-                  <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-bee-400/20 text-bee-400">✓</span>
+                <li class="flex items-center gap-4 text-gray-300">
+                  <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">✓</span>
                   <span class="text-lg">{item}</span>
                 </li>
               ))}
@@ -132,48 +139,46 @@ import {
               href={FACE_TRACKING.stripe}
               target="_blank"
               rel="noopener"
-              class="glow-bee mt-10 inline-block rounded-full bg-bee-400 px-10 py-4 font-display font-bold text-hive-950 transition hover:bg-bee-300 hover:scale-105"
+              class="mt-10 inline-block px-10 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full font-bold text-black text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(0,255,200,0.4)]"
             >
               Comprar ahora
             </a>
-            <p class="mt-4 text-sm text-neutral-500">Pago seguro · Envíos a todo el mundo</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ═══════════ PACKS ═══════════ -->
-    <section id="packs" class="py-32 bg-hive-950">
+    <section id="packs" class="py-32 bg-[#050505]">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="text-center">
-          <p class="text-xs font-semibold tracking-widest text-bee-400 uppercase">Nuestros Paquetes</p>
-          <h2 class="font-display mt-3 text-4xl font-bold sm:text-6xl">Beekonz <span class="text-gradient-bee">Trackers</span></h2>
-          <p class="mt-4 text-lg text-neutral-400">Elige el pack perfecto para tu experiencia VR.</p>
+          <p class="text-sm font-semibold tracking-widest text-emerald-400 uppercase mb-4">Nuestros Paquetes</p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">Beekonz <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Trackers</span></h2>
         </div>
         
         <div class="mt-16 grid gap-8 lg:grid-cols-3">
           {PACKS.map((pack) => (
             <div
               class:list={[
-                "relative flex flex-col rounded-3xl border p-10 transition-all duration-300 hover:scale-105",
+                "relative flex flex-col rounded-3xl border p-10 transition-all duration-300",
                 pack.recommended
-                  ? "glow-bee border-bee-400/60 bg-gradient-to-b from-bee-400/15 to-hive-900/60 lg:-my-6 lg:py-16 shadow-xl shadow-bee-400/20"
-                  : "border-white/10 bg-hive-900/50 hover:border-bee-400/30",
+                  ? "border-emerald-500/50 bg-gradient-to-b from-emerald-500/10 to-[#0a0a0a] lg:-my-6 lg:py-16 shadow-[0_0_50px_rgba(0,255,200,0.15)]"
+                  : "border-white/5 bg-[#0a0a0a] hover:border-emerald-500/30 hover:shadow-[0_0_30px_rgba(0,255,200,0.1)]",
               ]}
             >
               {pack.recommended && (
-                <p class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-bee-400 px-6 py-1.5 text-sm font-bold tracking-wide text-hive-950 uppercase">
+                <p class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 px-6 py-1.5 text-sm font-bold text-black uppercase">
                   Recomendado
                 </p>
               )}
-              <p class="font-display text-6xl font-bold text-bee-400">{pack.trackers}</p>
+              <p class="font-display text-6xl font-black text-emerald-400">{pack.trackers}</p>
               <h3 class="font-display mt-3 text-3xl font-bold text-white">{pack.name}</h3>
-              <p class="mt-2 text-neutral-400">{pack.tagline}</p>
-              <p class="font-display mt-6 text-5xl font-bold text-white">{pack.price}<span class="text-lg font-medium text-neutral-400"> MXN</span></p>
+              <p class="mt-2 text-gray-500">{pack.tagline}</p>
+              <p class="font-display mt-6 text-5xl font-black text-white">{pack.price}<span class="text-lg font-medium text-gray-500"> MXN</span></p>
               <ul class="mt-8 flex-1 space-y-4">
                 {pack.includes.map((item) => (
-                  <li class="flex items-start gap-3 text-neutral-200">
-                    <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-bee-400/20 text-sm text-bee-400">✓</span>
+                  <li class="flex items-start gap-3 text-gray-300">
+                    <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-sm text-emerald-400">✓</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -183,10 +188,10 @@ import {
                 target="_blank"
                 rel="noopener"
                 class:list={[
-                  "mt-10 block rounded-full py-4 text-center font-display font-bold transition-all hover:scale-105",
+                  "mt-10 block rounded-full py-4 text-center font-bold transition-all",
                   pack.recommended
-                    ? "bg-bee-400 text-hive-950 hover:bg-bee-300"
-                    : "border border-bee-400/50 text-bee-400 hover:bg-bee-400 hover:text-hive-950",
+                    ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,200,0.4)]"
+                    : "border border-emerald-500/50 text-emerald-400 hover:bg-emerald-500 hover:text-black hover:scale-105",
                 ]}
               >
                 Comprar ahora
@@ -194,54 +199,22 @@ import {
             </div>
           ))}
         </div>
-        
-        <div class="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-neutral-400">
-          <span class="flex items-center gap-2"><span class="text-bee-400">✅</span> Compatible SlimeVR</span>
-          <span class="flex items-center gap-2"><span class="text-bee-400">🎮</span> VRChat & SteamVR</span>
-          <span class="flex items-center gap-2"><span class="text-bee-400">📦</span> Envío incluido</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ SET PERSONALIZADO ═══════════ -->
-    <section class="px-4 sm:px-6 bg-hive-950">
-      <div class="glow-bee relative mx-auto max-w-7xl overflow-hidden rounded-3xl border border-bee-400/20">
-        <img src="/images/tracker-lifestyle-BLmfpVMs.jpg" alt="Set personalizado Beekonz" class="absolute inset-0 h-full w-full object-cover opacity-20" loading="lazy" />
-        <div class="relative bg-hive-900/80 px-8 py-20 text-center backdrop-blur-sm sm:px-16">
-          <h2 class="font-display text-4xl font-bold sm:text-5xl">¿Set <span class="text-gradient-bee">Personalizado</span>?</h2>
-          <p class="mx-auto mt-5 max-w-xl text-lg text-neutral-300">
-            ¿Necesitas una configuración específica? Nuestro equipo puede ayudarte a crear un set perfecto para tu espacio, estilo de juego y necesidades.
-          </p>
-          <ul class="mx-auto mt-8 grid max-w-md gap-3 text-left text-neutral-200">
-            {["Configuración adaptada a tu espacio de VR", "Optimizado para tu estilo de juego", "Soporte dedicado del equipo Beekonz"].map((t) => (
-              <li class="flex items-center gap-3"><span class="text-bee-400 text-xl">✦</span><span class="text-lg">{t}</span></li>
-            ))}
-          </ul>
-          <a
-            href={SITE.discord}
-            target="_blank"
-            rel="noopener"
-            class="mt-10 inline-block rounded-full bg-bee-400 px-10 py-4 font-display font-bold text-hive-950 transition hover:bg-bee-300 hover:scale-105"
-          >
-            Crear mi Set en Discord
-          </a>
-        </div>
       </div>
     </section>
 
     <!-- ═══════════ TRAYECTORIA ═══════════ -->
-    <section class="py-32 bg-hive-950">
+    <section class="py-32 bg-[#0a0a0a]">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="text-center">
-          <p class="text-xs font-semibold tracking-widest text-bee-400 uppercase">Experiencia & Trayectoria</p>
-          <h2 class="font-display mt-3 text-4xl font-bold sm:text-6xl">Más de <span class="text-gradient-bee">3 Años de Experiencia</span></h2>
+          <p class="text-sm font-semibold tracking-widest text-emerald-400 uppercase mb-4">Experiencia & Trayectoria</p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">Más de <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">3 Años</span></h2>
         </div>
         <div class="mt-16 grid grid-cols-2 gap-8 lg:grid-cols-4">
           {TRAYECTORIA.map((t) => (
-            <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8 text-center transition-all hover:border-bee-400/30 hover:scale-105">
-              <p class="font-display text-5xl font-bold text-bee-400">{t.value}</p>
-              <p class="font-display mt-3 font-semibold text-white text-lg">{t.label}</p>
-              <p class="mt-2 text-sm text-neutral-500">{t.sub}</p>
+            <div class="rounded-2xl border border-white/5 bg-[#050505] p-8 text-center transition-all hover:border-emerald-500/30 hover:shadow-[0_0_20px_rgba(0,255,200,0.1)]">
+              <p class="font-display text-5xl font-black text-emerald-400">{t.value}</p>
+              <p class="font-display mt-3 font-bold text-white text-lg">{t.label}</p>
+              <p class="mt-2 text-sm text-gray-500">{t.sub}</p>
             </div>
           ))}
         </div>
@@ -249,17 +222,17 @@ import {
     </section>
 
     <!-- ═══════════ GALERÍA ═══════════ -->
-    <section id="galeria" class="py-32 bg-hive-900/40">
+    <section id="galeria" class="py-32 bg-[#050505]">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="text-center">
-          <p class="text-xs font-semibold tracking-widest text-bee-400 uppercase">Galería</p>
-          <h2 class="font-display mt-3 text-4xl font-bold sm:text-6xl">Productos Reales <span class="text-gradient-bee">Beekonz</span></h2>
+          <p class="text-sm font-semibold tracking-widest text-emerald-400 uppercase mb-4">Galería</p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">Productos <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Reales</span></h2>
         </div>
         <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {GALLERY.map((g) => (
-            <figure class="group overflow-hidden rounded-2xl border border-white/10 transition-transform hover:scale-105">
+            <figure class="group overflow-hidden rounded-2xl border border-white/5 transition-all hover:border-emerald-500/30 hover:shadow-[0_0_20px_rgba(0,255,200,0.1)]">
               <img src={g.src} alt={g.caption} loading="lazy" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-110" />
-              <figcaption class="bg-hive-950/90 px-5 py-4 text-neutral-300">{g.caption}</figcaption>
+              <figcaption class="bg-[#0a0a0a] px-5 py-4 text-sm text-gray-400">{g.caption}</figcaption>
             </figure>
           ))}
         </div>
@@ -267,22 +240,22 @@ import {
     </section>
 
     <!-- ═══════════ TESTIMONIOS ═══════════ -->
-    <section class="py-32 bg-hive-950">
+    <section class="py-32 bg-[#0a0a0a]">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="text-center">
-          <p class="text-xs font-semibold tracking-widest text-bee-400 uppercase">Testimonios</p>
-          <h2 class="font-display mt-3 text-4xl font-bold sm:text-6xl">Lo que dicen <span class="text-gradient-bee">nuestros usuarios</span></h2>
+          <p class="text-sm font-semibold tracking-widest text-emerald-400 uppercase mb-4">Testimonios</p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">Lo que dicen <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">nuestros usuarios</span></h2>
         </div>
         <div class="mt-16 grid gap-8 md:grid-cols-3">
           {TESTIMONIALS.map((t) => (
-            <blockquote class="flex flex-col rounded-2xl border border-white/10 bg-hive-900/50 p-10 transition-all hover:border-bee-400/30 hover:scale-105">
+            <blockquote class="flex flex-col rounded-2xl border border-white/5 bg-[#050505] p-10 transition-all hover:border-emerald-500/30 hover:shadow-[0_0_20px_rgba(0,255,200,0.1)]">
               <p class="text-yellow-400 text-xl">★★★★★</p>
-              <p class="mt-6 flex-1 text-lg text-neutral-200 italic">"{t.quote}"</p>
+              <p class="mt-6 flex-1 text-lg text-gray-300 italic">"{t.quote}"</p>
               <footer class="mt-8 flex items-center gap-4">
-                <img src={t.img} alt={`Kit Beekonz de ${t.name}`} loading="lazy" class="h-14 w-14 rounded-full object-cover" />
+                <img src={t.img} alt={`Kit Beekonz de ${t.name}`} loading="lazy" class="h-14 w-14 rounded-full object-cover border-2 border-emerald-500/30" />
                 <div>
-                  <p class="font-display font-semibold text-white">{t.name}</p>
-                  <p class="text-sm text-neutral-500">{t.role} · {t.country}</p>
+                  <p class="font-bold text-white">{t.name}</p>
+                  <p class="text-sm text-gray-500">{t.role} · {t.country}</p>
                 </div>
               </footer>
             </blockquote>
@@ -291,39 +264,21 @@ import {
       </div>
     </section>
 
-    <!-- ═══════════ ENVÍOS ═══════════ -->
-    <section class="py-32 bg-hive-900/40">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
-        <div class="text-center">
-          <p class="text-xs font-semibold tracking-widest text-bee-400 uppercase">Logística</p>
-          <h2 class="font-display mt-3 text-4xl font-bold sm:text-6xl">Envíos a toda <span class="text-gradient-bee">México y el Mundo</span></h2>
-        </div>
-        <div class="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-8 sm:grid-cols-4">
-          {[[ "32", "Estados México"], ["2–5", "Días hábiles"], ["12+", "Países"], ["100%", "Tracking incluido"]].map(([v, l]) => (
-            <div class="text-center">
-              <p class="font-display text-5xl font-bold text-bee-400">{v}</p>
-              <p class="mt-2 text-sm tracking-wide text-neutral-400 uppercase">{l}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
     <!-- ═══════════ FAQ ═══════════ -->
-    <section id="faq" class="py-32 bg-hive-950">
+    <section id="faq" class="py-32 bg-[#050505]">
       <div class="mx-auto max-w-3xl px-4 sm:px-6">
         <div class="text-center">
-          <p class="text-xs font-semibold tracking-widest text-bee-400 uppercase">Preguntas Frecuentes</p>
-          <h2 class="font-display mt-3 text-4xl font-bold sm:text-6xl">¿Tienes Dudas?</h2>
+          <p class="text-sm font-semibold tracking-widest text-emerald-400 uppercase mb-4">Preguntas Frecuentes</p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">¿Tienes Dudas?</h2>
         </div>
         <div class="mt-14 space-y-4">
           {FAQ.map((f) => (
-            <details class="group rounded-xl border border-white/10 bg-hive-900/50 transition-all hover:border-bee-400/30">
+            <details class="group rounded-xl border border-white/5 bg-[#0a0a0a] transition-all hover:border-emerald-500/30">
               <summary class="flex cursor-pointer list-none items-center justify-between px-6 py-5 font-medium text-white text-lg [&::-webkit-details-marker]:hidden">
                 {f.q}
-                <span class="text-bee-400 text-2xl transition group-open:rotate-45">+</span>
+                <span class="text-emerald-400 text-2xl transition group-open:rotate-45">+</span>
               </summary>
-              <p class="px-6 pb-6 text-neutral-300">{f.a}</p>
+              <p class="px-6 pb-6 text-gray-400">{f.a}</p>
             </details>
           ))}
         </div>
@@ -331,20 +286,18 @@ import {
     </section>
 
     <!-- ═══════════ CTA FINAL ═══════════ -->
-    <section class="px-4 pb-32 sm:px-6 bg-hive-950">
-      <div class="glow-bee mx-auto max-w-5xl rounded-3xl border border-bee-400/20 bg-gradient-to-b from-bee-400/10 to-hive-900/60 px-8 py-20 text-center">
-        <p class="inline-flex items-center gap-2 rounded-full border border-bee-400/30 px-5 py-1.5 text-sm font-semibold text-bee-400">⭐ 4.9/5 · Hecho para la comunidad hispana</p>
-        <h2 class="font-display mx-auto mt-6 max-w-3xl text-4xl font-bold sm:text-6xl">
-          Lleva tu Experiencia VR al <span class="text-gradient-bee">Siguiente Nivel</span>
-        </h2>
-        <p class="mx-auto mt-5 max-w-xl text-lg text-neutral-300">
-          Tracking preciso, ligero y accesible. Diseñado especialmente para bailarines, creadores y la comunidad VRChat hispana.
-        </p>
-        <div class="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row">
-          <a href={PACKS[1].stripe} target="_blank" rel="noopener" class="glow-bee rounded-full bg-bee-400 px-10 py-4 font-display font-bold text-hive-950 transition hover:bg-bee-300 hover:scale-105">
-            Comprar Ahora
-          </a>
-          <span class="text-neutral-400">🚚 Envíos a todo el mundo · 5–7 días internacional</span>
+    <section class="py-32 bg-[#050505]">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6">
+        <div class="rounded-3xl border border-emerald-500/20 bg-gradient-to-b from-emerald-500/10 to-[#0a0a0a] px-8 py-20 text-center">
+          <p class="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 px-5 py-1.5 text-sm font-semibold text-emerald-400">⭐ 4.9/5 · Hecho para la comunidad hispana</p>
+          <h2 class="font-display mx-auto mt-6 max-w-3xl text-4xl sm:text-6xl font-black text-white">
+            Lleva tu VR al <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Siguiente Nivel</span>
+          </h2>
+          <div class="mt-10">
+            <a href={PACKS[1].stripe} target="_blank" rel="noopener" class="inline-block px-12 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full font-bold text-black text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(0,255,200,0.4)]">
+              Comprar Ahora
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -358,8 +311,8 @@ import {
     target="_blank"
     rel="noopener"
     aria-label="Únete a nuestro Discord"
-    class="fixed right-5 bottom-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-bee-400 p-3.5 shadow-lg shadow-black/40 transition hover:bg-bee-300 hover:scale-110"
+    class="fixed right-5 bottom-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 p-3.5 shadow-[0_0_20px_rgba(0,255,200,0.3)] transition hover:scale-110 hover:shadow-[0_0_30px_rgba(0,255,200,0.5)]"
   >
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="#0a0a05"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3c-.2.4-.5.9-.6 1.3a18.3 18.3 0 0 0-5.6 0C9 3.9 8.7 3.4 8.5 3a19.7 19.7 0 0 0-4.9 1.5A20.4 20.4 0 0 0 .1 18.1a19.9 19.9 0 0 0 6 3c.5-.6.9-1.3 1.3-2-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1 .4.7.8 1.4 1.3 2a19.8 19.8 0 0 0 6-3A20.3 20.3 0 0 0 20.3 4.4ZM8.1 15.3c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm7.8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="#000"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3c-.2.4-.5.9-.6 1.3a18.3 18.3 0 0 0-5.6 0C9 3.9 8.7 3.4 8.5 3a19.7 19.7 0 0 0-4.9 1.5A20.4 20.4 0 0 0 .1 18.1a19.9 19.9 0 0 0 6 3c.5-.6.9-1.3 1.3-2-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1 .4.7.8 1.4 1.3 2a19.8 19.8 0 0 0 6-3A20.3 20.3 0 0 0 20.3 4.4ZM8.1 15.3c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm7.8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
   </a>
 </Base>
