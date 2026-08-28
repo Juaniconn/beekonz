@@ -1,15 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-hive-950: #2E0F12;
-  --color-hive-900: #3D1518;
-  --color-hive-800: #4A2C2C;
-  --color-hive-700: #5C3A3A;
-  --color-bee-300: #F8F4F5;
-  --color-bee-400: #EAD08E;
-  --color-bee-500: #D4B870;
-  --color-bee-600: #B89B50;
-  --color-nectar: #FFF8DC;
+  --color-brand-950: #1a0a0c;
+  --color-brand-900: #2E0F12;
+  --color-brand-800: #3D1518;
+  --color-brand-700: #4A2C2C;
+  --color-brand-600: #5C3A3A;
+  --color-brand-500: #7D706E;
+  --color-brand-400: #B0A69E;
+  --color-brand-300: #D6CFC7;
+  --color-brand-200: #F2F2F2;
+  --color-brand-100: #F8F4F5;
+  --color-brand-50: #FFF8DC;
+  --color-accent: #EAD08E;
+  --color-accent-light: #F5E6B8;
+  --color-accent-dark: #D4B870;
   --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 }
@@ -19,8 +24,8 @@ html {
 }
 
 body {
-  background-color: #F8F4F5;
-  color: #2E0F12;
+  background-color: #1a0a0c;
+  color: #F8F4F5;
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
 }
@@ -30,46 +35,64 @@ body {
   color: #2E0F12;
 }
 
-/* Glow suave para tarjetas destacadas */
-.glow-bee {
-  box-shadow: 0 0 40px rgba(234, 208, 142, 0.15), 0 0 120px rgba(234, 208, 142, 0.05);
+/* Gradientes radiales sutiles */
+.gradient-radial {
+  background: radial-gradient(ellipse at center, rgba(234, 208, 142, 0.08) 0%, transparent 70%);
 }
 
-.text-gradient-bee {
-  background: linear-gradient(120deg, #EAD08E, #D4B870 45%, #B89B50);
+.gradient-radial-large {
+  background: radial-gradient(ellipse at top, rgba(234, 208, 142, 0.1) 0%, transparent 50%);
+}
+
+/* Glassmorphism sutil */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Glow dorado */
+.glow-gold {
+  box-shadow: 0 0 60px rgba(234, 208, 142, 0.15), 0 0 120px rgba(234, 208, 142, 0.05);
+}
+
+/* Gradiente de texto dorado */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #EAD08E 0%, #F5E6B8 50%, #D4B870 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Patrón hexagonal sutil de fondo */
-.honeycomb-bg {
-  background-image:
-    radial-gradient(circle at 25% 25%, rgba(234, 208, 142, 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(234, 208, 142, 0.04) 0%, transparent 50%);
-}
-
 /* Animaciones */
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
-@keyframes slide-up {
-  from { 
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(234, 208, 142, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(234, 208, 142, 0.4); }
 }
 
-.animate-fade-in {
-  animation: fade-in 0.8s ease-out forwards;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-.animate-slide-up {
-  animation: slide-up 0.8s ease-out forwards;
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Grid pattern sutil */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Noise texture */
+.noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.02;
 }

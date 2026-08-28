@@ -20,24 +20,26 @@ import {
 
   <main>
     <!-- ═══════════ HERO ═══════════ -->
-    <section class="relative min-h-screen overflow-hidden flex items-center justify-center pt-20 bg-[#F8F4F5]">
-      <!-- Background con patrón sutil -->
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#EAD08E_0%,_transparent_50%)] opacity-20"></div>
-      <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(46,15,18,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(46,15,18,0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+    <section class="relative min-h-screen overflow-hidden flex items-center justify-center pt-32 pb-20">
+      <!-- Background effects -->
+      <div class="absolute inset-0 gradient-radial-large"></div>
+      <div class="absolute inset-0 grid-pattern"></div>
+      <div class="absolute top-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-[100px]"></div>
+      <div class="absolute bottom-20 left-20 w-72 h-72 bg-accent/5 rounded-full blur-[80px]"></div>
       
-      <div class="relative mx-auto max-w-7xl px-4 text-center sm:px-6">
-        <div class="inline-flex items-center gap-2 rounded-full border border-[#EAD08E] bg-[#EAD08E]/10 px-5 py-2 mb-8">
-          <span class="w-2 h-2 rounded-full bg-[#EAD08E] animate-pulse"></span>
-          <span class="text-sm font-medium text-[#2E0F12] tracking-wider uppercase">Tracking VR de Nueva Generación</span>
+      <div class="relative mx-auto max-w-7xl px-6 text-center">
+        <div class="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/5 px-5 py-2 mb-8">
+          <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+          <span class="text-sm font-medium text-accent tracking-wider uppercase">Tracking VR de Nueva Generación</span>
         </div>
         
-        <h1 class="font-display text-6xl sm:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9]">
-          <span class="text-[#2E0F12]">FULL BODY</span><br />
-          <span class="text-[#2E0F12]">TRACKING</span><br />
-          <span class="text-gradient-bee">SIN LÍMITES.</span>
+        <h1 class="font-display text-7xl sm:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85]">
+          <span class="text-white">FULL BODY</span><br />
+          <span class="text-white">TRACKING</span><br />
+          <span class="text-gradient-gold">SIN LÍMITES.</span>
         </h1>
         
-        <p class="mx-auto mt-8 max-w-2xl text-xl text-[#4A2C2C] leading-relaxed">
+        <p class="mx-auto mt-8 max-w-2xl text-xl text-brand-400 leading-relaxed">
           Captura cada movimiento con precisión cinematográfica. Trackers Beekonz y Face Tracking diseñados para creadores serios de VRChat.
         </p>
         
@@ -46,11 +48,11 @@ import {
             href={PACKS[2].stripe}
             target="_blank"
             rel="noopener"
-            class="group relative px-10 py-4 bg-[#2E0F12] rounded-full font-bold text-[#F8F4F5] text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(46,15,18,0.3)]"
+            class="px-10 py-4 bg-accent rounded-full font-bold text-brand-900 text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(234,208,142,0.4)]"
           >
             Comprar Ahora
           </a>
-          <a href="#tecnologia" class="px-10 py-4 border border-[#2E0F12]/20 rounded-full font-semibold text-[#2E0F12] text-lg transition-all hover:border-[#EAD08E] hover:shadow-[0_0_20px_rgba(234,208,142,0.2)]">
+          <a href="#tecnologia" class="px-10 py-4 border border-white/10 rounded-full font-semibold text-white text-lg transition-all hover:border-accent/50 hover:shadow-[0_0_20px_rgba(234,208,142,0.1)]">
             Cómo Funciona
           </a>
         </div>
@@ -59,8 +61,8 @@ import {
         <div class="mx-auto mt-24 grid max-w-4xl grid-cols-2 gap-8 sm:grid-cols-4">
           {STATS.map((s) => (
             <div class="text-center">
-              <p class="font-display text-4xl sm:text-5xl font-black text-[#2E0F12]">{s.value}</p>
-              <p class="mt-2 text-sm text-[#7D706E] uppercase tracking-wider">{s.label}</p>
+              <p class="font-display text-4xl sm:text-5xl font-black text-white">{s.value}</p>
+              <p class="mt-2 text-sm text-brand-500 uppercase tracking-wider">{s.label}</p>
             </div>
           ))}
         </div>
@@ -68,30 +70,30 @@ import {
       
       <!-- Scroll indicator -->
       <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span class="text-xs text-[#7D706E] uppercase tracking-widest">Scroll</span>
-        <div class="w-6 h-10 border-2 border-[#B0A69E] rounded-full flex justify-center pt-2">
-          <div class="w-1.5 h-3 bg-[#EAD08E] rounded-full animate-bounce"></div>
+        <span class="text-xs text-brand-500 uppercase tracking-widest">Scroll</span>
+        <div class="w-6 h-10 border-2 border-brand-600 rounded-full flex justify-center pt-2">
+          <div class="w-1.5 h-3 bg-accent rounded-full animate-bounce"></div>
         </div>
       </div>
     </section>
 
     <!-- ═══════════ CARACTERÍSTICAS ═══════════ -->
-    <section id="tecnologia" class="py-32 bg-[#2E0F12]">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <section id="tecnologia" class="py-32 bg-brand-900">
+      <div class="mx-auto max-w-7xl px-6">
         <div class="text-center">
-          <p class="text-sm font-semibold tracking-widest text-[#EAD08E] uppercase mb-4">Especificaciones</p>
-          <h2 class="font-display text-4xl sm:text-6xl font-black text-[#F8F4F5]">
-            Características <span class="text-gradient-bee">Principales</span>
+          <p class="text-sm font-semibold tracking-widest text-accent uppercase mb-4">Especificaciones</p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">
+            Características <span class="text-gradient-gold">Principales</span>
           </h2>
         </div>
         <div class="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {FEATURES.map((f) => (
-            <div class="group relative rounded-2xl border border-[#F8F4F5]/10 bg-[#3D1518] p-8 transition-all duration-300 hover:border-[#EAD08E]/30 hover:bg-[#4A2C2C] hover:shadow-[0_0_30px_rgba(234,208,142,0.1)]">
-              <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-[#EAD08E]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="group relative rounded-2xl border border-white/5 bg-white/[0.02] p-8 transition-all duration-300 hover:border-accent/20 hover:bg-white/[0.04]">
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div class="relative">
-                <p class="font-display text-3xl font-black text-[#EAD08E]">{f.stat}</p>
-                <h3 class="font-display mt-4 font-bold text-[#F8F4F5] text-lg">{f.title}</h3>
-                <p class="mt-3 text-sm text-[#B0A69E]">{f.desc}</p>
+                <p class="font-display text-3xl font-black text-accent">{f.stat}</p>
+                <h3 class="font-display mt-4 font-bold text-white text-lg">{f.title}</h3>
+                <p class="mt-3 text-sm text-brand-500">{f.desc}</p>
               </div>
             </div>
           ))}
@@ -100,31 +102,32 @@ import {
     </section>
 
     <!-- ═══════════ FACE TRACKING ═══════════ -->
-    <section id="face-tracking" class="relative overflow-hidden py-32 bg-gradient-to-b from-[#3D1518] to-[#2E0F12]">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <section id="face-tracking" class="relative overflow-hidden py-32 bg-brand-950">
+      <div class="absolute inset-0 gradient-radial"></div>
+      <div class="relative mx-auto max-w-7xl px-6">
         <div class="text-center">
-          <p class="inline-block rounded-full bg-[#EAD08E] px-6 py-2 text-sm font-bold text-[#2E0F12] mb-6">
+          <p class="inline-block rounded-full bg-accent px-6 py-2 text-sm font-bold text-brand-900 mb-6">
             🐝 Nuevo Producto
           </p>
-          <h2 class="font-display text-4xl sm:text-6xl font-black text-[#F8F4F5]">Beekonz <span class="text-gradient-bee">Face Tracking</span></h2>
-          <p class="mx-auto mt-6 max-w-2xl text-lg text-[#B0A69E]">{FACE_TRACKING.description}</p>
-          <p class="font-display mt-8 text-5xl font-black text-[#F8F4F5]">{FACE_TRACKING.price}<span class="text-xl font-medium text-[#7D706E]"> MXN</span></p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">Beekonz <span class="text-gradient-gold">Face Tracking</span></h2>
+          <p class="mx-auto mt-6 max-w-2xl text-lg text-brand-400">{FACE_TRACKING.description}</p>
+          <p class="font-display mt-8 text-5xl font-black text-white">{FACE_TRACKING.price}<span class="text-xl font-medium text-brand-500"> MXN</span></p>
         </div>
 
         <div class="mt-16 grid gap-8 lg:grid-cols-2 items-center">
           <div class="grid gap-4 sm:grid-cols-2">
             {FACE_TRACKING.images.slice(0, 4).map((img) => (
-              <figure class="overflow-hidden rounded-2xl border border-[#F8F4F5]/10 transition-all hover:border-[#EAD08E]/30 hover:shadow-[0_0_20px_rgba(234,208,142,0.1)]">
+              <figure class="overflow-hidden rounded-2xl border border-white/5 transition-all hover:border-accent/20">
                 <img src={img.src} alt={img.alt} loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105" />
               </figure>
             ))}
           </div>
           <div>
-            <h3 class="font-display text-2xl font-bold text-[#F8F4F5]">El paquete incluye</h3>
+            <h3 class="font-display text-2xl font-bold text-white">El paquete incluye</h3>
             <ul class="mt-6 space-y-4">
               {FACE_TRACKING.includes.map((item) => (
-                <li class="flex items-center gap-4 text-[#F8F4F5]">
-                  <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EAD08E]/20 text-[#EAD08E]">✓</span>
+                <li class="flex items-center gap-4 text-brand-300">
+                  <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">✓</span>
                   <span class="text-lg">{item}</span>
                 </li>
               ))}
@@ -133,7 +136,7 @@ import {
               href={FACE_TRACKING.stripe}
               target="_blank"
               rel="noopener"
-              class="mt-10 inline-block px-10 py-4 bg-[#EAD08E] rounded-full font-bold text-[#2E0F12] text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(234,208,142,0.4)]"
+              class="mt-10 inline-block px-10 py-4 bg-accent rounded-full font-bold text-brand-900 text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(234,208,142,0.4)]"
             >
               Comprar ahora
             </a>
@@ -143,11 +146,11 @@ import {
     </section>
 
     <!-- ═══════════ PACKS ═══════════ -->
-    <section id="packs" class="py-32 bg-[#F8F4F5]">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <section id="packs" class="py-32 bg-brand-900">
+      <div class="mx-auto max-w-7xl px-6">
         <div class="text-center">
-          <p class="text-sm font-semibold tracking-widest text-[#2E0F12] uppercase mb-4">Nuestros Paquetes</p>
-          <h2 class="font-display text-4xl sm:text-6xl font-black text-[#2E0F12]">Beekonz <span class="text-gradient-bee">Trackers</span></h2>
+          <p class="text-sm font-semibold tracking-widest text-accent uppercase mb-4">Nuestros Paquetes</p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">Beekonz <span class="text-gradient-gold">Trackers</span></h2>
         </div>
         
         <div class="mt-16 grid gap-8 lg:grid-cols-3">
@@ -156,23 +159,23 @@ import {
               class:list={[
                 "relative flex flex-col rounded-3xl border p-10 transition-all duration-300",
                 pack.recommended
-                  ? "border-[#EAD08E] bg-gradient-to-b from-[#EAD08E]/10 to-[#F8F4F5] lg:-my-6 lg:py-16 shadow-[0_0_50px_rgba(234,208,142,0.2)]"
-                  : "border-[#2E0F12]/10 bg-[#F8F4F5] hover:border-[#EAD08E]/30 hover:shadow-[0_0_30px_rgba(234,208,142,0.1)]",
+                  ? "border-accent/30 bg-gradient-to-b from-accent/10 to-white/[0.02] lg:-my-6 lg:py-16 glow-gold"
+                  : "border-white/5 bg-white/[0.02] hover:border-accent/20 hover:bg-white/[0.04]",
               ]}
             >
               {pack.recommended && (
-                <p class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[#EAD08E] px-6 py-1.5 text-sm font-bold text-[#2E0F12] uppercase">
+                <p class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-accent px-6 py-1.5 text-sm font-bold text-brand-900 uppercase">
                   Recomendado
                 </p>
               )}
-              <p class="font-display text-6xl font-black text-[#2E0F12]">{pack.trackers}</p>
-              <h3 class="font-display mt-3 text-3xl font-bold text-[#2E0F12]">{pack.name}</h3>
-              <p class="mt-2 text-[#7D706E]">{pack.tagline}</p>
-              <p class="font-display mt-6 text-5xl font-black text-[#2E0F12]">{pack.price}<span class="text-lg font-medium text-[#7D706E]"> MXN</span></p>
+              <p class="font-display text-6xl font-black text-white">{pack.trackers}</p>
+              <h3 class="font-display mt-3 text-3xl font-bold text-white">{pack.name}</h3>
+              <p class="mt-2 text-brand-500">{pack.tagline}</p>
+              <p class="font-display mt-6 text-5xl font-black text-white">{pack.price}<span class="text-lg font-medium text-brand-500"> MXN</span></p>
               <ul class="mt-8 flex-1 space-y-4">
                 {pack.includes.map((item) => (
-                  <li class="flex items-start gap-3 text-[#4A2C2C]">
-                    <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#EAD08E]/20 text-sm text-[#2E0F12]">✓</span>
+                  <li class="flex items-start gap-3 text-brand-300">
+                    <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/10 text-sm text-accent">✓</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -184,8 +187,8 @@ import {
                 class:list={[
                   "mt-10 block rounded-full py-4 text-center font-bold transition-all hover:scale-105",
                   pack.recommended
-                    ? "bg-[#2E0F12] text-[#F8F4F5] hover:shadow-[0_0_30px_rgba(46,15,18,0.3)]"
-                    : "border border-[#2E0F12]/20 text-[#2E0F12] hover:border-[#EAD08E] hover:bg-[#EAD08E] hover:text-[#2E0F12]",
+                    ? "bg-accent text-brand-900 hover:shadow-[0_0_30px_rgba(234,208,142,0.4)]"
+                    : "border border-white/10 text-white hover:border-accent hover:bg-accent hover:text-brand-900",
                 ]}
               >
                 Comprar ahora
@@ -197,18 +200,18 @@ import {
     </section>
 
     <!-- ═══════════ TRAYECTORIA ═══════════ -->
-    <section class="py-32 bg-[#2E0F12]">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <section class="py-32 bg-brand-950">
+      <div class="mx-auto max-w-7xl px-6">
         <div class="text-center">
-          <p class="text-sm font-semibold tracking-widest text-[#EAD08E] uppercase mb-4">Experiencia & Trayectoria</p>
-          <h2 class="font-display text-4xl sm:text-6xl font-black text-[#F8F4F5]">Más de <span class="text-gradient-bee">3 Años</span></h2>
+          <p class="text-sm font-semibold tracking-widest text-accent uppercase mb-4">Experiencia & Trayectoria</p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">Más de <span class="text-gradient-gold">3 Años</span></h2>
         </div>
         <div class="mt-16 grid grid-cols-2 gap-8 lg:grid-cols-4">
           {TRAYECTORIA.map((t) => (
-            <div class="rounded-2xl border border-[#F8F4F5]/10 bg-[#3D1518] p-8 text-center transition-all hover:border-[#EAD08E]/30 hover:shadow-[0_0_20px_rgba(234,208,142,0.1)]">
-              <p class="font-display text-5xl font-black text-[#EAD08E]">{t.value}</p>
-              <p class="font-display mt-3 font-bold text-[#F8F4F5] text-lg">{t.label}</p>
-              <p class="mt-2 text-sm text-[#B0A69E]">{t.sub}</p>
+            <div class="rounded-2xl border border-white/5 bg-white/[0.02] p-8 text-center transition-all hover:border-accent/20 hover:bg-white/[0.04]">
+              <p class="font-display text-5xl font-black text-accent">{t.value}</p>
+              <p class="font-display mt-3 font-bold text-white text-lg">{t.label}</p>
+              <p class="mt-2 text-sm text-brand-500">{t.sub}</p>
             </div>
           ))}
         </div>
@@ -216,17 +219,17 @@ import {
     </section>
 
     <!-- ═══════════ GALERÍA ═══════════ -->
-    <section id="galeria" class="py-32 bg-[#F8F4F5]">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <section id="galeria" class="py-32 bg-brand-900">
+      <div class="mx-auto max-w-7xl px-6">
         <div class="text-center">
-          <p class="text-sm font-semibold tracking-widest text-[#2E0F12] uppercase mb-4">Galería</p>
-          <h2 class="font-display text-4xl sm:text-6xl font-black text-[#2E0F12]">Productos <span class="text-gradient-bee">Reales</span></h2>
+          <p class="text-sm font-semibold tracking-widest text-accent uppercase mb-4">Galería</p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">Productos <span class="text-gradient-gold">Reales</span></h2>
         </div>
         <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {GALLERY.map((g) => (
-            <figure class="group overflow-hidden rounded-2xl border border-[#2E0F12]/10 transition-all hover:border-[#EAD08E]/30 hover:shadow-[0_0_20px_rgba(234,208,142,0.1)]">
+            <figure class="group overflow-hidden rounded-2xl border border-white/5 transition-all hover:border-accent/20">
               <img src={g.src} alt={g.caption} loading="lazy" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-110" />
-              <figcaption class="bg-[#2E0F12] px-5 py-4 text-sm text-[#F8F4F5]">{g.caption}</figcaption>
+              <figcaption class="bg-brand-950 px-5 py-4 text-sm text-brand-400">{g.caption}</figcaption>
             </figure>
           ))}
         </div>
@@ -234,22 +237,22 @@ import {
     </section>
 
     <!-- ═══════════ TESTIMONIOS ═══════════ -->
-    <section class="py-32 bg-[#2E0F12]">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <section class="py-32 bg-brand-950">
+      <div class="mx-auto max-w-7xl px-6">
         <div class="text-center">
-          <p class="text-sm font-semibold tracking-widest text-[#EAD08E] uppercase mb-4">Testimonios</p>
-          <h2 class="font-display text-4xl sm:text-6xl font-black text-[#F8F4F5]">Lo que dicen <span class="text-gradient-bee">nuestros usuarios</span></h2>
+          <p class="text-sm font-semibold tracking-widest text-accent uppercase mb-4">Testimonios</p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">Lo que dicen <span class="text-gradient-gold">nuestros usuarios</span></h2>
         </div>
         <div class="mt-16 grid gap-8 md:grid-cols-3">
           {TESTIMONIALS.map((t) => (
-            <blockquote class="flex flex-col rounded-2xl border border-[#F8F4F5]/10 bg-[#3D1518] p-10 transition-all hover:border-[#EAD08E]/30 hover:shadow-[0_0_20px_rgba(234,208,142,0.1)]">
+            <blockquote class="flex flex-col rounded-2xl border border-white/5 bg-white/[0.02] p-10 transition-all hover:border-accent/20 hover:bg-white/[0.04]">
               <p class="text-yellow-400 text-xl">★★★★★</p>
-              <p class="mt-6 flex-1 text-lg text-[#F8F4F5] italic">"{t.quote}"</p>
+              <p class="mt-6 flex-1 text-lg text-brand-300 italic">"{t.quote}"</p>
               <footer class="mt-8 flex items-center gap-4">
-                <img src={t.img} alt={`Kit Beekonz de ${t.name}`} loading="lazy" class="h-14 w-14 rounded-full object-cover border-2 border-[#EAD08E]/30" />
+                <img src={t.img} alt={`Kit Beekonz de ${t.name}`} loading="lazy" class="h-14 w-14 rounded-full object-cover border-2 border-accent/20" />
                 <div>
-                  <p class="font-bold text-[#F8F4F5]">{t.name}</p>
-                  <p class="text-sm text-[#B0A69E]">{t.role} · {t.country}</p>
+                  <p class="font-bold text-white">{t.name}</p>
+                  <p class="text-sm text-brand-500">{t.role} · {t.country}</p>
                 </div>
               </footer>
             </blockquote>
@@ -259,20 +262,20 @@ import {
     </section>
 
     <!-- ═══════════ FAQ ═══════════ -->
-    <section id="faq" class="py-32 bg-[#F8F4F5]">
-      <div class="mx-auto max-w-3xl px-4 sm:px-6">
+    <section id="faq" class="py-32 bg-brand-900">
+      <div class="mx-auto max-w-3xl px-6">
         <div class="text-center">
-          <p class="text-sm font-semibold tracking-widest text-[#2E0F12] uppercase mb-4">Preguntas Frecuentes</p>
-          <h2 class="font-display text-4xl sm:text-6xl font-black text-[#2E0F12]">¿Tienes Dudas?</h2>
+          <p class="text-sm font-semibold tracking-widest text-accent uppercase mb-4">Preguntas Frecuentes</p>
+          <h2 class="font-display text-4xl sm:text-6xl font-black text-white">¿Tienes Dudas?</h2>
         </div>
         <div class="mt-14 space-y-4">
           {FAQ.map((f) => (
-            <details class="group rounded-xl border border-[#2E0F12]/10 bg-[#F8F4F5] transition-all hover:border-[#EAD08E]/30">
-              <summary class="flex cursor-pointer list-none items-center justify-between px-6 py-5 font-medium text-[#2E0F12] text-lg [&::-webkit-details-marker]:hidden">
+            <details class="group rounded-xl border border-white/5 bg-white/[0.02] transition-all hover:border-accent/20">
+              <summary class="flex cursor-pointer list-none items-center justify-between px-6 py-5 font-medium text-white text-lg [&::-webkit-details-marker]:hidden">
                 {f.q}
-                <span class="text-[#EAD08E] text-2xl transition group-open:rotate-45">+</span>
+                <span class="text-accent text-2xl transition group-open:rotate-45">+</span>
               </summary>
-              <p class="px-6 pb-6 text-[#4A2C2C]">{f.a}</p>
+              <p class="px-6 pb-6 text-brand-400">{f.a}</p>
             </details>
           ))}
         </div>
@@ -280,15 +283,15 @@ import {
     </section>
 
     <!-- ═══════════ CTA FINAL ═══════════ -->
-    <section class="py-32 bg-[#2E0F12]">
-      <div class="mx-auto max-w-5xl px-4 sm:px-6">
-        <div class="rounded-3xl border border-[#EAD08E]/20 bg-gradient-to-b from-[#EAD08E]/10 to-[#3D1518] px-8 py-20 text-center">
-          <p class="inline-flex items-center gap-2 rounded-full border border-[#EAD08E]/30 px-5 py-1.5 text-sm font-semibold text-[#EAD08E]">⭐ 4.9/5 · Hecho para la comunidad hispana</p>
-          <h2 class="font-display mx-auto mt-6 max-w-3xl text-4xl sm:text-6xl font-black text-[#F8F4F5]">
-            Lleva tu VR al <span class="text-gradient-bee">Siguiente Nivel</span>
+    <section class="py-32 bg-brand-950">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="rounded-3xl border border-accent/20 bg-gradient-to-b from-accent/10 to-white/[0.02] px-8 py-20 text-center glow-gold">
+          <p class="inline-flex items-center gap-2 rounded-full border border-accent/30 px-5 py-1.5 text-sm font-semibold text-accent">⭐ 4.9/5 · Hecho para la comunidad hispana</p>
+          <h2 class="font-display mx-auto mt-6 max-w-3xl text-4xl sm:text-6xl font-black text-white">
+            Lleva tu VR al <span class="text-gradient-gold">Siguiente Nivel</span>
           </h2>
           <div class="mt-10">
-            <a href={PACKS[1].stripe} target="_blank" rel="noopener" class="inline-block px-12 py-4 bg-[#EAD08E] rounded-full font-bold text-[#2E0F12] text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(234,208,142,0.4)]">
+            <a href={PACKS[1].stripe} target="_blank" rel="noopener" class="inline-block px-12 py-4 bg-accent rounded-full font-bold text-brand-900 text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(234,208,142,0.4)]">
               Comprar Ahora
             </a>
           </div>
@@ -305,7 +308,7 @@ import {
     target="_blank"
     rel="noopener"
     aria-label="Únete a nuestro Discord"
-    class="fixed right-5 bottom-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#EAD08E] p-3.5 shadow-[0_0_20px_rgba(234,208,142,0.3)] transition hover:scale-110 hover:shadow-[0_0_30px_rgba(234,208,142,0.5)]"
+    class="fixed right-5 bottom-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-accent p-3.5 shadow-[0_0_20px_rgba(234,208,142,0.3)] transition hover:scale-110 hover:shadow-[0_0_30px_rgba(234,208,142,0.5)]"
   >
     <svg width="24" height="24" viewBox="0 0 24 24" fill="#2E0F12"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3c-.2.4-.5.9-.6 1.3a18.3 18.3 0 0 0-5.6 0C9 3.9 8.7 3.4 8.5 3a19.7 19.7 0 0 0-4.9 1.5A20.4 20.4 0 0 0 .1 18.1a19.9 19.9 0 0 0 6 3c.5-.6.9-1.3 1.3-2-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1 .4.7.8 1.4 1.3 2a19.8 19.8 0 0 0 6-3A20.3 20.3 0 0 0 20.3 4.4ZM8.1 15.3c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm7.8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
   </a>
