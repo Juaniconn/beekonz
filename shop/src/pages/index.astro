@@ -18,70 +18,64 @@ import {
 <Base>
   <Header />
 
-  <main>
-    <!-- ═══════════ HERO - ESTYLE FANTOM UI ═══════════ -->
-    <section class="relative min-h-screen overflow-hidden flex items-center justify-center pt-32 pb-20 bg-[#0a0a0f]">
-      <!-- Background degradado -->
-      <div class="absolute inset-0">
-        <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#0f0f1a] to-[#0a0a0f]"></div>
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[radial-gradient(ellipse_at_center,_rgba(0,255,200,0.15)_0%,_transparent_70%)]"></div>
-        <div class="absolute bottom-0 right-0 w-[600px] h-[400px] bg-[radial-gradient(ellipse_at_center,_rgba(0,200,255,0.1)_0%,_transparent_70%)]"></div>
-      </div>
+  <main class="bg-[#0a0a0f] text-white overflow-hidden">
+    <!-- ═══════════ HERO - ESTILO FANTOM UI ═══════════ -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center px-6 pt-32 pb-20">
+      <!-- Background gradient -->
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#0f0f1a] to-[#0a0a0f]"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-[radial-gradient(ellipse_at_center,_rgba(234,208,142,0.1)_0%,_transparent_70%)]"></div>
       
-      <div class="relative mx-auto max-w-7xl px-6 text-center">
+      <div class="relative z-10 max-w-5xl mx-auto text-center">
         <h1 class="font-display text-7xl sm:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85]">
-          <span class="text-white">BEEK</span><span class="bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">ONZ</span>
+          <span class="text-white">BEEK</span><span class="bg-gradient-to-r from-[#EAD08E] via-[#F5E6B8] to-[#D4B870] bg-clip-text text-transparent">ONZ</span>
         </h1>
         
-        <p class="mx-auto mt-8 max-w-3xl text-xl sm:text-2xl text-gray-400 leading-relaxed">
-          Full Body Tracking de nueva generación. Trackers ultraligeros de <span class="text-emerald-400 font-semibold">10g</span> con <span class="text-emerald-400 font-semibold">+50h</span> de batería para VRChat.
+        <p class="mt-8 text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          Full Body Tracking de nueva generación. Trackers ultraligeros de <span class="text-[#EAD08E] font-semibold">10g</span> con <span class="text-[#EAD08E] font-semibold">+50h</span> de batería para VRChat.
         </p>
         
-        <div class="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href={PACKS[2].stripe}
-            target="_blank"
-            rel="noopener"
-            class="px-10 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full font-bold text-black text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(0,255,200,0.4)]"
-          >
+        <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href={PACKS[2].stripe} target="_blank" rel="noopener" class="px-10 py-4 bg-[#EAD08E] rounded-full font-bold text-[#2E0F12] text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(234,208,142,0.4)]">
             Comprar Ahora
           </a>
-          <a href="#packs" class="px-10 py-4 border border-white/20 rounded-full font-semibold text-white text-lg transition-all hover:border-emerald-400 hover:text-emerald-400">
+          <a href="#packs" class="px-10 py-4 border border-white/20 rounded-full font-semibold text-white text-lg transition-all hover:border-[#EAD08E] hover:text-[#EAD08E]">
             Ver Packs
           </a>
         </div>
-        
-        <!-- Pantallas flotantes estilo Fantom UI -->
-        <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { img: "/images/product_blackopen-D4FUIUW9.png", alt: "Tracker abierto" },
-            { img: "/images/product_blackclose-DG-ax_eH.png", alt: "Tracker cerrado" },
-            { img: "/images/hero-tracker-CAzRrDY8.jpg", alt: "Hero tracker" },
-            { img: "/images/tracker-lifestyle-BLmfpVMs.jpg", alt: "Estilo de vida" },
-          ].map((item, i) => (
-            <div 
-              class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,200,0.2)]"
-              style={`animation: float ${4 + i}s ease-in-out infinite; animation-delay: ${i * 0.5}s`}
-            >
-              <img src={item.img} alt={item.alt} class="w-full aspect-square object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-            </div>
-          ))}
-        </div>
+      </div>
+      
+      <!-- Pantallas flotantes estilo Fantom UI -->
+      <div class="relative z-10 mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+        {[
+          { img: "/images/product_blackopen-D4FUIUW9.png", alt: "Tracker abierto" },
+          { img: "/images/product_blackclose-DG-ax_eH.png", alt: "Tracker cerrado" },
+          { img: "/images/hero-tracker-CAzRrDY8.jpg", alt: "Hero tracker" },
+          { img: "/images/tracker-lifestyle-BLmfpVMs.jpg", alt: "Estilo de vida" },
+        ].map((item, i) => (
+          <div 
+            class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(234,208,142,0.2)]"
+            style={`animation: float ${4 + i}s ease-in-out infinite; animation-delay: ${i * 0.5}s`}
+          >
+            <img src={item.img} alt={item.alt} class="w-full aspect-square object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+          </div>
+        ))}
       </div>
     </section>
 
-    <!-- ═══════════ CARACTERÍSTICAS - ICONOS FLOTANTES ═══════════ -->
+    <!-- ═══════════ SECCIÓN 1 - TIPO FANTOM UI ═══════════ -->
     <section class="py-32 bg-[#0f0f1a]">
-      <div class="mx-auto max-w-7xl px-6">
+      <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="font-display text-4xl sm:text-5xl font-black text-white">¿Por qué <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Beekonz</span>?</h2>
+          <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white">
+            ¿Por qué <span class="bg-gradient-to-r from-[#EAD08E] to-[#D4B870] bg-clip-text text-transparent">Beekonz</span>?
+          </h2>
         </div>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
           {FEATURES.map((f) => (
-            <div class="relative rounded-2xl border border-white/5 bg-white/[0.02] p-8 text-center transition-all duration-300 hover:border-emerald-500/30 hover:bg-white/[0.04] hover:scale-105">
-              <p class="font-display text-4xl font-black text-emerald-400">{f.stat}</p>
+            <div class="relative rounded-2xl border border-white/5 bg-white/[0.02] p-8 text-center transition-all duration-300 hover:border-[#EAD08E]/30 hover:bg-white/[0.04] hover:scale-105">
+              <p class="font-display text-4xl font-black text-[#EAD08E]">{f.stat}</p>
               <h3 class="font-display mt-3 font-bold text-white">{f.title}</h3>
               <p class="mt-2 text-sm text-gray-500">{f.desc}</p>
             </div>
@@ -90,11 +84,13 @@ import {
       </div>
     </section>
 
-    <!-- ═══════════ PACKS - TARJETAS HORIZONTALES ═══════════ -->
+    <!-- ═══════════ SECCIÓN 2 - PACKS HORIZONTALES ═══════════ -->
     <section id="packs" class="py-32 bg-[#0a0a0f]">
-      <div class="mx-auto max-w-7xl px-6">
+      <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="font-display text-4xl sm:text-5xl font-black text-white">Elige tu <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Pack</span></h2>
+          <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white">
+            Elige tu <span class="bg-gradient-to-r from-[#EAD08E] to-[#D4B870] bg-clip-text text-transparent">Pack</span>
+          </h2>
         </div>
         
         <div class="grid gap-6 lg:grid-cols-3">
@@ -103,12 +99,12 @@ import {
               class:list={[
                 "relative flex flex-col rounded-3xl border p-8 transition-all duration-300",
                 pack.recommended
-                  ? "border-emerald-500/50 bg-gradient-to-b from-emerald-500/10 to-white/[0.02] scale-105 shadow-[0_0_50px_rgba(0,255,200,0.2)]"
-                  : "border-white/5 bg-white/[0.02] hover:border-emerald-500/30",
+                  ? "border-[#EAD08E]/50 bg-gradient-to-b from-[#EAD08E]/10 to-white/[0.02] scale-105 shadow-[0_0_50px_rgba(234,208,142,0.2)]"
+                  : "border-white/5 bg-white/[0.02] hover:border-[#EAD08E]/30",
               ]}
             >
               {pack.recommended && (
-                <p class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 px-4 py-1 text-xs font-bold text-black uppercase">
+                <p class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#EAD08E] px-4 py-1 text-xs font-bold text-[#2E0F12] uppercase">
                   Más Popular
                 </p>
               )}
@@ -123,7 +119,7 @@ import {
               <ul class="mt-6 flex-1 space-y-3">
                 {pack.includes.map((item) => (
                   <li class="flex items-center gap-3 text-sm text-gray-300">
-                    <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">✓</span>
+                    <span class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#EAD08E]/20 text-[#EAD08E]">✓</span>
                     {item}
                   </li>
                 ))}
@@ -135,8 +131,8 @@ import {
                 class:list={[
                   "mt-6 block rounded-full py-3 text-center font-bold transition-all",
                   pack.recommended
-                    ? "bg-gradient-to-r from-emerald-500 to-cyan-500 text-black hover:shadow-[0_0_30px_rgba(0,255,200,0.4)]"
-                    : "border border-white/10 text-white hover:border-emerald-500",
+                    ? "bg-[#EAD08E] text-[#2E0F12] hover:shadow-[0_0_30px_rgba(234,208,142,0.4)]"
+                    : "border border-white/10 text-white hover:border-[#EAD08E]",
                 ]}
               >
                 Comprar
@@ -147,19 +143,21 @@ import {
       </div>
     </section>
 
-    <!-- ═══════════ TESTIMONIOS - CARRUSEL ═══════════ -->
+    <!-- ═══════════ SECCIÓN 3 - TESTIMONIOS ═══════════ -->
     <section class="py-32 bg-[#0f0f1a]">
-      <div class="mx-auto max-w-7xl px-6">
+      <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="font-display text-4xl sm:text-5xl font-black text-white">Lo que dicen <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">nuestros usuarios</span></h2>
+          <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white">
+            Lo que dicen <span class="bg-gradient-to-r from-[#EAD08E] to-[#D4B870] bg-clip-text text-transparent">nuestros usuarios</span>
+          </h2>
         </div>
         <div class="grid gap-6 md:grid-cols-3">
           {TESTIMONIALS.map((t) => (
-            <blockquote class="flex flex-col rounded-2xl border border-white/5 bg-white/[0.02] p-8 transition-all hover:border-emerald-500/30">
+            <blockquote class="flex flex-col rounded-2xl border border-white/5 bg-white/[0.02] p-8 transition-all hover:border-[#EAD08E]/30">
               <p class="text-yellow-400 text-xl">★★★★★</p>
               <p class="mt-6 flex-1 text-lg text-gray-300 italic">"{t.quote}"</p>
               <footer class="mt-6 flex items-center gap-4">
-                <img src={t.img} alt={t.name} loading="lazy" class="h-12 w-12 rounded-full object-cover border-2 border-emerald-500/30" />
+                <img src={t.img} alt={t.name} loading="lazy" class="h-12 w-12 rounded-full object-cover border-2 border-[#EAD08E]/30" />
                 <div>
                   <p class="font-bold text-white">{t.name}</p>
                   <p class="text-sm text-gray-500">{t.role}</p>
@@ -171,18 +169,20 @@ import {
       </div>
     </section>
 
-    <!-- ═══════════ FAQ ═══════════ -->
+    <!-- ═══════════ SECCIÓN 4 - FAQ ═══════════ -->
     <section class="py-32 bg-[#0a0a0f]">
-      <div class="mx-auto max-w-3xl px-6">
+      <div class="max-w-3xl mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="font-display text-4xl sm:text-5xl font-black text-white">Preguntas <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Frecuentes</span></h2>
+          <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white">
+            Preguntas <span class="bg-gradient-to-r from-[#EAD08E] to-[#D4B870] bg-clip-text text-transparent">Frecuentes</span>
+          </h2>
         </div>
         <div class="space-y-4">
           {FAQ.map((f) => (
-            <details class="group rounded-xl border border-white/5 bg-white/[0.02] transition-all hover:border-emerald-500/30">
+            <details class="group rounded-xl border border-white/5 bg-white/[0.02] transition-all hover:border-[#EAD08E]/30">
               <summary class="flex cursor-pointer list-none items-center justify-between px-6 py-5 font-medium text-white text-lg [&::-webkit-details-marker]:hidden">
                 {f.q}
-                <span class="text-emerald-400 text-2xl transition group-open:rotate-45">+</span>
+                <span class="text-[#EAD08E] text-2xl transition group-open:rotate-45">+</span>
               </summary>
               <p class="px-6 pb-6 text-gray-400">{f.a}</p>
             </details>
@@ -193,13 +193,15 @@ import {
 
     <!-- ═══════════ CTA FINAL - WAITLIST STYLE ═══════════ -->
     <section class="py-32 bg-[#0f0f1a]">
-      <div class="mx-auto max-w-3xl px-6 text-center">
-        <h2 class="font-display text-4xl sm:text-5xl font-black text-white">¿Listo para <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">empezar</span>?</h2>
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white">
+          ¿Listo para <span class="bg-gradient-to-r from-[#EAD08E] to-[#D4B870] bg-clip-text text-transparent">empezar</span>?
+        </h2>
         <p class="mx-auto mt-6 max-w-xl text-lg text-gray-400">
           Únete a más de 150 creadores VR que ya usan Beekonz.
         </p>
         <div class="mt-10">
-          <a href={PACKS[1].stripe} target="_blank" rel="noopener" class="inline-block px-12 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full font-bold text-black text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(0,255,200,0.4)]">
+          <a href={PACKS[1].stripe} target="_blank" rel="noopener" class="inline-block px-12 py-4 bg-[#EAD08E] rounded-full font-bold text-[#2E0F12] text-lg transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(234,208,142,0.4)]">
             Comprar Ahora
           </a>
         </div>
@@ -208,4 +210,15 @@ import {
   </main>
 
   <Footer />
+
+  <!-- Botón flotante Discord -->
+  <a
+    href={SITE.discord}
+    target="_blank"
+    rel="noopener"
+    aria-label="Únete a nuestro Discord"
+    class="fixed right-5 bottom-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#EAD08E] p-3.5 shadow-[0_0_20px_rgba(234,208,142,0.3)] transition hover:scale-110 hover:shadow-[0_0_30px_rgba(234,208,142,0.5)]"
+  >
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="#2E0F12"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3c-.2.4-.5.9-.6 1.3a18.3 18.3 0 0 0-5.6 0C9 3.9 8.7 3.4 8.5 3a19.7 19.7 0 0 0-4.9 1.5A20.4 20.4 0 0 0 .1 18.1a19.9 19.9 0 0 0 6 3c.5-.6.9-1.3 1.3-2-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1 .4.7.8 1.4 1.3 2a19.8 19.8 0 0 0 6-3A20.3 20.3 0 0 0 20.3 4.4ZM8.1 15.3c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm7.8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
+  </a>
 </Base>
