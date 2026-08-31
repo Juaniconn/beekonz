@@ -4,52 +4,103 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Base title="Acerca de Beekonz | Full Body Tracking VR" description="Conoce la historia de Beekonz, la empresa mexicana de Full Body Tracking para la comunidad VR hispana.">
+<Base title="Acerca de Beekonz | Full Body Tracking">
   <Header />
-  <main class="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:px-6">
-    <p class="text-center text-xs font-semibold tracking-widest text-bee-400 uppercase">Quiénes Somos</p>
-    <h1 class="font-display mt-3 text-center text-3xl font-bold sm:text-5xl">Acerca de <span class="text-gradient-bee">Beekonz</span></h1>
-    <p class="mx-auto mt-4 max-w-xl text-center text-neutral-400">
-      Somos una empresa mexicana apasionada por la realidad virtual y el Full Body Tracking. Nacimos con la misión de hacer accesible la tecnología de tracking de alta precisión para la comunidad hispanohablante.
-    </p>
 
-    <div class="mt-12 space-y-8 text-neutral-300">
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-2xl font-bold text-white">Nuestra Historia</h2>
-        <p class="mt-4">
-          Beekonz nació en 2023 de la mano de <strong class="text-bee-400">@Juaniconn</strong>, un usuario activo de VRChat y entusiasta de la realidad virtual que vio cómo el Full Body Tracking estaba fuera del alcance de muchos hispanohablantes debido a los altos costos y la falta de soporte en español.
-        </p>
-        <p class="mt-4">
-          Con más de 3 años de experiencia como fabricante de trackers, hemos logrado consolidarnos como una marca confiable, enviando trackers a toda Latinoamérica y otros países de habla hispana. Nuestro enfoque en la calidad, el soporte cercano y la personalización nos ha permitido construir una comunidad activa y leal.
-        </p>
-      </div>
+  <main class="min-h-screen bg-[#F8F4F5]">
+    <div class="pt-32 pb-20 relative overflow-hidden">
+      <!-- Background effects -->
+      <div class="absolute inset-0 grid-pattern opacity-15"></div>
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#EAD08E]/10 rounded-full blur-[150px]"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#EAD08E]/10 rounded-full blur-[100px]"></div>
 
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-2xl font-bold text-white">Nuestro Equipo</h2>
-        <p class="mt-4">
-          Somos un equipo pequeño pero dedicado. Cada tracker es ensamblado y probado individualmente en nuestro taller en CDMX antes de ser enviado. Creemos en la transparencia y el trato humano: detrás de cada venta hay una persona real que se preocupa por tu experiencia.
-        </p>
-      </div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-5xl mx-auto">
+          <!-- Hero Header -->
+          <div class="text-center mb-16 animate-fade-in">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EAD08E]/10 border border-[#EAD08E]/30 mb-6">
+              <span class="text-sm font-medium text-[#2E0F12] tracking-wider uppercase">Quiénes Somos</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-[#2E0F12]">
+              Acerca de <span class="text-[#EAD08E]">Beekonz</span>
+            </h1>
+            <p class="text-xl text-[#4A2C2C] max-w-2xl mx-auto">
+              Más de 3 años creando tecnología de tracking accesible para la comunidad VR hispana.
+            </p>
+          </div>
 
-      <div class="grid gap-6 sm:grid-cols-2">
-        <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-6 text-center">
-          <p class="text-4xl font-bold text-bee-400">700+</p>
-          <p class="mt-2 text-sm text-neutral-400">Trackers vendidos</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-6 text-center">
-          <p class="text-4xl font-bold text-bee-400">150+</p>
-          <p class="mt-2 text-sm text-neutral-400">Clientes satisfechos</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-6 text-center">
-          <p class="text-4xl font-bold text-bee-400">20+</p>
-          <p class="mt-2 text-sm text-neutral-400">Sets personalizados</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-6 text-center">
-          <p class="text-4xl font-bold text-bee-400">3+</p>
-          <p class="mt-2 text-sm text-neutral-400">Años de experiencia</p>
+          <!-- Values Cards Grid -->
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Visión -->
+            <div class="group relative animate-fade-in" style="animation-delay: 0.1s">
+              <div class="h-full p-8 rounded-3xl bg-white border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-500 hover:shadow-lg hover:shadow-[#EAD08E]/5">
+                <div class="absolute inset-0 bg-gradient-to-br from-[#EAD08E]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl"></div>
+                <div class="relative z-10">
+                  <div class="w-14 h-14 rounded-2xl bg-[#EAD08E]/10 flex items-center justify-center mb-6 group-hover:bg-[#EAD08E]/20 group-hover:scale-110 transition-all duration-300">
+                    <svg class="w-7 h-7 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                  </div>
+                  <h2 class="text-xl font-display font-bold text-[#2E0F12] mb-4 group-hover:text-[#EAD08E] transition-colors">Nuestra Visión</h2>
+                  <p class="text-[#4A2C2C] leading-relaxed">
+                    Democratizar el Full Body Tracking para la comunidad hispanohablante. Diseñamos tecnología ultraligera, precisa y accesible para que cualquiera pueda moverse libremente dentro del mundo virtual.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tecnología -->
+            <div class="group relative animate-fade-in" style="animation-delay: 0.2s">
+              <div class="h-full p-8 rounded-3xl bg-white border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-500 hover:shadow-lg hover:shadow-[#EAD08E]/5">
+                <div class="absolute inset-0 bg-gradient-to-br from-[#EAD08E]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl"></div>
+                <div class="relative z-10">
+                  <div class="w-14 h-14 rounded-2xl bg-[#EAD08E]/10 flex items-center justify-center mb-6 group-hover:bg-[#EAD08E]/20 group-hover:scale-110 transition-all duration-300">
+                    <svg class="w-7 h-7 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  </div>
+                  <h2 class="text-xl font-display font-bold text-[#2E0F12] mb-4 group-hover:text-[#EAD08E] transition-colors">Nuestra Tecnología</h2>
+                  <p class="text-[#4A2C2C] leading-relaxed">
+                    Cada tracker refleja nuestra pasión: ingeniería inteligente, diseño minimalista y soporte humano cercano. Utilizamos los sensores más avanzados del mercado combinados con firmware optimizado.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comunidad -->
+            <div class="group relative animate-fade-in" style="animation-delay: 0.3s">
+              <div class="h-full p-8 rounded-3xl bg-white border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-500 hover:shadow-lg hover:shadow-[#EAD08E]/5">
+                <div class="absolute inset-0 bg-gradient-to-br from-[#EAD08E]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl"></div>
+                <div class="relative z-10">
+                  <div class="w-14 h-14 rounded-2xl bg-[#EAD08E]/10 flex items-center justify-center mb-6 group-hover:bg-[#EAD08E]/20 group-hover:scale-110 transition-all duration-300">
+                    <svg class="w-7 h-7 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                  </div>
+                  <h2 class="text-xl font-display font-bold text-[#2E0F12] mb-4 group-hover:text-[#EAD08E] transition-colors">Nuestra Comunidad</h2>
+                  <p class="text-[#4A2C2C] leading-relaxed">
+                    Más que una marca, somos una comunidad. Nuestro Discord está lleno de usuarios que comparten experiencias, tutoriales y se ayudan mutuamente. Soporte 24/7 en español.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Section -->
+          <div class="mt-16 p-8 rounded-3xl bg-white border border-[#2E0F12]/10 animate-fade-in" style="animation-delay: 0.4s">
+            <div class="grid sm:grid-cols-3 gap-8 text-center">
+              <div>
+                <div class="text-4xl font-display font-bold text-[#EAD08E] mb-2">700+</div>
+                <div class="text-[#4A2C2C]">Trackers vendidos</div>
+              </div>
+              <div>
+                <div class="text-4xl font-display font-bold text-[#EAD08E] mb-2">150+</div>
+                <div class="text-[#4A2C2C]">Clientes satisfechos</div>
+              </div>
+              <div>
+                <div class="text-4xl font-display font-bold text-[#EAD08E] mb-2">3+</div>
+                <div class="text-[#4A2C2C]">Años de experiencia</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <Footer />
   </main>
-  <Footer />
 </Base>

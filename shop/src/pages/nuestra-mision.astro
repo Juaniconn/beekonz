@@ -4,44 +4,93 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Base title="Nuestra Misión | Beekonz" description="La misión de Beekonz es hacer accesible el Full Body Tracking de alta precisión para la comunidad hispanohablante.">
+<Base title="Nuestra Misión | Beekonz">
   <Header />
-  <main class="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:px-6">
-    <p class="text-center text-xs font-semibold tracking-widest text-bee-400 uppercase">Quiénes Somos</p>
-    <h1 class="font-display mt-3 text-center text-3xl font-bold sm:text-5xl">Nuestra <span class="text-gradient-bee">Misión</span></h1>
-    <p class="mx-auto mt-4 max-w-xl text-center text-neutral-400">
-      Democratizar el Full Body Tracking de alta precisión para la comunidad hispanohablante.
-    </p>
 
-    <div class="mt-12 space-y-8 text-neutral-300">
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-2xl font-bold text-white">¿Por qué existimos?</h2>
-        <p class="mt-4">
-          El Full Body Tracking es una de las tecnologías que más transforma la experiencia en realidad virtual. Permite que tu avatar refleje cada movimiento real del cuerpo, creando una inmersión sin precedentes en VRChat, SteamVR y otras plataformas.
-        </p>
-        <p class="mt-4">
-          Sin embargo, cuando empezamos, las opciones eran caras, difíciles de conseguir en Latinoamérica y sin soporte en español. Decidimos cambiar eso.
-        </p>
-      </div>
+  <main class="min-h-screen bg-[#F8F4F5]">
+    <div class="pt-32 pb-20 relative overflow-hidden">
+      <!-- Background -->
+      <div class="absolute inset-0 grid-pattern opacity-15"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#EAD08E]/10 rounded-full blur-[150px]"></div>
 
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-2xl font-bold text-white">Lo que nos impulsa</h2>
-        <ul class="mt-4 space-y-4">
-          <li class="flex gap-3"><span class="text-bee-400">🐝</span> <span>Precios accesibles sin sacrificar calidad.</span></li>
-          <li class="flex gap-3"><span class="text-bee-400">🌎</span> <span>Envíos a toda Latinoamérica y más allá.</span></li>
-          <li class="flex gap-3"><span class="text-bee-400">💬</span> <span>Soporte real 24/7 en español, a través de Discord.</span></li>
-          <li class="flex gap-3"><span class="text-bee-400">🎨</span> <span>Personalización: tú eliges colores, straps y configuración.</span></li>
-          <li class="flex gap-3"><span class="text-bee-400">🔧</span> <span>Garantía y servicio postventa directo con el fabricante.</span></li>
-        </ul>
-      </div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto">
+          <!-- Header -->
+          <div class="text-center mb-16 animate-fade-in">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EAD08E]/10 border border-[#EAD08E]/30 mb-6">
+              <span class="text-sm font-medium text-[#2E0F12] tracking-wider uppercase">Propósito</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-[#2E0F12]">
+              Nuestra <span class="text-[#EAD08E]">Misión</span>
+            </h1>
+          </div>
 
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8 text-center">
-        <h2 class="font-display text-2xl font-bold text-white">Nuestro compromiso</h2>
-        <p class="mt-4">
-          Cada tracker que sale de nuestro taller ha sido probado individualmente. No vendemos lo que no usaríamos nosotros mismos. Si algo sale mal, lo arreglamos: esa es nuestra promesa.
-        </p>
+          <!-- Main Mission Card -->
+          <div class="relative p-10 rounded-3xl bg-white border border-[#2E0F12]/10 overflow-hidden mb-12 animate-fade-in" style="animation-delay: 0.1s">
+            <div class="absolute top-0 right-0 w-80 h-80 bg-[#EAD08E]/10 rounded-full blur-3xl"></div>
+            <div class="relative text-center">
+              <div class="w-20 h-20 rounded-2xl bg-[#EAD08E]/20 flex items-center justify-center mx-auto mb-8">
+                <svg class="w-10 h-10 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              </div>
+              <p class="text-2xl md:text-3xl font-display text-[#2E0F12] leading-relaxed">
+                Crear tecnología de movimiento <span class="text-[#EAD08E]">accesible</span>, 
+                <span class="text-[#EAD08E]"> confiable</span> y <span class="text-[#EAD08E]">emocionante</span> 
+                para toda la comunidad VR.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilares -->
+          <div class="text-center mb-8 animate-fade-in" style="animation-delay: 0.2s">
+            <h3 class="text-2xl font-display font-bold text-[#2E0F12]">Nos guiamos por 3 pilares</h3>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Innovación -->
+            <div class="group relative animate-fade-in" style="animation-delay: 0.3s">
+              <div class="h-full p-8 rounded-3xl bg-white border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-500 hover:shadow-lg hover:shadow-[#EAD08E]/5 text-center">
+                <div class="w-14 h-14 rounded-2xl bg-[#EAD08E]/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#EAD08E]/20 group-hover:scale-110 transition-all duration-300">
+                  <svg class="w-7 h-7 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                </div>
+                <h4 class="text-xl font-display font-bold mb-3 text-[#2E0F12] group-hover:text-[#EAD08E] transition-colors">Innovación Continua</h4>
+                <p class="text-[#4A2C2C]">Hardware mejorado, firmware optimizado. Siempre buscando la mejor experiencia VR posible.</p>
+              </div>
+            </div>
+
+            <!-- Accesibilidad -->
+            <div class="group relative animate-fade-in" style="animation-delay: 0.4s">
+              <div class="h-full p-8 rounded-3xl bg-white border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-500 hover:shadow-lg hover:shadow-[#EAD08E]/5 text-center">
+                <div class="w-14 h-14 rounded-2xl bg-[#EAD08E]/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#EAD08E]/20 group-hover:scale-110 transition-all duration-300">
+                  <svg class="w-7 h-7 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h4 class="text-xl font-display font-bold mb-3 text-[#2E0F12] group-hover:text-[#EAD08E] transition-colors">Accesibilidad</h4>
+                <p class="text-[#4A2C2C]">Precios justos y envíos internacionales para toda la comunidad latinoamericana.</p>
+              </div>
+            </div>
+
+            <!-- Comunidad -->
+            <div class="group relative animate-fade-in" style="animation-delay: 0.5s">
+              <div class="h-full p-8 rounded-3xl bg-white border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-500 hover:shadow-lg hover:shadow-[#EAD08E]/5 text-center">
+                <div class="w-14 h-14 rounded-2xl bg-[#EAD08E]/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#EAD08E]/20 group-hover:scale-110 transition-all duration-300">
+                  <svg class="w-7 h-7 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                </div>
+                <h4 class="text-xl font-display font-bold mb-3 text-[#2E0F12] group-hover:text-[#EAD08E] transition-colors">Comunidad</h4>
+                <p class="text-[#4A2C2C]">Soporte humano y rápido, disponible 24/7 en Discord en español.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-12 text-center animate-fade-in" style="animation-delay: 0.6s">
+            <a href="https://discord.gg/ekr3ERWJQ6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 bg-[#EAD08E] rounded-full font-semibold text-[#2E0F12] hover:shadow-lg hover:shadow-[#EAD08E]/30 transition-all duration-300 group">
+              Únete a la Comunidad
+              <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
+
+    <Footer />
   </main>
-  <Footer />
 </Base>
