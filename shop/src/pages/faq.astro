@@ -2,28 +2,181 @@
 import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { FAQ } from "../data/store";
 ---
 
-<Base title="Preguntas Frecuentes | Beekonz" description="Respuestas a las preguntas más comunes sobre Beekonz Trackers.">
+<Base title="Preguntas Frecuentes | Beekonz" description="Encuentra respuestas a las dudas más comunes sobre nuestros trackers Beekonz.">
   <Header />
-  <main class="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:px-6">
-    <p class="text-center text-xs font-semibold tracking-widest text-bee-400 uppercase">Recursos</p>
-    <h1 class="font-display mt-3 text-center text-3xl font-bold sm:text-5xl">Preguntas <span class="text-gradient-bee">Frecuentes</span></h1>
 
-    <div class="mt-12 space-y-4">
-      {FAQ.map((item, i) => (
-        <details class="group rounded-xl border border-white/10 bg-hive-900/50">
-          <summary class="flex cursor-pointer items-center justify-between p-6">
-            <span class="font-display font-semibold text-white">{item.q}</span>
-            <span class="text-bee-400 group-open:rotate-180 transition">▼</span>
-          </summary>
-          <div class="border-t border-white/5 px-6 py-4 text-neutral-300">
-            {item.a}
+  <main class="min-h-screen bg-[#F8F4F5]">
+    <div class="pt-32 pb-20 relative overflow-hidden">
+      {/* Background effects */}
+      <div class="absolute inset-0 grid-pattern opacity-15"></div>
+      <div class="absolute top-1/2 left-0 w-[300px] h-[300px] -translate-y-1/2 bg-[#EAD08E]/10 rounded-full blur-[100px]"></div>
+      <div class="absolute top-1/2 right-0 w-[300px] h-[300px] -translate-y-1/2 bg-[#2E0F12]/10 rounded-full blur-[100px]"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto">
+          {/* Hero */}
+          <div class="text-center mb-16 animate-fade-in">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#EAD08E]/10 border border-[#EAD08E]/30 mb-6">
+              <svg class="w-4 h-4 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span class="text-sm font-medium text-[#2E0F12] tracking-wider uppercase">Ayuda</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-[#2E0F12]">
+              Preguntas <span class="text-[#EAD08E]">Frecuentes</span>
+            </h1>
+            <p class="text-lg text-[#4A2C2C]">
+              Encuentra respuestas a las dudas más comunes sobre nuestros trackers.
+            </p>
           </div>
-        </details>
-      ))}
+
+          {/* FAQ Accordion */}
+          <div class="animate-fade-in" style="animation-delay: 0.1s">
+            <div class="space-y-4">
+              <!-- FAQ Item 1 -->
+              <div class="group">
+                <div class="bg-white rounded-2xl border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-300 overflow-hidden">
+                  <details class="group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer text-left font-semibold text-lg hover:text-[#EAD08E] text-[#2E0F12]">
+                      <span>¿Es compatible con SlimeVR?</span>
+                      <svg class="w-5 h-5 text-[#EAD08E] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-[#4A2C2C] font-light leading-relaxed">
+                      Sí, completamente compatible. Nuestros trackers utilizan el protocolo nativo de SlimeVR.
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="group">
+                <div class="bg-white rounded-2xl border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-300 overflow-hidden">
+                  <details class="group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer text-left font-semibold text-lg hover:text-[#EAD08E] text-[#2E0F12]">
+                      <span>¿Cuánto dura la batería?</span>
+                      <svg class="w-5 h-5 text-[#EAD08E] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-[#4A2C2C] font-light leading-relaxed">
+                      Entre 35 y 45 horas por carga completa. Puedes jugar varios días sin necesidad de recargar.
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="group">
+                <div class="bg-white rounded-2xl border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-300 overflow-hidden">
+                  <details class="group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer text-left font-semibold text-lg hover:text-[#EAD08E] text-[#2E0F12]">
+                      <span>¿Cuánto pesa cada tracker?</span>
+                      <svg class="w-5 h-5 text-[#EAD08E] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-[#4A2C2C] font-light leading-relaxed">
+                      Solo 10 gramos. Ultra ligeros para máxima comodidad en sesiones largas.
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="group">
+                <div class="bg-white rounded-2xl border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-300 overflow-hidden">
+                  <details class="group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer text-left font-semibold text-lg hover:text-[#EAD08E] text-[#2E0F12]">
+                      <span>¿Qué incluye cada paquete?</span>
+                      <svg class="w-5 h-5 text-[#EAD08E] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-[#4A2C2C] font-light leading-relaxed">
+                      Trackers, straps elásticas premium, dongle NRF52840, cable USB-C y guía digital.
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div class="group">
+                <div class="bg-white rounded-2xl border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-300 overflow-hidden">
+                  <details class="group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer text-left font-semibold text-lg hover:text-[#EAD08E] text-[#2E0F12]">
+                      <span>¿Tienen soporte técnico?</span>
+                      <svg class="w-5 h-5 text-[#EAD08E] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-[#4A2C2C] font-light leading-relaxed">
+                      Sí, soporte 24/7 vía Discord. Respondemos en español siempre.
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <!-- FAQ Item 6 -->
+              <div class="group">
+                <div class="bg-white rounded-2xl border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-300 overflow-hidden">
+                  <details class="group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer text-left font-semibold text-lg hover:text-[#EAD08E] text-[#2E0F12]">
+                      <span>¿Hacen envíos internacionales?</span>
+                      <svg class="w-5 h-5 text-[#EAD08E] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-[#4A2C2C] font-light leading-relaxed">
+                      Sí, envíos a México en 1-2 días, internacionales en 5-7 días hábiles. Todos incluyen tracking.
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <!-- FAQ Item 7 -->
+              <div class="group">
+                <div class="bg-white rounded-2xl border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-300 overflow-hidden">
+                  <details class="group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer text-left font-semibold text-lg hover:text-[#EAD08E] text-[#2E0F12]">
+                      <span>¿Funciona con VRChat?</span>
+                      <svg class="w-5 h-5 text-[#EAD08E] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-[#4A2C2C] font-light leading-relaxed">
+                      Totalmente compatible con VRChat, NeosVR, ChilloutVR y cualquier aplicación de SteamVR.
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <!-- FAQ Item 8 -->
+              <div class="group">
+                <div class="bg-white rounded-2xl border border-[#2E0F12]/10 hover:border-[#EAD08E]/40 transition-all duration-300 overflow-hidden">
+                  <details class="group">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer text-left font-semibold text-lg hover:text-[#EAD08E] text-[#2E0F12]">
+                      <span>¿Puedo pedir colores personalizados?</span>
+                      <svg class="w-5 h-5 text-[#EAD08E] group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-[#4A2C2C] font-light leading-relaxed">
+                      Sí, ofrecemos Blanco, Negro y Rojo Beekonz. Para configuraciones especiales, contáctanos en Discord.
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact CTA */}
+          <div class="mt-12 text-center animate-fade-in" style="animation-delay: 0.2s">
+            <div class="p-8 rounded-3xl bg-white border border-[#2E0F12]/10">
+              <p class="text-[#4A2C2C] mb-6 text-lg">
+                ¿No encontraste lo que buscabas?
+              </p>
+              <a
+                href="https://discord.gg/ekr3ERWJQ6"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-8 py-6 font-semibold rounded-full bg-[#EAD08E] hover:bg-[#D4B870] text-[#2E0F12] transition-all duration-300 group hover:shadow-lg hover:shadow-[#EAD08E]/30"
+              >
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                Pregúntanos en Discord
+                <svg class="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <Footer />
   </main>
-  <Footer />
 </Base>
