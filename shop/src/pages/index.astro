@@ -8,101 +8,139 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
 <Base>
   <Header />
 
-  <main class="bg-[#0a0a0f] text-white overflow-hidden">
-    <!-- ═══════════ HERO - GLASSMORPHISM + ANIMATIONS ═══════════ -->
-    <section class="relative min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden">
-      <!-- Animated background orbs -->
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#EAD08E]/20 rounded-full blur-[120px] animate-pulse"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#EAD08E]/10 rounded-full blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#EAD08E]/5 rounded-full blur-[150px]"></div>
+  <main class="bg-[#050505] text-white overflow-hidden">
+    <!-- ═══════════ HERO - CINEMATIC 3D ═══════════ -->
+    <section class="relative min-h-screen flex items-center overflow-hidden pt-28 pb-20">
+      <!-- Cinematic background -->
+      <div class="absolute inset-0">
+        <img src="/images/hero-tracker-CAzRrDY8.jpg" alt="" class="w-full h-full object-cover opacity-30" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/60"></div>
+        <div class="absolute top-1/4 right-0 w-[60vw] h-[60vw] rounded-full blur-3xl opacity-20 bg-[#EAD08E]"></div>
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
       </div>
-      
-      <!-- Grid pattern overlay -->
-      <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
-      
-      <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#EAD08E]/30 bg-[#EAD08E]/5 backdrop-blur-sm mb-8 animate-fade-in">
-          <span class="w-2 h-2 rounded-full bg-[#EAD08E] animate-pulse"></span>
-          <span class="text-sm font-medium text-[#EAD08E] tracking-wider uppercase">Tracking VR de Nueva Generación</span>
-        </div>
-        
-        <!-- Main heading -->
-        <h1 class="font-display text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-[0.85] animate-fade-in" style="animation-delay: 0.1s;">
-          <span class="text-white">FULL BODY</span><br />
-          <span class="text-white">TRACKING</span><br />
-          <span class="bg-gradient-to-r from-[#EAD08E] via-[#F5E6B8] to-[#D4B870] bg-clip-text text-transparent">SIN LÍMITES.</span>
-        </h1>
-        
-        <p class="mx-auto mt-8 max-w-2xl text-xl text-white/60 leading-relaxed animate-fade-in" style="animation-delay: 0.2s;">
-          Captura cada movimiento con precisión cinematográfica. Trackers ultraligeros de <span class="text-[#EAD08E] font-semibold">10g</span> con <span class="text-[#EAD08E] font-semibold">+50h</span> de batería.
-        </p>
-        
-        <!-- CTA Buttons -->
-        <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style="animation-delay: 0.3s;">
-          <a
-            href={PACKS[2].stripe}
-            target="_blank"
-            rel="noopener"
-            class="group relative px-10 py-4 bg-gradient-to-r from-[#EAD08E] to-[#D4B870] rounded-full font-bold text-[#2E0F12] text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(234,208,142,0.4)]"
-          >
-            <span class="relative z-10">Comprar Ahora</span>
-          </a>
-          <a
-            href="#packs"
-            class="px-10 py-4 border border-white/20 rounded-full font-semibold text-white text-lg transition-all duration-300 hover:border-[#EAD08E]/50 hover:bg-white/5 backdrop-blur-sm"
-          >
-            Ver Packs
-          </a>
-        </div>
-        
-        <!-- Floating product images -->
-        <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto animate-fade-in" style="animation-delay: 0.4s;">
-          {[
-            { img: "/images/product_blackopen-D4FUIUW9.png", alt: "Tracker abierto" },
-            { img: "/images/product_blackclose-DG-ax_eH.png", alt: "Tracker cerrado" },
-            { img: "/images/hero-tracker-CAzRrDY8.jpg", alt: "Hero tracker" },
-            { img: "/images/tracker-lifestyle-BLmfpVMs.jpg", alt: "Estilo de vida" },
-          ].map((item, i) => (
-            <div 
-              class="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl transition-all duration-500 hover:scale-105 hover:border-[#EAD08E]/30 hover:shadow-[0_0_30px_rgba(234,208,142,0.2)] group"
-              style={`animation: float ${4 + i}s ease-in-out infinite; animation-delay: ${i * 0.5}s`}
-            >
-              <img src={item.img} alt={item.alt} class="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-110" />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/80 via-transparent to-transparent"></div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <!-- Left column - copy -->
+          <div class="lg:col-span-7 space-y-8">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10">
+              <span class="relative flex h-2 w-2">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#EAD08E] opacity-75"></span>
+                <span class="relative inline-flex h-2 w-2 rounded-full bg-[#EAD08E]"></span>
+              </span>
+              <span class="text-xs uppercase tracking-[0.2em] font-semibold text-white/90">Tracking VR de Nueva Generación</span>
             </div>
-          ))}
+
+            <!-- Main heading -->
+            <h1 class="font-display text-6xl md:text-7xl lg:text-8xl xl:text-[9rem] leading-[0.9] tracking-tight overflow-hidden">
+              <span class="block text-white">FULL BODY</span>
+              <span class="block text-white">TRACKING</span>
+              <span class="block bg-gradient-to-r from-[#EAD08E] via-[#F5E6B8] to-[#D4B870] bg-clip-text text-transparent">SIN LÍMITES.</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-white/60 max-w-xl leading-relaxed font-light">
+              Captura cada movimiento con precisión cinematográfica. Trackers Beekonz y Face Tracking diseñados para creadores serios de <span class="text-white font-medium">VRChat</span>.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href={PACKS[2].stripe} target="_blank" rel="noopener" class="group relative px-8 py-4 bg-[#EAD08E] rounded-full font-bold text-[#2E0F12] text-base transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(234,208,142,0.4)]">
+                Comprar Ahora
+                <svg class="inline-block ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+              <button class="font-semibold px-8 py-4 rounded-full bg-white/5 backdrop-blur-md border-white/20 hover:bg-white/10 text-white transition-all duration-300">
+                <svg class="inline-block mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                Cómo Funciona
+              </button>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/10">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-[#EAD08E]/10 border border-[#EAD08E]/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <div>
+                  <div class="text-2xl md:text-3xl font-display text-white leading-none">50,000+</div>
+                  <div class="text-xs uppercase tracking-widest text-white/40 mt-1">Horas Trackeadas</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-[#EAD08E]/10 border border-[#EAD08E]/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/></svg>
+                </div>
+                <div>
+                  <div class="text-2xl md:text-3xl font-display text-white leading-none">32</div>
+                  <div class="text-xs uppercase tracking-widest text-white/40 mt-1">Estados Enviados</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-[#EAD08E]/10 border border-[#EAD08E]/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div>
+                  <div class="text-2xl md:text-3xl font-display text-white leading-none">12</div>
+                  <div class="text-xs uppercase tracking-widest text-white/40 mt-1">Países</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-[#EAD08E]/10 border border-[#EAD08E]/20 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                </div>
+                <div>
+                  <div class="text-2xl md:text-3xl font-display text-white leading-none">100%</div>
+                  <div class="text-xs uppercase tracking-widest text-white/40 mt-1">Listo VRChat</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column - 3D rotating tracker -->
+          <div class="lg:col-span-5 relative hidden lg:block">
+            <div class="absolute -inset-12 rounded-full blur-3xl opacity-70 animate-pulse" style="background: radial-gradient(circle, rgba(234,208,142,0.55), transparent 70%);"></div>
+
+            <div class="relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-b from-white/5 to-black/40 backdrop-blur-sm h-[600px]">
+              <!-- 3D Model Container -->
+              <div class="absolute inset-0" id="hero-3d-model">
+                <img src="/images/hero-tracker-CAzRrDY8.jpg" alt="Beekonz Tracker 3D" class="w-full h-full object-contain drop-shadow-2xl" style="animation: float 6s ease-in-out infinite;" />
+              </div>
+
+              <!-- Badges -->
+              <div class="absolute top-5 left-5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 z-10">
+                <span class="text-xs uppercase tracking-widest font-semibold text-[#EAD08E]">● Modelo 3D</span>
+              </div>
+              <div class="absolute top-5 right-5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 z-10">
+                <span class="text-[10px] uppercase tracking-widest font-semibold text-white/80">LSM6DSV · 35-45h</span>
+              </div>
+              
+              <!-- Bottom card -->
+              <div class="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-black/60 backdrop-blur-xl border border-white/10 z-10">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="text-xs uppercase tracking-widest text-white/50">Beekonz Pro Kit</div>
+                    <div class="font-display text-2xl text-white mt-1">10 TRACKERS</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="text-xs text-white/50">Desde</div>
+                    <div class="font-display text-2xl text-[#EAD08E]">$8,999</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      
+
       <!-- Scroll indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-        <span class="text-xs text-white/40 uppercase tracking-widest">Scroll</span>
-        <div class="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center pt-2">
-          <div class="w-1.5 h-3 bg-[#EAD08E] rounded-full animate-pulse"></div>
-        </div>
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        <span class="text-[10px] uppercase tracking-[0.3em] text-white/40">Desliza</span>
+        <div class="w-px h-12 bg-gradient-to-b from-[#EAD08E] to-transparent"></div>
       </div>
     </section>
 
-    <!-- ═══════════ STATS - COUNTER ANIMATION ═══════════ -->
-    <section class="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#2E0F12]">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {STATS.map((s, i) => (
-            <div 
-              class="text-center p-8 rounded-3xl bg-white/[0.02] border border-white/5 backdrop-blur-sm transition-all duration-500 hover:border-[#EAD08E]/30 hover:bg-white/[0.04] hover:scale-105 group"
-              style={`animation: fade-in 0.6s ease-out forwards; animation-delay: ${i * 0.1}s; opacity: 0;`}
-            >
-              <p class="font-display text-4xl sm:text-5xl font-black text-[#EAD08E] group-hover:scale-110 transition-transform duration-300">{s.value}</p>
-              <p class="mt-2 text-sm text-white/50 uppercase tracking-wider">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ FEATURES - GLASSMORPHISM CARDS ═══════════ -->
+    <!-- ═══════════ FEATURES - PREMIUM CARDS ═══════════ -->
     <section id="tecnologia" class="py-32 bg-[#2E0F12]">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-20">
@@ -113,11 +151,8 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {FEATURES.map((f, i) => (
-            <div 
-              class="relative rounded-2xl border border-white/5 bg-white/[0.02] p-8 transition-all duration-500 hover:border-[#EAD08E]/30 hover:bg-white/[0.04] hover:scale-105 group"
-              style={`animation: fade-in 0.6s ease-out forwards; animation-delay: ${i * 0.1}s; opacity: 0;`}
-            >
+          {FEATURES.map((f) => (
+            <div class="relative rounded-2xl border border-white/5 bg-white/[0.02] p-8 transition-all duration-500 hover:border-[#EAD08E]/30 hover:bg-white/[0.04] hover:scale-105 group">
               <div class="absolute inset-0 rounded-2xl bg-gradient-to-b from-[#EAD08E]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div class="relative">
                 <p class="font-display text-3xl font-black text-[#EAD08E] group-hover:scale-110 transition-transform duration-300">{f.stat}</p>
@@ -130,8 +165,8 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
       </div>
     </section>
 
-    <!-- ═══════════ FACE TRACKING - ASYMMETRIC LAYOUT ═══════════ -->
-    <section id="face-tracking" class="relative overflow-hidden py-32 bg-[#0a0a0f]">
+    <!-- ═══════════ FACE TRACKING - ASYMMETRIC ═══════════ -->
+    <section id="face-tracking" class="relative overflow-hidden py-32 bg-[#050505]">
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(234,208,142,0.08)_0%,_transparent_70%)]"></div>
       <div class="relative max-w-7xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -152,22 +187,14 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
               ))}
             </ul>
             
-            <a
-              href={FACE_TRACKING.stripe}
-              target="_blank"
-              rel="noopener"
-              class="mt-10 inline-block px-10 py-4 bg-gradient-to-r from-[#EAD08E] to-[#D4B870] rounded-full font-bold text-[#2E0F12] text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(234,208,142,0.4)]"
-            >
+            <a href={FACE_TRACKING.stripe} target="_blank" rel="noopener" class="mt-10 inline-block px-10 py-4 bg-gradient-to-r from-[#EAD08E] to-[#D4B870] rounded-full font-bold text-[#2E0F12] text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(234,208,142,0.4)]">
               Comprar ahora
             </a>
           </div>
           
           <div class="grid grid-cols-2 gap-4">
-            {FACE_TRACKING.images.slice(0, 4).map((img, i) => (
-              <figure 
-                class="overflow-hidden rounded-2xl border border-white/10 transition-all duration-500 hover:border-[#EAD08E]/30 hover:scale-105 group"
-                style={`animation: fade-in 0.6s ease-out forwards; animation-delay: ${i * 0.1}s; opacity: 0;`}
-              >
+            {FACE_TRACKING.images.slice(0, 4).map((img) => (
+              <figure class="overflow-hidden rounded-2xl border border-white/10 transition-all duration-500 hover:border-[#EAD08E]/30 hover:scale-105 group">
                 <img src={img.src} alt={img.alt} loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-110" />
               </figure>
             ))}
@@ -176,7 +203,7 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
       </div>
     </section>
 
-    <!-- ═══════════ PACKS - PRICING WITH ANIMATIONS ═══════════ -->
+    <!-- ═══════════ PACKS - PREMIUM PRICING ═══════════ -->
     <section id="packs" class="py-32 bg-[#2E0F12]">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-20">
@@ -185,7 +212,7 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
         </div>
         
         <div class="grid gap-8 lg:grid-cols-3">
-          {PACKS.map((pack, i) => (
+          {PACKS.map((pack) => (
             <div
               class:list={[
                 "relative flex flex-col rounded-3xl border p-10 transition-all duration-500",
@@ -193,7 +220,6 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
                   ? "border-[#EAD08E]/50 bg-gradient-to-b from-[#EAD08E]/10 to-white/[0.02] lg:-my-6 lg:py-16 shadow-[0_0_50px_rgba(234,208,142,0.15)] hover:shadow-[0_0_80px_rgba(234,208,142,0.25)]"
                   : "border-white/5 bg-white/[0.02] hover:border-[#EAD08E]/30 hover:bg-white/[0.04]",
               ]}
-              style={`animation: fade-in 0.6s ease-out forwards; animation-delay: ${i * 0.1}s; opacity: 0;`}
             >
               {pack.recommended && (
                 <p class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#EAD08E] to-[#D4B870] px-6 py-1.5 text-sm font-bold text-[#2E0F12] uppercase">
@@ -231,8 +257,8 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
       </div>
     </section>
 
-    <!-- ═══════════ GALLERY - MASONRY WITH HOVER ═══════════ -->
-    <section class="py-32 bg-[#0a0a0f]">
+    <!-- ═══════════ GALLERY - MASONRY ═══════════ -->
+    <section class="py-32 bg-[#050505]">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
           <p class="text-sm font-semibold tracking-widest text-[#EAD08E] uppercase mb-4">Galería</p>
@@ -240,10 +266,7 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
           {GALLERY.map((g, i) => (
-            <figure 
-              class={["group overflow-hidden rounded-2xl border border-white/5 transition-all duration-500 hover:border-[#EAD08E]/30 hover:scale-105", i === 0 && "md:col-span-2 md:row-span-2"].filter(Boolean).join(" ")}
-              style={`animation: fade-in 0.6s ease-out forwards; animation-delay: ${i * 0.05}s; opacity: 0;`}
-            >
+            <figure class={["group overflow-hidden rounded-2xl border border-white/5 transition-all duration-500 hover:border-[#EAD08E]/30 hover:scale-105", i === 0 && "md:col-span-2 md:row-span-2"].filter(Boolean).join(" ")}>
               <img src={g.src} alt={g.caption} loading="lazy" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" />
               <figcaption class="bg-[#2E0F12] px-5 py-4 text-sm text-white/60">{g.caption}</figcaption>
             </figure>
@@ -252,7 +275,7 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
       </div>
     </section>
 
-    <!-- ═══════════ TESTIMONIALS - ANIMATED CARDS ═══════════ -->
+    <!-- ═══════════ TESTIMONIALS ═══════════ -->
     <section class="py-32 bg-[#2E0F12]">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
@@ -260,11 +283,8 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
           <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white">Lo que dicen <span class="bg-gradient-to-r from-[#EAD08E] to-[#D4B870] bg-clip-text text-transparent">nuestros usuarios</span></h2>
         </div>
         <div class="grid gap-8 md:grid-cols-3">
-          {TESTIMONIALS.map((t, i) => (
-            <blockquote 
-              class="flex flex-col rounded-2xl border border-white/5 bg-white/[0.02] p-10 transition-all duration-500 hover:border-[#EAD08E]/30 hover:bg-white/[0.04] hover:scale-105"
-              style={`animation: fade-in 0.6s ease-out forwards; animation-delay: ${i * 0.1}s; opacity: 0;`}
-            >
+          {TESTIMONIALS.map((t) => (
+            <blockquote class="flex flex-col rounded-2xl border border-white/5 bg-white/[0.02] p-10 transition-all duration-500 hover:border-[#EAD08E]/30 hover:bg-white/[0.04] hover:scale-105">
               <p class="text-yellow-400 text-xl">★★★★★</p>
               <p class="mt-6 flex-1 text-lg text-white/70 italic">"{t.quote}"</p>
               <footer class="mt-8 flex items-center gap-4">
@@ -280,19 +300,16 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
       </div>
     </section>
 
-    <!-- ═══════════ FAQ - INTERACTIVE ═══════════ -->
-    <section class="py-32 bg-[#0a0a0f]">
+    <!-- ═══════════ FAQ ═══════════ -->
+    <section class="py-32 bg-[#050505]">
       <div class="max-w-3xl mx-auto px-6">
         <div class="text-center mb-16">
           <p class="text-sm font-semibold tracking-widest text-[#EAD08E] uppercase mb-4">Preguntas Frecuentes</p>
           <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white">¿Tienes Dudas?</h2>
         </div>
         <div class="space-y-4">
-          {FAQ.map((f, i) => (
-            <details 
-              class="group rounded-xl border border-white/5 bg-white/[0.02] transition-all duration-300 hover:border-[#EAD08E]/30"
-              style={`animation: fade-in 0.6s ease-out forwards; animation-delay: ${i * 0.05}s; opacity: 0;`}
-            >
+          {FAQ.map((f) => (
+            <details class="group rounded-xl border border-white/5 bg-white/[0.02] transition-all duration-300 hover:border-[#EAD08E]/30">
               <summary class="flex cursor-pointer list-none items-center justify-between px-6 py-5 font-medium text-white text-lg [&::-webkit-details-marker]:hidden">
                 {f.q}
                 <span class="text-[#EAD08E] text-2xl transition group-open:rotate-45">+</span>
@@ -335,3 +352,14 @@ import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ
     <svg width="24" height="24" viewBox="0 0 24 24" fill="#2E0F12"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3c-.2.4-.5.9-.6 1.3a18.3 18.3 0 0 0-5.6 0C9 3.9 8.7 3.4 8.5 3a19.7 19.7 0 0 0-4.9 1.5A20.4 20.4 0 0 0 .1 18.1a19.9 19.9 0 0 0 6 3c.5-.6.9-1.3 1.3-2-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1 .4.7.8 1.4 1.3 2a19.8 19.8 0 0 0 6-3A20.3 20.3 0 0 0 20.3 4.4ZM8.1 15.3c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm7.8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
   </a>
 </Base>
+
+<style>
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
