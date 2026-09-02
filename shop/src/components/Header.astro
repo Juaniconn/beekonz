@@ -31,31 +31,31 @@ const SOCIALES = [
 ];
 ---
 
-<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500" id="main-header">
-  <nav class="flex items-center gap-2 px-3 py-2 bg-[#2E0F12]/95 backdrop-blur-xl rounded-full border border-white/10 shadow-lg">
+<header class="fixed top-0 left-0 right-0 z-50 navbar" id="main-header">
+  <div class="container flex items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-white/5 transition-all duration-300">
-      <img src="/images/Beekonz_White_Logo.png" alt="Beekonz" class="h-6 w-auto" />
+    <a href="/" class="flex items-center gap-2">
+      <img src="/images/Beekonz_White_Logo.png" alt="Beekonz" class="h-8 w-auto" />
     </a>
 
     <!-- Menu Button - Desktop -->
-    <button id="mega-menu-btn" class="hidden md:flex items-center gap-2 px-4 py-2 bg-[#2E0F12] rounded-full border border-white/10 hover:border-[#EAD08E]/50 transition-all duration-300 group">
+    <button id="mega-menu-btn" class="hidden md:flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg border border-white/10 hover:border-[#EAD08E]/50 transition-all duration-300 group">
       <div class="flex flex-col gap-1">
         <span class="block w-4 h-0.5 bg-white transition-all duration-300" id="line1"></span>
         <span class="block w-4 h-0.5 bg-white transition-all duration-300" id="line2"></span>
         <span class="block w-4 h-0.5 bg-white transition-all duration-300" id="line3"></span>
       </div>
-      <span class="text-white text-sm font-medium">menu</span>
+      <span class="text-white text-button-md">menu</span>
     </button>
 
     <!-- Social Icons -->
-    <div class="hidden md:flex items-center gap-1">
+    <div class="hidden md:flex items-center gap-2">
       {SOCIALES.slice(0, 2).map((social) => (
         <a
           href={social.href}
           target="_blank"
           rel="noopener noreferrer"
-          class="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-[#EAD08E] hover:border-[#EAD08E] hover:text-[#2E0F12] transition-all duration-300"
+          class="w-9 h-9 flex items-center justify-center rounded-full text-[#d4b8b9] hover:text-[#EAD08E] transition-colors"
           aria-label={social.name}
         >
           {social.icon === "discord" && (
@@ -69,21 +69,21 @@ const SOCIALES = [
     </div>
 
     <!-- Mobile Menu Button -->
-    <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-9 h-9 rounded-full bg-[#2E0F12] border border-white/10">
-      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-10 h-10 rounded-md text-white">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
     </button>
-  </nav>
+  </div>
 
   <!-- Mega Menu - Desktop -->
   <div id="mega-menu" class="absolute top-full left-1/2 -translate-x-1/2 mt-4 transition-all duration-500 hidden md:block opacity-0 -translate-y-4 pointer-events-none">
-    <div class="relative flex rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-[#2E0F12]/95 backdrop-blur-xl">
-      <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#2E0F12] rotate-45 rounded-sm border-l border-t border-white/10"></div>
+    <div class="relative flex rounded-2xl overflow-hidden shadow-2xl border border-[#EAD08E]/20 bg-[#2E0F12]/95 backdrop-blur-xl">
+      <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#2E0F12] rotate-45 rounded-sm border-l border-t border-[#EAD08E]/20"></div>
       
       <!-- Productos -->
       <div class="w-64 p-6 relative overflow-hidden border-r border-white/10">
         <div class="absolute inset-0 bg-gradient-to-br from-[#EAD08E]/10 to-transparent pointer-events-none"></div>
         <div class="relative">
-          <h3 class="text-[#EAD08E] text-sm font-medium uppercase tracking-wider mb-6">Productos</h3>
+          <h3 class="text-[#EAD08E] text-button-cap uppercase tracking-wider mb-6">Productos</h3>
           <ul class="space-y-3">
             {PRODUCTOS.map((item, idx) => (
               <li key={idx}>
@@ -91,7 +91,7 @@ const SOCIALES = [
                   href={item.href}
                   target={item.external ? "_blank" : undefined}
                   rel={item.external ? "noopener noreferrer" : undefined}
-                  class="flex items-center justify-between text-[#F8F4F5]/70 hover:text-[#EAD08E] text-sm py-1 group transition-colors"
+                  class="flex items-center justify-between text-[#d4b8b9] hover:text-[#EAD08E] text-body-md py-1 group transition-colors"
                 >
                   <span>{item.name}</span>
                   <svg class="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
@@ -106,13 +106,13 @@ const SOCIALES = [
       <div class="w-56 p-6 relative overflow-hidden border-r border-white/10">
         <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
         <div class="relative">
-          <h3 class="text-[#F8F4F5] text-sm font-medium uppercase tracking-wider mb-6">Quiénes Somos</h3>
+          <h3 class="text-white text-button-cap uppercase tracking-wider mb-6">Quiénes Somos</h3>
           <ul class="space-y-3">
             {ABOUT.map((item, idx) => (
               <li key={idx}>
                 <a
                   href={item.href}
-                  class="flex items-center gap-3 text-[#F8F4F5]/70 hover:text-[#F8F4F5] text-sm py-1 group transition-colors"
+                  class="flex items-center gap-3 text-[#d4b8b9] hover:text-white text-body-md py-1 group transition-colors"
                 >
                   <span>{item.name}</span>
                 </a>
@@ -126,13 +126,13 @@ const SOCIALES = [
       <div class="w-56 p-6 relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-bl from-[#EAD08E]/10 to-transparent pointer-events-none"></div>
         <div class="relative">
-          <h3 class="text-[#EAD08E] text-sm font-medium uppercase tracking-wider mb-6">Recursos</h3>
+          <h3 class="text-[#EAD08E] text-button-cap uppercase tracking-wider mb-6">Recursos</h3>
           <ul class="space-y-3">
             {RECURSOS.map((item, idx) => (
               <li key={idx}>
                 <a
                   href={item.href}
-                  class="flex items-center gap-3 text-[#F8F4F5]/70 hover:text-[#F8F4F5] text-sm py-1 group transition-colors"
+                  class="flex items-center gap-3 text-[#d4b8b9] hover:text-white text-body-md py-1 group transition-colors"
                 >
                   <span>{item.name}</span>
                 </a>
@@ -145,20 +145,15 @@ const SOCIALES = [
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="fixed inset-0 z-40 bg-[#2E0F12]/98 backdrop-blur-xl pt-20 px-6 overflow-y-auto hidden md:hidden">
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-[#2E0F12] pt-20 px-6 overflow-y-auto hidden md:hidden">
     <div class="flex flex-col space-y-6">
       <!-- Productos -->
       <div>
-        <h3 class="text-[#EAD08E] text-sm font-medium uppercase tracking-wider mb-4">Productos</h3>
+        <h3 class="text-[#EAD08E] text-button-cap uppercase tracking-wider mb-4">Productos</h3>
         <ul class="space-y-3 pl-2">
           {PRODUCTOS.map((item, idx) => (
             <li key={idx}>
-              <a
-                href={item.href}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noopener noreferrer" : undefined}
-                class="text-[#F8F4F5]/70 hover:text-[#EAD08E] text-sm flex items-center gap-2"
-              >
+              <a href={item.href} target={item.external ? "_blank" : undefined} rel={item.external ? "noopener noreferrer" : undefined} class="text-[#d4b8b9] hover:text-[#EAD08E] text-body-md flex items-center gap-2">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 {item.name}
               </a>
@@ -169,11 +164,11 @@ const SOCIALES = [
 
       <!-- Quiénes Somos -->
       <div>
-        <h3 class="text-[#F8F4F5] text-sm font-medium uppercase tracking-wider mb-4">Quiénes Somos</h3>
+        <h3 class="text-white text-button-cap uppercase tracking-wider mb-4">Quiénes Somos</h3>
         <ul class="space-y-3 pl-2">
           {ABOUT.map((item, idx) => (
             <li key={idx}>
-              <a href={item.href} class="text-[#F8F4F5]/70 hover:text-[#F8F4F5] text-sm flex items-center gap-3">
+              <a href={item.href} class="text-[#d4b8b9] hover:text-white text-body-md flex items-center gap-3">
                 {item.name}
               </a>
             </li>
@@ -183,11 +178,11 @@ const SOCIALES = [
 
       <!-- Recursos -->
       <div>
-        <h3 class="text-[#EAD08E] text-sm font-medium uppercase tracking-wider mb-4">Recursos</h3>
+        <h3 class="text-[#EAD08E] text-button-cap uppercase tracking-wider mb-4">Recursos</h3>
         <ul class="space-y-3 pl-2">
           {RECURSOS.map((item, idx) => (
             <li key={idx}>
-              <a href={item.href} class="text-[#F8F4F5]/70 hover:text-[#F8F4F5] text-sm flex items-center gap-3">
+              <a href={item.href} class="text-[#d4b8b9] hover:text-white text-body-md flex items-center gap-3">
                 {item.name}
               </a>
             </li>
@@ -197,7 +192,7 @@ const SOCIALES = [
 
       <!-- Social Links -->
       <div class="pt-4 border-t border-white/10">
-        <h3 class="text-[#F8F4F5]/50 text-sm font-medium uppercase tracking-wider mb-4">Síguenos</h3>
+        <h3 class="text-[#8b6b6e] text-button-cap uppercase tracking-wider mb-4">Síguenos</h3>
         <div class="flex items-center gap-3">
           {SOCIALES.map((social) => (
             <a
@@ -205,7 +200,7 @@ const SOCIALES = [
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-[#F8F4F5]/70 hover:bg-[#EAD08E] hover:text-[#2E0F12] transition-all duration-300"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-[#d4b8b9] hover:bg-[#EAD08E] hover:text-[#2E0F12] transition-all duration-300"
             >
               {social.icon === "discord" && (
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
@@ -222,6 +217,13 @@ const SOCIALES = [
             </a>
           ))}
         </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="pt-4">
+        <a href="https://buy.stripe.com/28EfZi9HTcAlfIX73v7g40p" target="_blank" rel="noopener noreferrer" class="btn-primary w-full text-center">
+          Comprar Ahora
+        </a>
       </div>
     </div>
   </div>
