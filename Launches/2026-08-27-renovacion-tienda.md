@@ -41,7 +41,7 @@ Renovación total de la tienda en línea Beekonz. Se migró de una SPA React/Vit
 - [ ] Integrar Stripe Checkout o Payment Links dinámicos
 - [ ] Crear tablas en base de datos (suscriptores, órdenes)
 - [ ] Agregar página de seguimiento con ClickUp embed
-- [ ] Rediseñar hero con modelo 3D interactivo
+- [x] Rediseñar hero con modelo 3D interactivo → ver [[2026-08-31-hero-modelo-3d-real]]
 - [ ] Agregar sección de testimonios dinámica
 - [ ] Configurar analytics
 
