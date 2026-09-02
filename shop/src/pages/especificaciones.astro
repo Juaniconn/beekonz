@@ -2,80 +2,202 @@
 import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { FEATURES, FACE_TRACKING } from "../data/store";
 ---
 
-<Base title="Especificaciones Técnicas | Beekonz" description="Especificaciones técnicas de los trackers Beekonz: sensor LSM6DSV, batería, peso, latencia y más.">
+<Base title="Especificaciones Técnicas | Beekonz" description="Especificaciones técnicas de los trackers Beekonz: sensor LSM6DSV, batería 35-45h, peso 10g, latencia 25-35ms, nRF52840 y Face Tracking con Babble.">
   <Header />
-  <main class="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:px-6">
-    <p class="text-center text-xs font-semibold tracking-widest text-bee-400 uppercase">Recursos</p>
-    <h1 class="font-display mt-3 text-center text-3xl font-bold sm:text-5xl">Especificaciones <span class="text-gradient-bee">Técnicas</span></h1>
 
-    <div class="mt-12 space-y-8 text-neutral-300">
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-2xl font-bold text-white">Beekonz Smols LSM6DSV</h2>
-        <div class="mt-6 grid gap-4 sm:grid-cols-2">
-          <div class="rounded-lg border border-white/5 p-4">
-            <p class="text-xs text-neutral-500">Sensor</p>
-            <p class="mt-1 font-semibold">LSM6DSV (IMU 6-axis)</p>
-          </div>
-          <div class="rounded-lg border border-white/5 p-4">
-            <p class="text-xs text-neutral-500">Peso</p>
-            <p class="mt-1 font-semibold">~10 g</p>
-          </div>
-          <div class="rounded-lg border border-white/5 p-4">
-            <p class="text-xs text-neutral-500">Batería</p>
-            <p class="mt-1 font-semibold">401230, 3.7V, 115 mAh</p>
-          </div>
-          <div class="rounded-lg border border-white/5 p-4">
-            <p class="text-xs text-neutral-500">Autonomía</p>
-            <p class="mt-1 font-semibold">35–45 h</p>
-          </div>
-          <div class="rounded-lg border border-white/5 p-4">
-            <p class="text-xs text-neutral-500">Latencia</p>
-            <p class="mt-1 font-semibold">25–35 ms</p>
-          </div>
-          <div class="rounded-lg border border-white/5 p-4">
-            <p class="text-xs text-neutral-500">Conectividad</p>
-            <p class="mt-1 font-semibold">nRF52840 USB Dongle</p>
-          </div>
-          <div class="rounded-lg border border-white/5 p-4">
-            <p class="text-xs text-neutral-500">Firmware</p>
-            <p class="mt-1 font-semibold">Basado en SlimeVR</p>
-          </div>
-          <div class="rounded-lg border border-white/5 p-4">
-            <p class="text-xs text-neutral-500">Compatibilidad</p>
-            <p class="mt-1 font-semibold">VRChat, SteamVR, NeosVR, ChilloutVR</p>
+  <main>
+    <!-- Hero -->
+    <section class="bg-[#2E0F12] text-white pt-32 pb-20">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-[#EAD08E] text-button-cap uppercase tracking-widest mb-4">Recursos Técnicos</p>
+        <h1 class="text-display-xxl font-display font-bold mb-6">
+          Especificaciones <span class="text-[#EAD08E]">Técnicas</span>
+        </h1>
+        <p class="text-body-lg text-[#d4b8b9] max-w-2xl mx-auto">
+          Conoce las especificaciones completas de nuestros trackers y el sistema de Face Tracking.
+        </p>
+      </div>
+    </section>
+
+    <!-- Trackers Specs -->
+    <section class="section-light">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-display-lg font-display font-bold text-[#2E0F12] mb-4">
+            Beekonz Smols LSM6DSV
+          </h2>
+          <p class="text-body-lg text-[#8b6b6e] max-w-2xl mx-auto">
+            Trackers de alta precisión con sensor LSM6DSV, ultraligeros y con autonomía prolongada.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          {FEATURES.map((feature) => (
+            <div class="card text-center">
+              <p class="text-[#EAD08E] text-display-md font-display font-bold mb-2">{feature.stat}</p>
+              <h3 class="text-heading-lg text-[#2E0F12] mb-2">{feature.title}</h3>
+              <p class="text-body-md text-[#8b6b6e]">{feature.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Specs Card -->
+    <section class="section-soft">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <div class="card">
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-6">
+              Ficha Técnica Completa
+            </h2>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex justify-between items-center py-3 border-b border-[#EAD08E]/30">
+                  <span class="text-body-md text-[#8b6b6e]">Sensor</span>
+                  <span class="text-body-strong text-[#2E0F12]">LSM6DSV (IMU 6-axis)</span>
+                </div>
+                <div class="flex justify-between items-center py-3 border-b border-[#EAD08E]/30">
+                  <span class="text-body-md text-[#8b6b6e]">Peso</span>
+                  <span class="text-body-strong text-[#2E0F12]">~10 g</span>
+                </div>
+                <div class="flex justify-between items-center py-3 border-b border-[#EAD08E]/30">
+                  <span class="text-body-md text-[#8b6b6e]">Batería</span>
+                  <span class="text-body-strong text-[#2E0F12]">401230, 3.7V, 115 mAh</span>
+                </div>
+                <div class="flex justify-between items-center py-3 border-b border-[#EAD08E]/30">
+                  <span class="text-body-md text-[#8b6b6e]">Autonomía</span>
+                  <span class="text-body-strong text-[#2E0F12]">35–45 h</span>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="flex justify-between items-center py-3 border-b border-[#EAD08E]/30">
+                  <span class="text-body-md text-[#8b6b6e]">Latencia</span>
+                  <span class="text-body-strong text-[#2E0F12]">25–35 ms</span>
+                </div>
+                <div class="flex justify-between items-center py-3 border-b border-[#EAD08E]/30">
+                  <span class="text-body-md text-[#8b6b6e]">Conectividad</span>
+                  <span class="text-body-strong text-[#2E0F12]">nRF52840 USB Dongle</span>
+                </div>
+                <div class="flex justify-between items-center py-3 border-b border-[#EAD08E]/30">
+                  <span class="text-body-md text-[#8b6b6e]">Firmware</span>
+                  <span class="text-body-strong text-[#2E0F12]">Basado en SlimeVR</span>
+                </div>
+                <div class="flex justify-between items-center py-3 border-b border-[#EAD08E]/30">
+                  <span class="text-body-md text-[#8b6b6e]">Compatibilidad</span>
+                  <span class="text-body-strong text-[#2E0F12]">VRChat, SteamVR, NeosVR</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-2xl font-bold text-white">Beekonz Face Tracking</h2>
-        <div class="mt-6 grid gap-4 sm:grid-cols-2">
-          <div class="rounded-lg border border-white/5 p-4">
-            <p class="text-xs text-neutral-500">Tipo</p>
-            <p class="mt-1 font-semibold">Tracking facial USB-C</p>
+    <!-- Face Tracking -->
+    <section class="section-light">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-center mb-12">
+            <span class="badge mb-4">Nuevo</span>
+            <h2 class="text-display-lg font-display font-bold text-[#2E0F12] mb-4">
+              {FACE_TRACKING.name}
+            </h2>
+            <p class="text-body-lg text-[#8b6b6e]">
+              {FACE_TRACKING.description}
+            </p>
           </div>
-          <div class="rounded-lg border border-white/5 p-4">
-            <p class="text-xs text-neutral-500">Software</p>
-            <p class="mt-1 font-semibold">Babble</p>
+
+          <div class="grid sm:grid-cols-2 gap-6 mb-8">
+            <div class="card">
+              <h3 class="text-heading-lg text-[#2E0F12] mb-4">Especificaciones</h3>
+              <div class="space-y-3">
+                <div class="flex justify-between items-center py-2 border-b border-[#EAD08E]/30">
+                  <span class="text-body-md text-[#8b6b6e]">Tipo</span>
+                  <span class="text-body-strong text-[#2E0F12]">Tracking facial USB-C</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-[#EAD08E]/30">
+                  <span class="text-body-md text-[#8b6b6e]">Software</span>
+                  <span class="text-body-strong text-[#2E0F12]">Babble</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-[#EAD08E]/30">
+                  <span class="text-body-md text-[#8b6b6e]">Conexión</span>
+                  <span class="text-body-strong text-[#2E0F12]">USB-C a PC</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-[#EAD08E]/30">
+                  <span class="text-body-md text-[#8b6b6e]">Compatibilidad</span>
+                  <span class="text-body-strong text-[#2E0F12]">VRChat</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="text-heading-lg text-[#2E0F12] mb-4">Incluye</h3>
+              <ul class="space-y-3">
+                {FACE_TRACKING.includes.map((item) => (
+                  <li class="flex items-center gap-3 text-body-md text-[#2E0F12]">
+                    <span class="w-2 h-2 rounded-full bg-[#EAD08E]"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div class="rounded-lg border border-white/5 p-4">
-            <p class="text-xs text-neutral-500">Conexión</p>
-            <p class="mt-1 font-semibold">USB-C a PC</p>
-          </div>
-          <div class="rounded-lg border border-white/5 p-4">
-            <p class="text-xs text-neutral-500">Compatibilidad</p>
-            <p class="mt-1 font-semibold">VRChat</p>
+
+          <div class="grid sm:grid-cols-3 gap-4">
+            {FACE_TRACKING.features.map((feature) => (
+              <div class="card text-center">
+                <span class="text-2xl mb-2 block">{feature.icon}</span>
+                <h4 class="text-heading-lg text-[#2E0F12] mb-1">{feature.title}</h4>
+                <p class="text-caption text-[#8b6b6e]">{feature.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-2xl font-bold text-white">Dongle nRF52840</h2>
-        <p class="mt-4">Cada pack incluye un dongle Holyiot nRF52840 optimizado para bajo consumo y máxima estabilidad. Cada tracker se conecta por un canal dedicado, eliminando interferencias.</p>
+    <!-- Dongle -->
+    <section class="section-soft">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4">
+            Dongle Holyiot nRF52840
+          </h2>
+          <p class="text-body-lg text-[#8b6b6e] mb-6">
+            Cada pack incluye un dongle Holyiot nRF52840 optimizado para bajo consumo y máxima estabilidad. Cada tracker se conecta por un canal dedicado, eliminando interferencias.
+          </p>
+          <div class="card inline-block">
+            <div class="flex items-center gap-4">
+              <span class="text-3xl">📡</span>
+              <div class="text-left">
+                <p class="text-body-strong text-[#2E0F12]">Incluido en todos los packs</p>
+                <p class="text-caption text-[#8b6b6e]">Canal dedicado por tracker · Bajo consumo</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-display-md font-display font-bold mb-4">
+          ¿Listo para la experiencia <span class="text-[#EAD08E]">Full Body Tracking</span>?
+        </h2>
+        <p class="text-body-lg text-[#d4b8b9] mb-8 max-w-xl mx-auto">
+          Elige tu pack y comienza a trackear con la mejor precisión.
+        </p>
+        <a href="https://buy.stripe.com/28EfZi9HTcAlfIX73v7g40p" target="_blank" rel="noopener noreferrer" class="btn-primary text-button-md">
+          Comprar Ahora
+        </a>
+      </div>
+    </section>
   </main>
+
   <Footer />
 </Base>
