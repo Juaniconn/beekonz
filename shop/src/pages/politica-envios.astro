@@ -4,41 +4,112 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Base title="Política de Envíos | Beekonz" description="Política de envíos de Beekonz. Tiempos de entrega, costos y cobertura.">
+<Base title="Política de Envíos | Beekonz" description="Política de envíos de Beekonz. Tiempos de entrega, costos, cobertura y paqueterías.">
   <Header />
-  <main class="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:px-6">
-    <p class="text-center text-xs font-semibold tracking-widest text-bee-400 uppercase">Políticas</p>
-    <h1 class="font-display mt-3 text-center text-3xl font-bold sm:text-5xl">Política de <span class="text-gradient-bee">Envíos</span></h1>
 
-    <div class="mt-12 space-y-8 text-neutral-300">
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-xl font-bold text-white">1. Cobertura</h2>
-        <p class="mt-4">Enviamos a toda la República Mexicana (32 estados) y a más de 12 países internacionalmente. Nuestro centro logístico está en Ciudad de México.</p>
+  <main class="bg-white">
+    <!-- Hero -->
+    <section class="bg-[#2E0F12] text-white pt-32 pb-16">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-[#EAD08E] text-button-cap uppercase tracking-widest mb-4">Políticas</p>
+        <h1 class="text-display-xxl font-display font-bold mb-4">
+          Política de <span class="text-[#EAD08E]">Envíos</span>
+        </h1>
+        <p class="text-body-lg text-[#d4b8b9] max-w-2xl mx-auto">
+          Información sobre cobertura, tiempos y costos de envío.
+        </p>
       </div>
+    </section>
 
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-xl font-bold text-white">2. Tiempos de entrega</h2>
-        <ul class="mt-4 list-inside list-disc space-y-2">
-          <li><strong>Nacional:</strong> 2-5 días hábiles</li>
-          <li><strong>Internacional:</strong> 5-7 días hábiles</li>
-        </ul>
-      </div>
+    <!-- Content -->
+    <section class="py-16">
+      <div class="max-w-3xl mx-auto px-4">
+        <div class="space-y-10">
+          <div>
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
+              1. Cobertura
+            </h2>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
+              Enviamos a toda la <strong>República Mexicana (32 estados)</strong> y a más de <strong>12 países</strong> internacionalmente, incluyendo Estados Unidos, España, Argentina, Colombia, Chile, Perú y más.
+            </p>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
+              Nuestro centro logístico está ubicado en Ciudad de México, desde donde despachamos todos los pedidos.
+            </p>
+          </div>
 
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-xl font-bold text-white">3. Costo de envío</h2>
-        <p class="mt-4">El costo de envío varía según el destino y se muestra al momento de pagar. En México, el envío puede ser gratuito dependiendo del paquete o promociones activas.</p>
-      </div>
+          <div>
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
+              2. Tiempos de Entrega
+            </h2>
+            <div class="bg-[#F8F4F5] rounded-xl p-6 mb-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <p class="text-body-strong text-[#2E0F12] mb-1">Nacional (México)</p>
+                  <p class="text-body-md text-[#8b6b6e]">2-5 días hábiles</p>
+                </div>
+                <div>
+                  <p class="text-body-strong text-[#2E0F12] mb-1">Internacional</p>
+                  <p class="text-body-md text-[#8b6b6e]">5-7 días hábiles</p>
+                </div>
+              </div>
+            </div>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
+              Los tiempos de entrega son estimados y comienzan a contar desde que el pedido es despachado. Pueden variar por circunstancias externas como clima, aduanas o contingencias.
+            </p>
+          </div>
 
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-xl font-bold text-white">4. Número de rastreo</h2>
-        <p class="mt-4">Cada envío incluye número de rastreo. Recibirás un correo con el tracking una vez que tu pedido salga de nuestro taller. También puedes consultar el estado en la sección de <a href="/seguimiento-pedidos" class="text-bee-400 hover:underline">Seguimiento de Pedidos</a>.</p>
-      </div>
+          <div>
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
+              3. Costo de Envío
+            </h2>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
+              El costo de envío varía según el destino, peso del paquete y se muestra de forma transparente al momento de pagar.
+            </p>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
+              En México, el envío puede ser <strong>gratuito</strong> dependiendo del paquete adquirido o promociones activas. Las promociones se aplican automáticamente al carrito.
+            </p>
+          </div>
 
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-xl font-bold text-white">5. Paqueterías</h2>
-        <p class="mt-4">Trabajamos con DHL y FedEx para envíos nacionales e internacionales. No nos hacemos responsables por retrasos causados por la paquetería o aduanas.</p>
+          <div>
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
+              4. Número de Rastreo
+            </h2>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
+              Cada envío incluye un <strong>número de rastreo</strong> que te permitirá conocer la ubicación de tu paquete en tiempo real.
+            </p>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
+              Recibirás un correo electrónico con el tracking una vez que tu pedido salga de nuestro taller. También puedes consultar el estado en la sección de <a href="/seguimiento-pedidos" class="text-[#2E0F12] underline hover:text-[#EAD08E]">Seguimiento de Pedidos</a>.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
+              5. Paqueterías
+            </h2>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
+              Trabajamos con <strong>DHL</strong> y <strong>FedEx</strong> para envíos nacionales e internacionales, garantizando un servicio confiable y profesional.
+            </p>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
+              No nos hacemos responsables por retrasos causados por la paquetería, aduanas o situaciones de fuerza mayor. Sin embargo, nos comprometemos a dar seguimiento a cualquier incidencia que reportes.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
+              6. Dirección Incorrecta
+            </h2>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
+              Es responsabilidad del cliente proporcionar una dirección de envío correcta y completa. Si el paquete es devuelto por dirección incorrecta, el costo de reenvío correrá por cuenta del cliente.
+            </p>
+          </div>
+
+          <p class="text-caption text-[#8b6b6e] pt-8 border-t border-[#EAD08E]/30">
+            Última actualización: Septiembre 2025
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
+
   <Footer />
 </Base>

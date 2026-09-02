@@ -6,41 +6,110 @@ import Footer from "../components/Footer.astro";
 
 <Base title="Seguimiento de Pedidos | Beekonz" description="Consulta el estado de tu pedido en tiempo real, desde fabricación hasta entrega.">
   <Header />
-  <main class="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:px-6">
-    <p class="text-center text-xs font-semibold tracking-widest text-bee-400 uppercase">Transparencia Total</p>
-    <h1 class="font-display mt-3 text-center text-3xl font-bold sm:text-5xl">Seguimiento de <span class="text-gradient-bee">Pedidos</span></h1>
-    <p class="mx-auto mt-4 max-w-xl text-center text-neutral-400">
-      Consulta el estado de tu pedido en tiempo real, desde fabricación hasta entrega. En Beekonz creemos en la transparencia total: aquí visualizas el estado real de tu pedido directamente desde nuestro sistema interno de seguimiento.
-    </p>
 
-    <div class="mt-12 overflow-hidden rounded-2xl border border-white/10 bg-hive-900/50" style="min-height: 600px;">
-      <!-- Embed de ClickUp -->
-      <iframe
-        class="clickup-embed"
-        src="https://sharing.clickup.com/9017841418/b/h/8cr2nra-517/7ae5e7a78615cff"
-        onwheel=""
-        width="100%"
-        height="700px"
-        style="background: transparent; border: 1px solid #ccc;"
-        loading="lazy"
-        title="Sistema de seguimiento Beekonz"
-      >
-      </iframe>
-    </div>
+  <main>
+    <!-- Hero -->
+    <section class="bg-[#2E0F12] text-white pt-32 pb-16">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-[#EAD08E] text-button-cap uppercase tracking-widest mb-4">Transparencia Total</p>
+        <h1 class="text-display-xxl font-display font-bold mb-4">
+          Seguimiento de <span class="text-[#EAD08E]">Pedidos</span>
+        </h1>
+        <p class="text-body-lg text-[#d4b8b9] max-w-2xl mx-auto">
+          Consulta el estado de tu pedido en tiempo real, desde fabricación hasta entrega. En Beekonz creemos en la transparencia total.
+        </p>
+      </div>
+    </section>
 
-    <div class="mt-8 rounded-xl border border-white/8 bg-hive-900/50 p-6 text-center">
-      <p class="text-sm text-neutral-300">
-        Si tu pedido no aparece, contáctanos directamente para ayudarte.
-      </p>
-      <a
-        href="https://discord.gg/ekr3ERWJQ6"
-        target="_blank"
-        rel="noopener"
-        class="mt-4 inline-block rounded-full border border-bee-400/40 px-6 py-2.5 font-display font-semibold text-bee-400 transition hover:bg-bee-400 hover:text-hive-950"
-      >
-        ¿Tienes dudas sobre tu pedido?
-      </a>
-    </div>
+    <!-- Instructions -->
+    <section class="section-soft">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <div class="card mb-8">
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4">
+              ¿Cómo funciona?
+            </h2>
+            <div class="grid sm:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="w-12 h-12 rounded-full bg-[#EAD08E] flex items-center justify-center mx-auto mb-3">
+                  <span class="text-[#2E0F12] font-bold text-lg">1</span>
+                </div>
+                <h3 class="text-heading-lg text-[#2E0F12] mb-1">Busca tu pedido</h3>
+                <p class="text-caption text-[#8b6b6e]">Encuentra tu número de orden en el correo de confirmación.</p>
+              </div>
+              <div class="text-center">
+                <div class="w-12 h-12 rounded-full bg-[#EAD08E] flex items-center justify-center mx-auto mb-3">
+                  <span class="text-[#2E0F12] font-bold text-lg">2</span>
+                </div>
+                <h3 class="text-heading-lg text-[#2E0F12] mb-1">Ubica el estado</h3>
+                <p class="text-caption text-[#8b6b6e]">Visualiza el estado actual en el panel de abajo.</p>
+              </div>
+              <div class="text-center">
+                <div class="w-12 h-12 rounded-full bg-[#EAD08E] flex items-center justify-center mx-auto mb-3">
+                  <span class="text-[#2E0F12] font-bold text-lg">3</span>
+                </div>
+                <h3 class="text-heading-lg text-[#2E0F12] mb-1">Recibe tu tracker</h3>
+                <p class="text-caption text-[#8b6b6e]">Te notificamos cuando esté en camino.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ClickUp Embed -->
+    <section class="section-light">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="rounded-2xl border border-[#EAD08E]/30 overflow-hidden bg-white shadow-lg">
+            <div class="bg-[#2E0F12] px-6 py-4 flex items-center gap-3">
+              <div class="flex gap-2">
+                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                <span class="w-3 h-3 rounded-full bg-green-500"></span>
+              </div>
+              <p class="text-body-md text-[#d4b8b9] ml-2">Sistema de Seguimiento Beekonz</p>
+            </div>
+            <iframe
+              class="clickup-embed"
+              src="https://sharing.clickup.com/9017841418/b/h/8cr2nra-517/7ae5e7a78615cff"
+              onwheel=""
+              width="100%"
+              height="700px"
+              style="background: #ffffff; border: none;"
+              loading="lazy"
+              title="Sistema de seguimiento Beekonz"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="section-soft">
+      <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto text-center">
+          <div class="card">
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4">
+              ¿Tienes dudas sobre tu pedido?
+            </h2>
+            <p class="text-body-lg text-[#8b6b6e] mb-6">
+              Si tu pedido no aparece en el sistema o necesitas ayuda adicional, nuestro equipo está disponible 24/7.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="https://discord.gg/ekr3ERWJQ6" target="_blank" rel="noopener noreferrer" class="btn-primary text-button-md">
+                Contactar en Discord
+              </a>
+              <a href="mailto:redes@beekonz.shop" class="btn-secondary text-button-md">
+                Enviar Email
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
   <Footer />
 </Base>

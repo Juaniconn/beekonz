@@ -6,50 +6,106 @@ import Footer from "../components/Footer.astro";
 
 <Base title="Garantía y Reembolsos | Beekonz" description="Política de garantía y reembolsos de Beekonz. 6 meses de garantía contra defectos de fabricación.">
   <Header />
-  <main class="mx-auto max-w-4xl px-4 pt-32 pb-24 sm:px-6">
-    <p class="text-center text-xs font-semibold tracking-widest text-bee-400 uppercase">Políticas</p>
-    <h1 class="font-display mt-3 text-center text-3xl font-bold sm:text-5xl">Garantía y <span class="text-gradient-bee">Reembolsos</span></h1>
 
-    <div class="mt-12 space-y-8 text-neutral-300">
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-2xl font-bold text-white">Garantía de 6 meses</h2>
-        <p class="mt-4">Todos nuestros productos tienen garantía de 6 meses contra defectos de fabricación. Si tu tracker presenta un problema durante este período, lo reparamos o reemplazamos sin costo adicional.</p>
-        <p class="mt-4">La garantía cubre:</p>
-        <ul class="mt-3 list-inside list-disc space-y-2">
-          <li>Fallas en el sensor o componentes internos</li>
-          <li>Problemas de batería (duración menor a la especificada)</li>
-          <li>Defectos en el ensamblaje</li>
-          <li>Fallas en el firmware</li>
-        </ul>
+  <main class="bg-white">
+    <!-- Hero -->
+    <section class="bg-[#2E0F12] text-white pt-32 pb-16">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-[#EAD08E] text-button-cap uppercase tracking-widest mb-4">Políticas</p>
+        <h1 class="text-display-xxl font-display font-bold mb-4">
+          Garantía y <span class="text-[#EAD08E]">Reembolsos</span>
+        </h1>
+        <p class="text-body-lg text-[#d4b8b9] max-w-2xl mx-auto">
+          6 meses de garantía contra defectos de fabricación en todos nuestros productos.
+        </p>
       </div>
+    </section>
 
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-2xl font-bold text-white">¿Qué NO cubre la garantía?</h2>
-        <ul class="mt-4 list-inside list-disc space-y-2">
-          <li>Daños por agua o humedad</li>
-          <li>Golpes o caídas</li>
-          <li>Modificaciones no autorizadas</li>
-          <li>Uso de cargadores no certificados</li>
-          <li>Desgaste normal por uso</li>
-        </ul>
-      </div>
+    <!-- Content -->
+    <section class="py-16">
+      <div class="max-w-3xl mx-auto px-4">
+        <div class="space-y-10">
+          <div>
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
+              1. Garantía de 6 Meses
+            </h2>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
+              Todos nuestros productos tienen una <strong>garantía de 6 meses</strong> contra defectos de fabricación a partir de la fecha de entrega. Si tu tracker presenta un problema cubierto por la garantía durante este período, lo reparamos o reemplazamos sin costo adicional.
+            </p>
+            <h3 class="text-heading-lg text-[#2E0F12] mb-3 mt-6">La garantía cubre:</h3>
+            <ul class="list-disc pl-6 space-y-2 text-body-md text-[#4A2C2C]">
+              <li>Fallas en el sensor o componentes internos</li>
+              <li>Problemas de batería (duración menor a la especificada)</li>
+              <li>Defectos en el ensamblaje</li>
+              <li>Fallas en el firmware</li>
+              <li>Problemas de conectividad con el dongle incluido</li>
+            </ul>
+          </div>
 
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-2xl font-bold text-white">Proceso de garantía</h2>
-        <ol class="mt-4 list-inside list-decimal space-y-3">
-          <li>Contáctanos en Discord con tu número de orden y evidencia del problema (foto/video).</li>
-          <li>Evaluamos el caso en 24-48 horas.</li>
-          <li>Si aplica, te enviamos un reemplazo o lo reparamos en nuestro taller.</li>
-          <li>El envío de regreso corre por nuestra cuenta si el producto está defectuoso.</li>
-        </ol>
-      </div>
+          <div>
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
+              2. ¿Qué NO Cubre la Garantía?
+            </h2>
+            <ul class="list-disc pl-6 space-y-2 text-body-md text-[#4A2C2C]">
+              <li>Daños por agua, humedad o exposición a líquidos</li>
+              <li>Golpes, caídas o maltrato físico</li>
+              <li>Modificaciones no autorizadas (abrir el dispositivo, soldar, etc.)</li>
+              <li>Uso de cargadores no certificados o voltajes incorrectos</li>
+              <li>Desgaste normal por uso (rayones, decoloración)</li>
+              <li>Daños causados por terceros o software malicioso</li>
+            </ul>
+          </div>
 
-      <div class="rounded-2xl border border-white/10 bg-hive-900/50 p-8">
-        <h2 class="font-display text-2xl font-bold text-white">Reembolsos</h2>
-        <p class="mt-4">Aceptamos solicitudes de reembolso dentro de los primeros 7 días si el producto llega defectuoso. No aceptamos devoluciones por cambio de opinión una vez abierto el producto.</p>
-        <p class="mt-4">Para solicitar un reembolso, contáctanos en Discord con tu orden y evidencia del problema.</p>
+          <div>
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
+              3. Proceso de Garantía
+            </h2>
+            <ol class="list-decimal pl-6 space-y-3 text-body-md text-[#4A2C2C]">
+              <li><strong>Contáctanos</strong> en Discord con tu número de orden y evidencia del problema (foto o video).</li>
+              <li><strong>Evaluamos el caso</strong> en un plazo de 24-48 horas hábiles.</li>
+              <li><strong>Si aplica</strong>, te enviamos un reemplazo nuevo o reparamos tu unidad en nuestro taller.</li>
+              <li><strong>El envío de regreso</strong> corre por nuestra cuenta si el producto está defectuoso.</li>
+            </ol>
+          </div>
+
+          <div>
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
+              4. Reembolsos
+            </h2>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
+              Aceptamos solicitudes de reembolso dentro de los <strong>primeros 7 días</strong> después de la entrega si el producto llega defectuoso o no funciona correctamente.
+            </p>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
+              Para solicitar un reembolso:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 text-body-md text-[#4A2C2C]">
+              <li>Contacta a nuestro equipo en Discord</li>
+              <li>Proporciona tu número de pedido</li>
+              <li>Adjunta fotos o videos del problema</li>
+              <li>Describe brevemente el defecto</li>
+            </ul>
+            <p class="text-body-md text-[#4A2C2C] leading-relaxed mt-4">
+              <strong>No aceptamos devoluciones por cambio de opinión una vez abierto el producto.</strong> Si el producto está sellado y sin abrir, puedes solicitar devolución dentro de los primeros 7 días.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
+              5. Contacto para Garantías
+            </h2>
+            <div class="bg-[#F8F4F5] rounded-xl p-6 space-y-2">
+              <p class="text-body-md text-[#2E0F12]"><strong>Discord:</strong> <a href="https://discord.gg/ekr3ERWJQ6" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#EAD08E]">https://discord.gg/ekr3ERWJQ6</a></p>
+              <p class="text-body-md text-[#2E0F12]"><strong>Email:</strong> <a href="mailto:redes@beekonz.shop" class="underline hover:text-[#EAD08E]">redes@beekonz.shop</a></p>
+            </div>
+          </div>
+
+          <p class="text-caption text-[#8b6b6e] pt-8 border-t border-[#EAD08E]/30">
+            Última actualización: Septiembre 2025
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
   </main>
+
   <Footer />
 </Base>
