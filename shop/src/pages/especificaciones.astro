@@ -2,101 +2,98 @@
 import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { FEATURES } from "../data/store";
 ---
 
-<Base title="Especificaciones Técnicas | Beekonz Trackers">
+<Base title="Especificaciones Técnicas | Beekonz">
   <Header />
 
-  <section class="pt-40 pb-20 bg-[#050505]">
-    <div class="container max-w-3xl">
-      <p class="caption text-[#EAD08E] tracking-widest uppercase mb-4">Especificaciones</p>
-      <h1 class="display-lg text-white mb-6">Detalles Técnicos</h1>
-      <p class="body-lg text-[#a0a0a0]">Cada tracker Beekonz está diseñado con componentes de grado industrial para ofrecer la mejor experiencia de Full Body Tracking.</p>
-    </div>
-  </section>
-
-  <!-- Specs Grid -->
-  <section class="section bg-white">
-    <div class="container">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {FEATURES.map((f) => (
-          <div class="rounded-xl border border-[#050505]/10 p-6">
-            <p class="display-md text-[#2E0F12] mb-2">{f.stat}</p>
-            <h3 class="heading-lg text-[#050505] mb-2">{f.title}</h3>
-            <p class="body-sm text-[#555555]">{f.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Detailed Specs -->
-  <section class="section bg-[#050505]">
-    <div class="container">
-      <div class="grid md:grid-cols-2 gap-16">
-        <div class="space-y-8">
-          <h2 class="display-lg text-white">Hardware</h2>
-          <div class="space-y-4">
-            <div class="flex justify-between py-3 border-b border-white/10">
-              <span class="body-md text-[#a0a0a0]">Sensor</span>
-              <span class="body-md text-white font-medium">LSM6DSV (6 ejes)</span>
-            </div>
-            <div class="flex justify-between py-3 border-b border-white/10">
-              <span class="body-md text-[#a0a0a0]">Microcontrolador</span>
-              <span class="body-md text-white font-medium">nRF52840</span>
-            </div>
-            <div class="flex justify-between py-3 border-b border-white/10">
-              <span class="body-md text-[#a0a0a0]">Peso</span>
-              <span class="body-md text-white font-medium">~10g</span>
-            </div>
-            <div class="flex justify-between py-3 border-b border-white/10">
-              <span class="body-md text-[#a0a0a0]">Batería</span>
-              <span class="body-md text-white font-medium">35-45 horas</span>
-            </div>
-            <div class="flex justify-between py-3 border-b border-white/10">
-              <span class="body-md text-[#a0a0a0]">Latencia</span>
-              <span class="body-md text-white font-medium">25-35ms</span>
-            </div>
-            <div class="flex justify-between py-3 border-b border-white/10">
-              <span class="body-md text-[#a0a0a0]">Conectividad</span>
-              <span class="body-md text-white font-medium">NRF (2.4GHz)</span>
-            </div>
-          </div>
+  <main>
+    <!-- Hero -->
+    <section class="hero-dark">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="badge mb-6">Recursos</span>
+          <h1 class="text-display-xxl text-white mb-6">Especificaciones <span class="text-gradient-gold">Técnicas</span></h1>
         </div>
+      </div>
+    </section>
 
-        <div class="space-y-8">
-          <h2 class="display-lg text-white">Compatibilidad</h2>
-          <div class="space-y-4">
-            <div class="flex justify-between py-3 border-b border-white/10">
-              <span class="body-md text-[#a0a0a0]">Software</span>
-              <span class="body-md text-white font-medium">SlimeVR</span>
-            </div>
-            <div class="flex justify-between py-3 border-b border-white/10">
-              <span class="body-md text-[#a0a0a0]">Plataforma</span>
-              <span class="body-md text-white font-medium">SteamVR</span>
-            </div>
-            <div class="flex justify-between py-3 border-b border-white/10">
-              <span class="body-md text-[#a0a0a0]">VR Social</span>
-              <span class="body-md text-white font-medium">VRChat</span>
-            </div>
-            <div class="flex justify-between py-3 border-b border-white/10">
-              <span class="body-md text-[#a0a0a0]">Alternativas</span>
-              <span class="body-md text-white font-medium">NeosVR, ChilloutVR</span>
-            </div>
-            <div class="flex justify-between py-3 border-b border-white/10">
-              <span class="body-md text-[#a0a0a0]">Dongle incluido</span>
-              <span class="body-md text-white font-medium">Holyiot nRF52840</span>
-            </div>
-            <div class="flex justify-between py-3 border-b border-white/10">
-              <span class="body-md text-[#a0a0a0]">OS</span>
-              <span class="body-md text-white font-medium">Windows</span>
-            </div>
+    <!-- Tracker Specs -->
+    <section class="section section-light">
+      <div class="container">
+        <h2 class="text-display-lg text-white mb-8">Beekonz Smols LSM6DSV</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="card">
+            <p class="text-[#666666] text-micro uppercase mb-2">Sensor</p>
+            <p class="text-white text-body-lg font-semibold">LSM6DSV (IMU 6-axis)</p>
+          </div>
+          <div class="card">
+            <p class="text-[#666666] text-micro uppercase mb-2">Peso</p>
+            <p class="text-white text-body-lg font-semibold">~10 g</p>
+          </div>
+          <div class="card">
+            <p class="text-[#666666] text-micro uppercase mb-2">Batería</p>
+            <p class="text-white text-body-lg font-semibold">401230, 3.7V, 115 mAh</p>
+          </div>
+          <div class="card">
+            <p class="text-[#666666] text-micro uppercase mb-2">Autonomía</p>
+            <p class="text-white text-body-lg font-semibold">35–45 h</p>
+          </div>
+          <div class="card">
+            <p class="text-[#666666] text-micro uppercase mb-2">Latencia</p>
+            <p class="text-white text-body-lg font-semibold">25–35 ms</p>
+          </div>
+          <div class="card">
+            <p class="text-[#666666] text-micro uppercase mb-2">Conectividad</p>
+            <p class="text-white text-body-lg font-semibold">nRF52840 USB Dongle</p>
+          </div>
+          <div class="card">
+            <p class="text-[#666666] text-micro uppercase mb-2">Firmware</p>
+            <p class="text-white text-body-lg font-semibold">Basado en SlimeVR</p>
+          </div>
+          <div class="card">
+            <p class="text-[#666666] text-micro uppercase mb-2">Compatibilidad</p>
+            <p class="text-white text-body-lg font-semibold">VRChat, SteamVR, NeosVR, ChilloutVR</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Face Tracking Specs -->
+    <section class="section section-soft">
+      <div class="container">
+        <h2 class="text-display-lg text-white mb-8">Beekonz Face Tracking</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="card">
+            <p class="text-[#666666] text-micro uppercase mb-2">Tipo</p>
+            <p class="text-white text-body-lg font-semibold">Tracking facial USB-C</p>
+          </div>
+          <div class="card">
+            <p class="text-[#666666] text-micro uppercase mb-2">Software</p>
+            <p class="text-white text-body-lg font-semibold">Babble</p>
+          </div>
+          <div class="card">
+            <p class="text-[#666666] text-micro uppercase mb-2">Conexión</p>
+            <p class="text-white text-body-lg font-semibold">USB-C a PC</p>
+          </div>
+          <div class="card">
+            <p class="text-[#666666] text-micro uppercase mb-2">Compatibilidad</p>
+            <p class="text-white text-body-lg font-semibold">VRChat</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dongle -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="card">
+          <h2 class="text-heading-lg text-white mb-4">Dongle nRF52840</h2>
+          <p class="text-body-md text-[#a0a0a0]">Cada pack incluye un dongle Holyiot nRF52840 optimizado para bajo consumo y máxima estabilidad. Cada tracker se conecta por un canal dedicado, eliminando interferencias.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <Footer />
 </Base>

@@ -4,27 +4,58 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Base title="Seguimiento de Pedidos | Beekonz Trackers">
+<Base title="Seguimiento de Pedidos | Beekonz">
   <Header />
-  <section class="pt-40 pb-20 bg-[#050505]">
-    <div class="container max-w-3xl text-center">
-      <p class="caption text-[#EAD08E] tracking-widest uppercase mb-4">Seguimiento</p>
-      <h1 class="display-lg text-white mb-6">Estado de tu Pedido</h1>
-      <p class="body-lg text-[#a0a0a0]">Consulta el estado de tu envío con el número de orden de tu compra.</p>
-    </div>
-  </section>
-  <section class="section bg-white">
-    <div class="container max-w-4xl">
-      <div class="rounded-xl overflow-hidden border border-[#050505]/10">
-        <iframe src="https://app.clickup.com/embed?v=8cr2nra-517" class="w-full h-[600px] border-0"></iframe>
+
+  <main>
+    <section class="hero-dark">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="badge mb-6">Seguimiento</span>
+          <h1 class="text-display-xxl text-white mb-6">Seguimiento de <span class="text-gradient-gold">Pedidos</span></h1>
+          <p class="text-body-lg text-[#a0a0a0]">Consulta el estado de tu pedido en tiempo real.</p>
+        </div>
       </div>
-      <div class="mt-8 text-center">
-        <p class="body-md text-[#555555] mb-4">¿No encuentras tu pedido? Contáctanos en Discord.</p>
-        <a href="https://discord.gg/ekr3ERWJQ6" target="_blank" rel="noopener noreferrer" class="btn btn-gold px-6 py-3">
-          Contactar por Discord
-        </a>
+    </section>
+
+    <section class="section section-light">
+      <div class="container max-w-4xl">
+        <div class="card">
+          <div class="aspect-video w-full">
+            <iframe 
+              src="https://app.clickup.com/embed?v=8cr2nra-517" 
+              class="w-full h-full rounded-lg"
+              style="min-height: 600px;"
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <div class="mt-8 card">
+          <h2 class="text-heading-lg text-white mb-4">¿Cómo funciona?</h2>
+          <ul class="space-y-3 text-body-md text-[#a0a0a0]">
+            <li class="flex items-start gap-3">
+              <span class="text-[#EAD08E]">1.</span>
+              <span>Realiza tu compra y recibe el correo de confirmación.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-[#EAD08E]">2.</span>
+              <span>Tu pedido pasa por nuestro proceso de fabricación y pruebas.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-[#EAD08E]">3.</span>
+              <span>Una vez enviado, recibirás el número de seguimiento por correo.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-[#EAD08E]">4.</span>
+              <span>Consulta el estado actualizado en el panel de arriba.</span>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
+
   <Footer />
 </Base>

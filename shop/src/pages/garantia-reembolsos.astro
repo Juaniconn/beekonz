@@ -4,21 +4,50 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Base title="Garantía y Reembolsos | Beekonz Trackers">
+<Base title="Garantía y Reembolsos | Beekonz">
   <Header />
-  <section class="pt-40 pb-20 bg-[#050505]">
-    <div class="container max-w-3xl">
-      <p class="caption text-[#EAD08E] tracking-widest uppercase mb-4">Legal</p>
-      <h1 class="display-lg text-white mb-6">Garantía y Reembolsos</h1>
-      <p class="body-lg text-[#a0a0a0]">Última actualización: Septiembre 2026</p>
-    </div>
-  </section>
-  <section class="section bg-white">
-    <div class="container max-w-3xl space-y-8">
-      <div><h2 class="heading-lg text-[#050505] mb-4">Garantía de 90 días</h2><p class="body-md text-[#555555] leading-relaxed">Nuestros trackers tienen garantía de 90 días por defectos de fabricación. Si tu tracker presenta algún problema técnico, lo reemplazamos sin costo adicional.</p></div>
-      <div><h2 class="heading-lg text-[#050505] mb-4">Reembolsos</h2><p class="body-md text-[#555555] leading-relaxed">Si no estás satisfecho con tu compra, tienes 14 días desde la recepción para solicitar un reembolso completo. El producto debe estar sin uso y en su empaque original.</p></div>
-      <div><h2 class="heading-lg text-[#050505] mb-4">Proceso</h2><p class="body-md text-[#555555] leading-relaxed">Contáctanos en Discord o por email a redes@beekonz.shop con tu número de orden. Procesamos reembolsos en 5-7 días hábiles.</p></div>
-    </div>
-  </section>
+
+  <main>
+    <section class="hero-dark">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="badge mb-6">Legal</span>
+          <h1 class="text-display-xxl text-white mb-6">Garantía y <span class="text-gradient-gold">Reembolsos</span></h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container max-w-3xl">
+        <div class="card space-y-8">
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">1. Garantía</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Todos nuestros productos cuentan con 6 meses de garantía contra defectos de fabricación. La garantía cubre fallos de hardware, problemas de batería y defectos de fábrica. No cubre daños por mal uso, golpes, humedad o modificaciones no autorizadas.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">2. Reembolsos</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Tienes 30 días después de recibir tu producto para solicitar un reembolso si no estás satisfecho. El producto debe estar en su empaque original, sin daños y con todos los accesorios incluidos. Los reembolsos se procesan en 5-10 días hábiles.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">3. ¿Cómo solicitar garantía o reembolso?</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Contáctanos en <span class="text-[#EAD08E]">redes@beekonz.shop</span> con tu número de pedido y una descripción del problema. Si es posible, incluye fotos o videos del defecto. Te responderemos en un plazo máximo de 48 horas con los siguientes pasos.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-white/10">
+            <p class="text-caption text-[#666666]">Última actualización: Agosto 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <Footer />
 </Base>

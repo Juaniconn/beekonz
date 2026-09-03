@@ -4,57 +4,74 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Base title="Política de Privacidad | Beekonz Trackers">
+<Base title="Aviso de Privacidad | Beekonz">
   <Header />
 
-  <section class="pt-40 pb-20 bg-[#050505]">
-    <div class="container max-w-3xl">
-      <p class="caption text-[#EAD08E] tracking-widest uppercase mb-4">Legal</p>
-      <h1 class="display-lg text-white mb-6">Política de Privacidad</h1>
-      <p class="body-lg text-[#a0a0a0]">Última actualización: Septiembre 2026</p>
-    </div>
-  </section>
-
-  <section class="section bg-white">
-    <div class="container max-w-3xl prose prose-invert">
-      <div class="space-y-8">
-        <div>
-          <h2 class="heading-lg text-[#050505] mb-4">1. Información que recopilamos</h2>
-          <p class="body-md text-[#555555] leading-relaxed">
-            Cuando realizas una compra a través de nuestros enlaces de Stripe, recopilamente únicamente la información necesaria para procesar tu pedido: nombre, email y dirección de envío. No almacenamos datos de tarjetas de crédito — Stripe maneja todos los pagos de forma segura.
-          </p>
-        </div>
-
-        <div>
-          <h2 class="heading-lg text-[#050505] mb-4">2. Uso de la información</h2>
-          <p class="body-md text-[#555555] leading-relaxed">
-            Utilizamos tu información exclusivamente para: procesar y enviar tu pedido, enviar actualizaciones por email sobre tu orden, y responder a tus mensajes de soporte en Discord.
-          </p>
-        </div>
-
-        <div>
-          <h2 class="heading-lg text-[#050505] mb-4">3. Compartir con terceros</h2>
-          <p class="body-md text-[#555555] leading-relaxed">
-            No vendemos, comerciamos ni transferimos tu información personal a terceros. Solo compartimos datos con servicios necesarios para operar (Stripe para pagos, servicios de envío para entregas).
-          </p>
-        </div>
-
-        <div>
-          <h2 class="heading-lg text-[#050505] mb-4">4. Seguridad</h2>
-          <p class="body-md text-[#555555] leading-relaxed">
-            Implementamos medidas de seguridad adecuadas para proteger tu información. Los pagos son procesados por Stripe (nivel 1 PCI DSS), el estándar más alto de seguridad en la industria.
-          </p>
-        </div>
-
-        <div>
-          <h2 class="heading-lg text-[#050505] mb-4">5. Contacto</h2>
-          <p class="body-md text-[#555555] leading-relaxed">
-            Si tienes preguntas sobre esta política, contáctanos en Discord o por email a redes@beekonz.shop.
-          </p>
+  <main>
+    <!-- Hero -->
+    <section class="hero-dark">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="badge mb-6">Legal</span>
+          <h1 class="text-display-xxl text-white mb-6">Aviso de <span class="text-gradient-gold">Privacidad</span></h1>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Content -->
+    <section class="section section-light">
+      <div class="container max-w-3xl">
+        <div class="card space-y-8">
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">1. Datos que recopilamos</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Recopilamos información que nos proporcionas directamente al realizar una compra, crear una cuenta o contactarnos: nombre, dirección de envío, correo electrónico, número de teléfono y datos de pago (procesados de forma segura a través de Stripe).
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">2. Uso de la información</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Utilizamos tus datos para procesar pedidos, gestionar envíos, enviar actualizaciones de tu compra, brindar soporte técnico y mejorar nuestros productos y servicios. No vendemos ni compartimos tu información personal con terceros para fines comerciales.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">3. Cookies y tecnologías similares</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Utilizamos cookies esenciales para el funcionamiento del sitio y herramientas de análisis para entender cómo interactúas con nuestra tienda. Puedes gestionar tus preferencias de cookies desde la configuración de tu navegador.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">4. Seguridad de los datos</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Implementamos medidas de seguridad técnicas y organizativas para proteger tu información personal contra acceso no autorizado, alteración, divulgación o destrucción. Los pagos son procesados de forma segura por Stripe con encriptación SSL.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">5. Tus derechos</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Tienes derecho a acceder, rectificar, cancelar u oponerte al tratamiento de tus datos personales. Para ejercer estos derechos, contáctanos en redes@beekonz.shop con el asunto "Protección de datos".
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">6. Contacto</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Si tienes preguntas sobre este aviso de privacidad o el tratamiento de tus datos, puedes contactarnos en:<br>
+              <span class="text-[#EAD08E]">redes@beekonz.shop</span>
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-white/10">
+            <p class="text-caption text-[#666666]">Última actualización: Agosto 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <Footer />
 </Base>

@@ -4,21 +4,66 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Base title="Política de Venta | Beekonz Trackers">
+<Base title="Política de Venta | Beekonz">
   <Header />
-  <section class="pt-40 pb-20 bg-[#050505]">
-    <div class="container max-w-3xl">
-      <p class="caption text-[#EAD08E] tracking-widest uppercase mb-4">Legal</p>
-      <h1 class="display-lg text-white mb-6">Política de Venta</h1>
-      <p class="body-lg text-[#a0a0a0]">Última actualización: Septiembre 2026</p>
-    </div>
-  </section>
-  <section class="section bg-white">
-    <div class="container max-w-3xl space-y-8">
-      <div><h2 class="heading-lg text-[#050505] mb-4">Precios y Pagos</h2><p class="body-md text-[#555555] leading-relaxed">Todos los precios están en MXN (pesos mexicanos) e incluyen IVA. Los pagos se procesan de forma segura a través de Stripe. Aceptamos tarjetas de crédito/débito y otros métodos disponibles en la plataforma.</p></div>
-      <div><h2 class="heading-lg text-[#050505] mb-4">Proceso de Compra</h2><p class="body-md text-[#555555] leading-relaxed">Al realizar tu compra recibirás un email de confirmación con los detalles de tu pedido. El estado de tu envío se puede consultar en nuestra página de seguimiento de pedidos.</p></div>
-      <div><h2 class="heading-lg text-[#050505] mb-4">Cancelaciones</h2><p class="body-md text-[#555555] leading-relaxed">Puedes cancelar tu pedido antes de que sea enviado. Contáctanos en Discord dentro de las primeras 24 horas para procesar la cancelación y reembolso.</p></div>
-    </div>
-  </section>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-dark">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="badge mb-6">Legal</span>
+          <h1 class="text-display-xxl text-white mb-6">Política de <span class="text-gradient-gold">Venta</span></h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="section section-light">
+      <div class="container max-w-3xl">
+        <div class="card space-y-8">
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">1. Condiciones generales</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Al realizar una compra en Beekonz aceptas las siguientes condiciones de venta. Nuestros productos son trackers VR (Full Body Tracking) y accesorios relacionados. La compra implica la aceptación de nuestras políticas de envío, garantía y reembolso.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">2. Precios y pagos</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Todos los precios están en pesos mexicanos (MXN) e incluyen IVA. Los pagos se procesan de forma segura a través de Stripe. Aceptamos tarjetas de crédito, débito y otros métodos de pago disponibles en la plataforma. Los precios pueden cambiar sin previo aviso.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">3. Procesamiento de pedidos</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Una vez confirmado el pago, recibirás un correo de confirmación con los detalles de tu pedido. Los pedidos se procesan en un plazo de 1-3 días hábiles. Te notificaremos cuando tu pedido haya sido enviado con el número de seguimiento correspondiente.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">4. Disponibilidad de productos</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Los productos están sujetos a disponibilidad. En caso de que un producto no esté disponible después de realizar tu pedido, te notificaremos y ofreceremos un reembolso completo o la opción de esperar el reabastecimiento.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">5. Cancelaciones</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Puedes solicitar la cancelación de tu pedido dentro de las primeras 24 horas después de la compra, siempre que aún no haya sido enviado. Contáctanos en redes@beekonz.shop para solicitar la cancelación.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-white/10">
+            <p class="text-caption text-[#666666]">Última actualización: Agosto 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <Footer />
 </Base>

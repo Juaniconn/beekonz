@@ -4,21 +4,60 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Base title="Política de Envíos | Beekonz Trackers">
+<Base title="Política de Envíos | Beekonz">
   <Header />
-  <section class="pt-40 pb-20 bg-[#050505]">
-    <div class="container max-w-3xl">
-      <p class="caption text-[#EAD08E] tracking-widest uppercase mb-4">Legal</p>
-      <h1 class="display-lg text-white mb-6">Política de Envíos</h1>
-      <p class="body-lg text-[#a0a0a0]">Última actualización: Septiembre 2026</p>
-    </div>
-  </section>
-  <section class="section bg-white">
-    <div class="container max-w-3xl space-y-8">
-      <div><h2 class="heading-lg text-[#050505] mb-4">Tiempos de Envío</h2><p class="body-md text-[#555555] leading-relaxed"><strong>Nacional (México):</strong> 3-5 días hábiles.<br><strong>Internacional (Latinoamérica):</strong> 5-10 días hábiles.<br><strong>Otros países:</strong> 10-15 días hábiles.</p></div>
-      <div><h2 class="heading-lg text-[#050505] mb-4">Seguimiento</h2><p class="body-md text-[#555555] leading-relaxed">Cada envío incluye número de seguimiento que te enviamos por email. También puedes consultar el estado en nuestra página de seguimiento de pedidos con el número de orden.</p></div>
-      <div><h2 class="heading-lg text-[#050505] mb-4">Costos</h2><p class="body-md text-[#555555] leading-relaxed">Envío nacional desde $150 MXN. Internacional desde $350 MXN. Pedidos superiores a $7,000 MXN tienen envío nacional gratuito.</p></div>
-    </div>
-  </section>
+
+  <main>
+    <section class="hero-dark">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <span class="badge mb-6">Legal</span>
+          <h1 class="text-display-xxl text-white mb-6">Política de <span class="text-gradient-gold">Envíos</span></h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container max-w-3xl">
+        <div class="card space-y-8">
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">1. Cobertura</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Realizamos envíos a todo México y a nivel internacional. Contamos con más de 12 países de destino en Latinoamérica y otros continentes. La cobertura exacta se muestra al momento de la compra según tu dirección de envío.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">2. Tiempos de entrega</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              <strong class="text-white">México:</strong> 3-7 días hábiles.<br>
+              <strong class="text-white">Latinoamérica:</strong> 7-14 días hábiles.<br>
+              <strong class="text-white">Otros continentes:</strong> 10-21 días hábiles.<br><br>
+              Los tiempos son estimados y pueden variar según aduanas y servicios postales locales.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">3. Costos de envío</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Los costos de envío se calculan automáticamente según el destino y el peso del paquete. Ofrecemos envío gratuito en pedidos mayores a $7,999 MXN dentro de México.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-heading-lg text-white mb-4">4. Seguimiento</h2>
+            <p class="text-body-md text-[#a0a0a0] leading-relaxed">
+              Una vez enviado tu pedido, recibirás un correo con el número de seguimiento para que puedas rastrearlo en tiempo real a través del sitio del transportista.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-white/10">
+            <p class="text-caption text-[#666666]">Última actualización: Agosto 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <Footer />
 </Base>
