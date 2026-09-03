@@ -2,98 +2,95 @@
 import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { SITE } from "../data/store";
+import { SITE, TRAYECTORIA } from "../data/store";
 ---
 
 <Base title="Acerca de Beekonz | Full Body Tracking">
   <Header />
 
-  <main>
-    <!-- Hero -->
-    <section class="hero-dark">
-      <div class="container">
-        <div class="max-w-3xl mx-auto text-center">
-          <span class="badge mb-6">Quiénes Somos</span>
-          <h1 class="text-display-xxl text-white mb-6">
-            Acerca de <span class="text-gradient-gold">Beekonz</span>
-          </h1>
-          <p class="text-body-lg text-[#d4b8b9]">
-            Más de 3 años creando tecnología de tracking accesible para la comunidad VR hispana.
+  <!-- Hero -->
+  <section class="pt-40 pb-20 bg-[#050505]">
+    <div class="container">
+      <div class="max-w-3xl">
+        <p class="caption text-[#EAD08E] tracking-widest uppercase mb-4">Acerca de</p>
+        <h1 class="display-lg text-white mb-6">
+          Más de 3 años creando tecnología<br>
+          <span class="text-[#a0a0a0]">para la comunidad VR hispana.</span>
+        </h1>
+        <p class="body-lg text-[#a0a0a0]">
+          Beekonz nació en CDMX con una misión: hacer el Full Body Tracking accesible para todos. Diseñamos, fabricamos y enviamos trackers ultraligeros con la precisión que exigen los creadores serios de VRChat.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Grid -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="rounded-xl border border-[#050505]/10 p-8">
+          <div class="w-12 h-12 rounded-lg bg-[#2E0F12]/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-[#2E0F12]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="heading-lg text-[#050505] mb-4">Nuestra Visión</h3>
+          <p class="body-md text-[#555555] leading-relaxed">
+            Democratizar el Full Body Tracking para la comunidad hispanohablante. Creemos que todos merecen acceso a tecnología de tracking de calidad, sin importar su ubicación o presupuesto.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-[#050505]/10 p-8">
+          <div class="w-12 h-12 rounded-lg bg-[#2E0F12]/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-[#2E0F12]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
+          <h3 class="heading-lg text-[#050505] mb-4">Nuestra Tecnología</h3>
+          <p class="body-md text-[#555555] leading-relaxed">
+            Sensor LSM6DSV de 6 ejes, microcontrolador nRF52340, batería de larga duración. Cada tracker pesa ~10g y ofrece 35-45 horas de uso continuo con latencia ultra baja de 25-35ms.
+          </p>
+        </div>
+
+        <div class="rounded-xl border border-[#050505]/10 p-8">
+          <div class="w-12 h-12 rounded-lg bg-[#2E0F12]/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-[#2E0F12]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3 class="heading-lg text-[#050505] mb-4">Nuestra Comunidad</h3>
+          <p class="body-md text-[#555555] leading-relaxed">
+            +150 clientes activos en Discord. Soporte 24/7 en español. Creamos una comunidad donde ayudamos mutuamente a configurar, resolver problemas y compartir setups.
           </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Values -->
-    <section class="section section-light">
-      <div class="container">
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="card">
-            <div class="w-14 h-14 rounded-xl bg-[#EAD08E]/10 flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-            </div>
-            <h2 class="text-heading-lg text-[#2E0F12] mb-4">Nuestra Visión</h2>
-            <p class="text-body-md text-[#8b6b6e] leading-relaxed">
-              Democratizar el Full Body Tracking para la comunidad hispanohablante. Diseñamos tecnología ultraligera, precisa y accesible para que cualquiera pueda moverse libremente dentro del mundo virtual.
-            </p>
+  <!-- Stats -->
+  <section class="section bg-[#2E0F12]">
+    <div class="container">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {TRAYECTORIA.map((t) => (
+          <div class="text-center">
+            <p class="display-lg text-white">{t.value}</p>
+            <p class="body-sm text-[#d4b8b9] mt-2">{t.label}</p>
+            <p class="caption text-[#8b6b6e] mt-1">{t.sub}</p>
           </div>
-
-          <div class="card">
-            <div class="w-14 h-14 rounded-xl bg-[#EAD08E]/10 flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            </div>
-            <h2 class="text-heading-lg text-[#2E0F12] mb-4">Nuestra Tecnología</h2>
-            <p class="text-body-md text-[#8b6b6e] leading-relaxed">
-              Cada tracker refleja nuestra pasión: ingeniería inteligente, diseño minimalista y soporte humano cercano. Utilizamos los sensores más avanzados del mercado combinados con firmware optimizado.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="w-14 h-14 rounded-xl bg-[#EAD08E]/10 flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-            </div>
-            <h2 class="text-heading-lg text-[#2E0F12] mb-4">Nuestra Comunidad</h2>
-            <p class="text-body-md text-[#8b6b6e] leading-relaxed">
-              Más que una marca, somos una comunidad. Nuestro Discord está lleno de usuarios que comparten experiencias, tutoriales y se ayudan mutuamente. Soporte 24/7 en español.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Stats -->
-    <section class="section section-soft">
-      <div class="container">
-        <div class="card text-center">
-          <div class="grid sm:grid-cols-3 gap-8">
-            <div>
-              <div class="text-display-lg font-black text-[#EAD08E] mb-2">700+</div>
-              <div class="text-body-md text-[#8b6b6e]">Trackers vendidos</div>
-            </div>
-            <div>
-              <div class="text-display-lg font-black text-[#EAD08E] mb-2">150+</div>
-              <div class="text-body-md text-[#8b6b6e]">Clientes satisfechos</div>
-            </div>
-            <div>
-              <div class="text-display-lg font-black text-[#EAD08E] mb-2">3+</div>
-              <div class="text-body-md text-[#8b6b6e]">Años de experiencia</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-band">
-      <div class="container max-w-3xl text-center">
-        <h2 class="text-display-xl text-white mb-6">Únete a nuestra comunidad</h2>
-        <p class="text-body-lg text-[#d4b8b9] mb-8">Más de 150 creadores VR ya confían en Beekonz. Sé parte del movimiento.</p>
-        <a href={SITE.discord} target="_blank" rel="noopener" class="btn-primary text-lg">
-          Unirme al Discord
+  <!-- CTA -->
+  <section class="section bg-[#050505] text-center">
+    <div class="container max-w-3xl">
+      <h2 class="display-lg text-white mb-6">¿Quieres saber más?</h2>
+      <p class="body-lg text-[#a0a0a0] mb-8">Escríbenos en Discord o envíanos un mensaje directo. Estamos aquí para ayudarte.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={SITE.discord} target="_blank" rel="noopener noreferrer" class="btn btn-gold text-base px-8 py-4">
+          Únete al Discord
+        </a>
+        <a href="/contacto" class="btn btn-outline text-base px-8 py-4">
+          Contáctanos
         </a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <Footer />
 </Base>

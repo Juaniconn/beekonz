@@ -2,304 +2,326 @@
 import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ } from "../data/store";
+import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, STATS, FAQ, TRAYECTORIA } from "../data/store";
 ---
 
 <Base>
   <Header />
 
-  <main>
-    <!-- ═══════════ HERO — Editorial Dark ═══════════ -->
-    <section class="hero-dark">
-      <div class="container">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-          <!-- Left column — copy -->
-          <div class="lg:col-span-7 space-y-8">
-            <!-- Badge -->
-            <span class="badge">Tracking VR de Nueva Generación</span>
+  <!-- ═══════════ HERO — Editorial Bold (13g-style) ═══════════ -->
+  <section class="hero relative overflow-hidden">
+    <!-- Subtle grid pattern -->
+    <div class="absolute inset-0 grid-pattern"></div>
 
-            <!-- Main heading -->
-            <h1 class="text-display-xxl text-white">
-              FULL BODY<br>
-              TRACKING<br>
-              <span class="text-gradient-gold">SIN LÍMITES.</span>
+    <div class="container relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center min-h-[80vh]">
+        <!-- Left — Copy -->
+        <div class="lg:col-span-7 space-y-8 pt-32">
+          <div class="space-y-2">
+            <p class="caption text-[#EAD08E] tracking-widest uppercase">Full Body Tracking</p>
+            <h1 class="display-hero text-white">
+              PRECISIÓN<br>
+              <span class="text-[#EAD08E]">SIN LÍMITES.</span>
             </h1>
-
-            <p class="text-body-lg text-[#d4b8b9] max-w-xl">
-              Captura cada movimiento con precisión cinematográfica. Trackers Beekonz y Face Tracking diseñados para creadores serios de <span class="text-white font-medium">VRChat</span>.
-            </p>
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4">
-              <a href={PACKS[2].stripe} target="_blank" rel="noopener" class="btn-primary">
-                Comprar Ahora
-                <svg class="inline-block ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-              </a>
-              <a href="#tecnologia" class="btn-dark">
-                <svg class="inline-block mr-2 w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                Cómo Funciona
-              </a>
-            </div>
-
-            <!-- Stats -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/10">
-              <div>
-                <div class="text-display-md text-white">50,000+</div>
-                <div class="text-micro uppercase tracking-widest text-[#8b6b6e] mt-1">Horas Trackeadas</div>
-              </div>
-              <div>
-                <div class="text-display-md text-white">32</div>
-                <div class="text-micro uppercase tracking-widest text-[#8b6b6e] mt-1">Estados Enviados</div>
-              </div>
-              <div>
-                <div class="text-display-md text-white">12</div>
-                <div class="text-micro uppercase tracking-widest text-[#8b6b6e] mt-1">Países</div>
-              </div>
-              <div>
-                <div class="text-display-md text-white">100%</div>
-                <div class="text-micro uppercase tracking-widest text-[#8b6b6e] mt-1">Listo VRChat</div>
-              </div>
-            </div>
           </div>
 
-          <!-- Right column — 3D rotating tracker -->
-          <div class="lg:col-span-5 relative hidden lg:block">
-            <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm h-[600px]">
-              <!-- 3D Model Container -->
-              <div class="absolute inset-0 flex items-center justify-center" id="hero-3d-model">
-                <div class="tracker3d-loading w-16 h-16 rounded-full border-2 border-[#EAD08E]/20 border-t-[#EAD08E] animate-spin"></div>
-                <p class="tracker3d-fallback hidden text-sm text-white/40">No se pudo cargar el modelo 3D</p>
-              </div>
-              <script src="../scripts/tracker3d.ts"></script>
+          <p class="body-lg text-[#a0a0a0] max-w-xl">
+            Trackers ultraligeros de 10g con hasta 45h de batería. Diseñados en CDMX para la comunidad hispana de VRChat. Compatibles con SlimeVR, SteamVR y más.
+          </p>
 
-              <!-- Badges -->
-              <div class="absolute top-5 left-5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 z-10">
-                <span class="text-micro uppercase tracking-widest font-semibold text-[#EAD08E]">● Modelo 3D</span>
-              </div>
-              <div class="absolute top-5 right-5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 z-10">
-                <span class="text-micro uppercase tracking-widest font-semibold text-white/80">LSM6DSV · 35-45h</span>
-              </div>
-              
-              <!-- Bottom card -->
-              <div class="absolute bottom-5 left-5 right-5 p-5 rounded-xl bg-black/60 backdrop-blur-xl border border-white/10 z-10">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <div class="text-micro uppercase tracking-widest text-white/50">Beekonz Pro Kit</div>
-                    <div class="font-display text-2xl text-white mt-1">10 TRACKERS</div>
-                  </div>
-                  <div class="text-right">
-                    <div class="text-micro text-white/50">Desde</div>
-                    <div class="font-display text-2xl text-[#EAD08E]">$8,999</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ FEATURES — Light Section ═══════════ -->
-    <section id="tecnologia" class="section section-light">
-      <div class="container">
-        <div class="text-center mb-20">
-          <p class="text-button-cap font-semibold tracking-widest text-[#EAD08E] uppercase mb-4">Especificaciones</p>
-          <h2 class="text-display-xl text-[#2E0F12]">
-            Diseñado para <span class="text-gradient-gold">rendir</span>
-          </h2>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {FEATURES.map((f) => (
-            <div class="card text-center">
-              <p class="text-display-lg font-black text-[#EAD08E]">{f.stat}</p>
-              <h3 class="text-heading-lg mt-4 text-[#2E0F12]">{f.title}</h3>
-              <p class="mt-3 text-body-md text-[#8b6b6e]">{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ FACE TRACKING — Soft Section ═══════════ -->
-    <section id="face-tracking" class="section section-soft">
-      <div class="container">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span class="badge mb-6">🐝 Nuevo Producto</span>
-            <h2 class="text-display-xl text-[#2E0F12]">Beekonz <span class="text-gradient-gold">Face Tracking</span></h2>
-            <p class="mt-6 text-body-lg text-[#8b6b6e]">{FACE_TRACKING.description}</p>
-            <p class="font-display mt-8 text-5xl font-black text-[#2E0F12]">{FACE_TRACKING.price}<span class="text-xl font-medium text-[#8b6b6e]"> MXN</span></p>
-            
-            <ul class="mt-8 space-y-4">
-              {FACE_TRACKING.includes.map((item) => (
-                <li class="flex items-center gap-4 text-[#2E0F12]">
-                  <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EAD08E] text-[#2E0F12]">✓</span>
-                  <span class="text-body-lg">{item}</span>
-                </li>
-              ))}
-            </ul>
-            
-            <a href={FACE_TRACKING.stripe} target="_blank" rel="noopener" class="mt-10 inline-block btn-primary text-lg">
-              Comprar ahora
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://buy.stripe.com/28EfZi9HTcAlfIX73v7g40p" target="_blank" rel="noopener noreferrer" class="btn btn-gold text-base px-8 py-4">
+              Comprar Pro Pack — $8,999
+            </a>
+            <a href="#trackers" class="btn btn-outline text-base px-8 py-4">
+              Ver Trackers
             </a>
           </div>
-          
-          <div class="grid grid-cols-2 gap-4">
-            {FACE_TRACKING.images.slice(0, 4).map((img) => (
-              <figure class="overflow-hidden rounded-xl border border-[#EAD08E]/20 transition-all duration-500 hover:border-[#EAD08E] hover:scale-105 group">
-                <img src={img.src} alt={img.alt} loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </figure>
+
+          <!-- Stats compactos -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-white/10">
+            {STATS.map((stat) => (
+              <div>
+                <p class="display-md text-white">{stat.value}</p>
+                <p class="caption text-[#666666] mt-1">{stat.label}</p>
+              </div>
             ))}
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ═══════════ PACKS — Light Section ═══════════ -->
-    <section id="packs" class="section section-light">
-      <div class="container">
-        <div class="text-center mb-20">
-          <p class="text-button-cap font-semibold tracking-widest text-[#EAD08E] uppercase mb-4">Nuestros Paquetes</p>
-          <h2 class="text-display-xl text-[#2E0F12]">Elige tu <span class="text-gradient-gold">configuración</span></h2>
+        <!-- Right — 3D Model -->
+        <div class="lg:col-span-5 relative hidden lg:block">
+          <div class="relative rounded-xl overflow-hidden border border-white/10 bg-[#111111] h-[600px] flex items-center justify-center">
+            <div class="absolute inset-0" id="hero-3d-model">
+              <div class="tracker3d-loading w-12 h-12 rounded-full border-2 border-[#EAD08E]/20 border-t-[#EAD08E] animate-spin absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+              <p class="tracker3d-fallback hidden body-sm text-[#666666] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">No se pudo cargar el modelo 3D</p>
+            </div>
+            <script src="../scripts/tracker3d.ts"></script>
+
+            <!-- Badge top-left -->
+            <div class="absolute top-4 left-4 px-3 py-1.5 rounded bg-black/60 backdrop-blur-sm border border-white/10 z-10">
+              <span class="caption text-[#EAD08E] font-semibold">● Modelo 3D</span>
+            </div>
+            <!-- Badge top-right -->
+            <div class="absolute top-4 right-4 px-3 py-1.5 rounded bg-black/60 backdrop-blur-sm border border-white/10 z-10">
+              <span class="caption text-[#a0a0a0] font-semibold">LSM6DSV · 35-45h</span>
+            </div>
+
+            <!-- Bottom info card -->
+            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-lg bg-black/70 backdrop-blur-sm border border-white/10 z-10">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="caption text-[#666666]">Beekonz Pro Kit</p>
+                  <p class="heading-lg text-white">10 TRACKERS</p>
+                </div>
+                <div class="text-right">
+                  <p class="caption text-[#666666]">Desde</p>
+                  <p class="heading-lg text-[#EAD08E]">$8,999</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div class="grid gap-8 lg:grid-cols-3">
-          {PACKS.map((pack) => (
-            <div class:list={[
-              "relative flex flex-col rounded-2xl p-10 transition-all duration-500",
-              pack.recommended
-                ? "card-pricing-featured lg:-my-6 lg:py-16"
-                : "card-pricing"
-            ]}>
-              {pack.recommended && (
-                <p class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[#EAD08E] px-6 py-1.5 text-button-cap font-bold text-[#2E0F12] uppercase">
-                  Recomendado
-                </p>
-              )}
-              <p class={["text-display-lg font-black", pack.recommended ? "text-white" : "text-[#2E0F12]"]}>{pack.trackers}</p>
-              <h3 class={["mt-3 text-2xl font-bold", pack.recommended ? "text-white" : "text-[#2E0F12]"]}>{pack.name}</h3>
-              <p class={["mt-2", pack.recommended ? "text-[#d4b8b9]" : "text-[#8b6b6e]"]}>{pack.tagline}</p>
-              <p class={["mt-6 text-4xl font-black", pack.recommended ? "text-white" : "text-[#2E0F12]"]}>{pack.price}<span class="text-lg font-medium opacity-60"> MXN</span></p>
-              <ul class="mt-8 flex-1 space-y-4">
-                {pack.includes.map((item) => (
-                  <li class="flex items-start gap-3">
-                    <span class={["mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-sm", pack.recommended ? "bg-white/20 text-white" : "bg-[#EAD08E]/20 text-[#2E0F12]"]}>✓</span>
-                    <span class={pack.recommended ? "text-white/80" : "text-[#8b6b6e]"}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={pack.stripe}
-                target="_blank"
-                rel="noopener"
-                class={[
-                  "mt-10 block rounded-lg py-4 text-center font-bold transition-all duration-300",
-                  pack.recommended
-                    ? "bg-white text-[#2E0F12] hover:bg-[#F8F4F5]"
-                    : "border border-[#2E0F12] text-[#2E0F12] hover:bg-[#2E0F12] hover:text-white",
-                ]}
-              >
-                Comprar ahora
-              </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TRACKERS — Tres pilares (13g-style) ═══════════ -->
+  <section id="trackers" class="section section-dark">
+    <div class="container">
+      <!-- Header -->
+      <div class="max-w-3xl mb-20">
+        <p class="caption text-[#EAD08E] tracking-widest uppercase mb-4">Nuestros Packs</p>
+        <h2 class="display-lg text-white mb-6">
+          Elige tu configuración.<br>
+          <span class="text-[#a0a0a0]">Rendimiento para cada necesidad.</span>
+        </h2>
+        <p class="body-lg text-[#a0a0a0]">
+          Desde iniciarte en FBT hasta setups profesionales para creadores y bailarines. Cada pack incluye dongle y straps premium.
+        </p>
+      </div>
+
+      <!-- Packs Grid -->
+      <div class="grid md:grid-cols-3 gap-6">
+        {PACKS.map((pack, idx) => (
+          <div class={`relative rounded-xl p-8 ${pack.recommended ? 'bg-[#2E0F12] border-2 border-[#EAD08E]' : 'bg-[#111111] border border-white/10'}`}>
+            {pack.recommended && (
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#EAD08E] text-[#050505] caption font-bold">
+                MÁS POPULAR
+              </div>
+            )}
+            <div class="mb-8">
+              <p class="caption text-[#666666] mb-2">{pack.trackers} Trackers</p>
+              <h3 class="heading-lg text-white mb-2">{pack.name}</h3>
+              <p class="display-lg text-white">{pack.price} <span class="body-md text-[#666666]">MXN</span></p>
+            </div>
+            <ul class="space-y-3 mb-8">
+              {pack.includes.map((item) => (
+                <li class="body-sm text-[#a0a0a0] flex items-start gap-2">
+                  <svg class="w-4 h-4 text-[#EAD08E] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <a href={pack.stripe} target="_blank" rel="noopener noreferrer" class={`btn w-full text-center ${pack.recommended ? 'btn-gold' : 'btn-outline'}`}>
+              Comprar {pack.name}
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FACE TRACKING — Editorial split ═══════════ -->
+  <section id="face-tracking" class="section bg-white">
+    <div class="container">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left — Copy -->
+        <div class="space-y-8">
+          <p class="caption text-[#2E0F12] tracking-widest uppercase">Face Tracking</p>
+          <h2 class="display-lg text-[#050505]">
+            Expresiones reales.<br>
+            <span class="text-[#8b6b6e]">Conexión genuina.</span>
+          </h2>
+          <p class="body-lg text-[#555555]">
+            {FACE_TRACKING.description}
+          </p>
+          <ul class="grid grid-cols-2 gap-4">
+            {FACE_TRACKING.features.slice(0, 4).map((f) => (
+              <li class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded bg-[#2E0F12]/10 flex items-center justify-center flex-shrink-0">
+                  <span class="text-sm">{f.icon}</span>
+                </div>
+                <div>
+                  <p class="body-sm font-semibold text-[#050505]">{f.title}</p>
+                  <p class="body-sm text-[#8b6b6e]">{f.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <a href={FACE_TRACKING.stripe} target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+            Comprar Face Tracking — $2,499
+          </a>
+        </div>
+
+        <!-- Right — Images -->
+        <div class="grid grid-cols-2 gap-4">
+          {FACE_TRACKING.images.slice(0, 4).map((img, idx) => (
+            <div class={`rounded-xl overflow-hidden bg-[#f5f5f5] ${idx === 0 ? 'col-span-2 aspect-video' : 'aspect-square'}`}>
+              <img src={img.src} alt={img.alt} class="w-full h-full object-cover" loading="lazy" />
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ═══════════ GALLERY — Soft Section ═══════════ -->
-    <section class="section section-soft">
-      <div class="container">
-        <div class="text-center mb-16">
-          <p class="text-button-cap font-semibold tracking-widest text-[#EAD08E] uppercase mb-4">Galería</p>
-          <h2 class="text-display-xl text-[#2E0F12]">Productos <span class="text-gradient-gold">Reales</span></h2>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {GALLERY.map((g, i) => (
-            <figure class={["group overflow-hidden rounded-xl border border-[#EAD08E]/20 transition-all duration-500 hover:border-[#EAD08E] hover:scale-105", i === 0 && "md:col-span-2 md:row-span-2"].filter(Boolean).join(" ")}>
-              <img src={g.src} alt={g.caption} loading="lazy" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" />
-              <figcaption class="bg-white px-5 py-4 text-caption text-[#8b6b6e] border-t border-[#EAD08E]/20">{g.caption}</figcaption>
-            </figure>
-          ))}
-        </div>
+  <!-- ═══════════ ESPECIFICACIONES — Cards limpias ═══════════ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="text-center mb-20">
+        <p class="caption text-[#EAD08E] tracking-widest uppercase mb-4">Especificaciones</p>
+        <h2 class="display-lg text-white">
+          Tecnología que<br>
+          <span class="text-[#a0a0a0]">no se siente.</span>
+        </h2>
       </div>
-    </section>
 
-    <!-- ═══════════ TESTIMONIALS — Light Section ═══════════ -->
-    <section class="section section-light">
-      <div class="container">
-        <div class="text-center mb-16">
-          <p class="text-button-cap font-semibold tracking-widest text-[#EAD08E] uppercase mb-4">Testimonios</p>
-          <h2 class="text-display-xl text-[#2E0F12]">Lo que dicen <span class="text-gradient-gold">nuestros usuarios</span></h2>
-        </div>
-        <div class="grid gap-8 md:grid-cols-3">
-          {TESTIMONIALS.map((t) => (
-            <blockquote class="card flex flex-col">
-              <p class="text-[#EAD08E] text-xl">★★★★★</p>
-              <p class="mt-6 flex-1 text-body-lg text-[#8b6b6e] italic">"{t.quote}"</p>
-              <footer class="mt-8 flex items-center gap-4">
-                <img src={t.img} alt={t.name} loading="lazy" class="h-14 w-14 rounded-full object-cover border-2 border-[#EAD08E]/30" />
-                <div>
-                  <p class="font-bold text-[#2E0F12]">{t.name}</p>
-                  <p class="text-caption text-[#8b6b6e]">{t.role} · {t.country}</p>
-                </div>
-              </footer>
-            </blockquote>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ FAQ — Soft Section ═══════════ -->
-    <section class="section section-soft">
-      <div class="container max-w-3xl">
-        <div class="text-center mb-16">
-          <p class="text-button-cap font-semibold tracking-widest text-[#EAD08E] uppercase mb-4">Preguntas Frecuentes</p>
-          <h2 class="text-display-xl text-[#2E0F12]">¿Tienes Dudas?</h2>
-        </div>
-        <div class="space-y-4">
-          {FAQ.map((f) => (
-            <details class="group rounded-xl border border-[#EAD08E]/20 bg-white transition-all duration-300 hover:border-[#EAD08E]">
-              <summary class="flex cursor-pointer list-none items-center justify-between px-6 py-5 font-medium text-[#2E0F12] text-body-lg [&::-webkit-details-marker]:hidden">
-                {f.q}
-                <span class="text-[#EAD08E] text-2xl transition group-open:rotate-45">+</span>
-              </summary>
-              <p class="px-6 pb-6 text-body-md text-[#8b6b6e]">{f.a}</p>
-            </details>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════ CTA FINAL — Dark Band ═══════════ -->
-    <section class="cta-band">
-      <div class="container max-w-5xl text-center">
-        <div class="rounded-2xl border border-[#EAD08E]/20 bg-white/5 backdrop-blur-sm px-8 py-20">
-          <span class="inline-flex items-center gap-2 rounded-full border border-[#EAD08E]/30 px-5 py-1.5 text-button-cap font-semibold text-[#EAD08E]">⭐ 4.9/5 · Hecho para la comunidad hispana</span>
-          <h2 class="mx-auto mt-6 max-w-3xl text-display-xl text-white">
-            Lleva tu VR al <span class="text-gradient-gold">Siguiente Nivel</span>
-          </h2>
-          <div class="mt-10">
-            <a href={PACKS[1].stripe} target="_blank" rel="noopener" class="btn-primary text-lg">
-              Comprar Ahora
-            </a>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {FEATURES.map((f) => (
+          <div class="rounded-xl border border-white/10 bg-[#111111] p-6 hover:border-[#EAD08E]/30 transition-colors duration-300">
+            <p class="display-md text-[#EAD08E] mb-2">{f.stat}</p>
+            <h3 class="heading-lg text-white mb-2">{f.title}</h3>
+            <p class="body-sm text-[#666666]">{f.desc}</p>
           </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TRAYECTORIA — Stats editorial ═══════════ -->
+  <section class="section section-bordeaux">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="space-y-6">
+          <p class="caption text-[#EAD08E] tracking-widest uppercase">Nuestra Trayectoria</p>
+          <h2 class="display-lg text-white">
+            +3 años creando<br>
+            <span class="text-[#d4b8b9]">para la comunidad.</span>
+          </h2>
+          <p class="body-lg text-[#d4b8b9]">
+            Desde CDMX, hemos enviado trackers a más de 20 países. Nuestra comunidad en Discord crece cada día con creadores, bailarines y entusiastas de la VR.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+          {TRAYECTORIA.map((t) => (
+            <div class="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+              <p class="display-lg text-white">{t.value}</p>
+              <p class="heading-lg text-[#d4b8b9] mt-1">{t.label}</p>
+              <p class="caption text-[#8b6b6e] mt-2">{t.sub}</p>
+            </div>
+          ))}
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- ═══════════ TESTIMONIOS — 13g-style cards ═══════════ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="text-center mb-16">
+        <p class="caption text-[#EAD08E] tracking-widest uppercase mb-4">Testimonios</p>
+        <h2 class="display-lg text-white">Lo que dicen nuestros clientes</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        {TESTIMONIALS.map((t) => (
+          <div class="rounded-xl border border-white/10 bg-[#111111] p-8 space-y-6">
+            <!-- Stars -->
+            <div class="flex gap-1">
+              {[...Array(5)].map(() => (
+                <svg class="w-4 h-4 text-[#EAD08E]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              ))}
+            </div>
+            <p class="body-lg text-white leading-relaxed">"{t.quote}"</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+              <img src={t.img} alt={t.name} class="w-10 h-10 rounded-full object-cover" loading="lazy" />
+              <div>
+                <p class="body-sm font-semibold text-white">{t.name}</p>
+                <p class="caption text-[#666666]">{t.role} · {t.country}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FAQ — Acordeón limpio ═══════════ -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="caption text-[#2E0F12] tracking-widest uppercase mb-4">FAQ</p>
+          <h2 class="display-lg text-[#050505]">Preguntas frecuentes</h2>
+        </div>
+
+        <div class="space-y-4" id="faq-accordion">
+          {FAQ.map((item, idx) => (
+            <div class="rounded-xl border border-[#050505]/10 overflow-hidden">
+              <button class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-[#f5f5f5] transition-colors" data-faq-toggle={idx}>
+                <span class="heading-lg text-[#050505]">{item.q}</span>
+                <svg class="w-5 h-5 text-[#8b6b6e] transition-transform duration-200 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" data-faq-icon={idx}><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="hidden px-6 pb-5" data-faq-content={idx}>
+                <p class="body-md text-[#555555]">{item.a}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA FINAL — Bold ═══════════ -->
+  <section class="section bg-[#050505] text-center">
+    <div class="container max-w-4xl">
+      <h2 class="display-xl text-white mb-6">
+        ¿Listo para<br>
+        <span class="text-[#EAD08E]">moverte libre?</span>
+      </h2>
+      <p class="body-lg text-[#a0a0a0] mb-10 max-w-2xl mx-auto">
+        Únete a +150 creadores que ya confían en Beekonz. Soporte 24/7 en Discord, envíos a todo el mundo.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://buy.stripe.com/28EfZi9HTcAlfIX73v7g40p" target="_blank" rel="noopener noreferrer" class="btn btn-gold text-base px-10 py-5">
+          Comprar Ahora
+        </a>
+        <a href={SITE.discord} target="_blank" rel="noopener noreferrer" class="btn btn-outline text-base px-10 py-5">
+          Únete al Discord
+        </a>
+      </div>
+    </div>
+  </section>
 
   <Footer />
-
-  <!-- Botón flotante Discord -->
-  <a
-    href={SITE.discord}
-    target="_blank"
-    rel="noopener"
-    aria-label="Únete a nuestro Discord"
-    class="fixed right-5 bottom-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#EAD08E] p-3.5 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl"
-  >
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="#2E0F12"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3c-.2.4-.5.9-.6 1.3a18.3 18.3 0 0 0-5.6 0C9 3.9 8.7 3.4 8.5 3a19.7 19.7 0 0 0-4.9 1.5A20.4 20.4 0 0 0 .1 18.1a19.9 19.9 0 0 0 6 3c.5-.6.9-1.3 1.3-2-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1 .4.7.8 1.4 1.3 2a19.8 19.8 0 0 0 6-3A20.3 20.3 0 0 0 20.3 4.4ZM8.1 15.3c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm7.8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
-  </a>
 </Base>
+
+<script>
+  document.querySelectorAll('[data-faq-toggle]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const idx = btn.getAttribute('data-faq-toggle');
+      const content = document.querySelector("[data-faq-content='" + idx + "']");
+      const icon = document.querySelector("[data-faq-icon='" + idx + "']");
+      const isHidden = content.classList.contains('hidden');
+      
+      document.querySelectorAll('[data-faq-content]').forEach((c) => c.classList.add('hidden'));
+      document.querySelectorAll('[data-faq-icon]').forEach((i) => i.classList.remove('rotate-180'));
+      
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    });
+  });
+</script>

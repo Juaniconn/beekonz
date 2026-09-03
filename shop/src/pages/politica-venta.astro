@@ -4,125 +4,21 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Base title="Política de Venta | Beekonz" description="Política de venta de Beekonz. Condiciones de compra, pagos y procesamiento de pedidos.">
+<Base title="Política de Venta | Beekonz Trackers">
   <Header />
-
-  <main class="bg-white">
-    <!-- Hero -->
-    <section class="bg-[#2E0F12] text-white pt-32 pb-16">
-      <div class="container mx-auto px-4 text-center">
-        <p class="text-[#EAD08E] text-button-cap uppercase tracking-widest mb-4">Políticas</p>
-        <h1 class="text-display-xxl font-display font-bold mb-4">
-          Política de <span class="text-[#EAD08E]">Venta</span>
-        </h1>
-        <p class="text-body-lg text-[#d4b8b9] max-w-2xl mx-auto">
-          Condiciones que aplican a todas las compras realizadas en Beekonz.
-        </p>
-      </div>
-    </section>
-
-    <!-- Content -->
-    <section class="py-16">
-      <div class="max-w-3xl mx-auto px-4">
-        <div class="space-y-10">
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              1. Condiciones Generales de Compra
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
-              Al realizar una compra en Beekonz, el cliente acepta los presentes términos y condiciones en su totalidad. Es responsabilidad del cliente leer y comprender estas políticas antes de realizar su pedido.
-            </p>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
-              Nos reservamos el derecho de modificar estas condiciones en cualquier momento. Las modificaciones no afectarán pedidos ya confirmados.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              2. Precios y Moneda
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
-              Todos los precios mostrados en el sitio están en pesos mexicanos (MXN) e incluyen IVA cuando aplique, salvo que se indique lo contrario.
-            </p>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
-              Los precios pueden ser modificados sin previo aviso. Sin embargo, se respetará el precio mostrado al momento de la confirmación del pedido ya procesado.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              3. Métodos de Pago
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
-              Los pagos se procesan de forma segura a través de <strong>Stripe</strong>, plataforma que cumple con el estándar PCI DSS Nivel 1. Aceptamos:
-            </p>
-            <ul class="list-disc pl-6 space-y-2 text-body-md text-[#4A2C2C]">
-              <li>Tarjetas de crédito y débito (Visa, Mastercard, AMEX)</li>
-              <li>Pago en OXXO (a través de referencia)</li>
-              <li>Transferencia bancaria (SPEI)</li>
-              <li>Otros métodos disponibles en la pasarela de pago</li>
-            </ul>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mt-4">
-              Beekonz no almacena información de tarjetas de crédito ni datos bancarios.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              4. Procesamiento de Pedidos
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
-              Los pedidos se procesan en un plazo de <strong>24 a 48 horas hábiles</strong> una vez confirmado el pago. Recibirás un correo electrónico de confirmación con los detalles de tu pedido.
-            </p>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
-              Una vez enviado el pedido, recibirás otro correo con el número de seguimiento para rastreo.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              5. Facturación
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
-              Si requieres factura fiscal, envía un correo a <a href="mailto:redes@beekonz.shop" class="text-[#2E0F12] underline hover:text-[#EAD08E]">redes@beekonz.shop</a> con:
-            </p>
-            <ul class="list-disc pl-6 space-y-2 text-body-md text-[#4A2C2C]">
-              <li>Número de pedido</li>
-              <li>Datos fiscales completos (RFC, razón social, dirección fiscal, uso de CFDI)</li>
-            </ul>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mt-4">
-              La factura se emitirá en un plazo máximo de 5 días hábiles.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              6. Cancelaciones
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
-              Puedes solicitar la cancelación de tu pedido dentro de las <strong>primeras 24 horas</strong> después de realizar la compra, siempre y cuando el pedido no haya sido enviado.
-            </p>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
-              Para solicitar una cancelación, contáctanos inmediatamente a través de Discord o correo electrónico con tu número de pedido.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              7. Productos Agotados
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
-              En caso de que un producto se agote después de realizar tu pedido, te notificaremos de inmediato para ofrecerte un producto similar, un reembolso completo o un vale para futura compra, según tu preferencia.
-            </p>
-          </div>
-
-          <p class="text-caption text-[#8b6b6e] pt-8 border-t border-[#EAD08E]/30">
-            Última actualización: Septiembre 2025
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
+  <section class="pt-40 pb-20 bg-[#050505]">
+    <div class="container max-w-3xl">
+      <p class="caption text-[#EAD08E] tracking-widest uppercase mb-4">Legal</p>
+      <h1 class="display-lg text-white mb-6">Política de Venta</h1>
+      <p class="body-lg text-[#a0a0a0]">Última actualización: Septiembre 2026</p>
+    </div>
+  </section>
+  <section class="section bg-white">
+    <div class="container max-w-3xl space-y-8">
+      <div><h2 class="heading-lg text-[#050505] mb-4">Precios y Pagos</h2><p class="body-md text-[#555555] leading-relaxed">Todos los precios están en MXN (pesos mexicanos) e incluyen IVA. Los pagos se procesan de forma segura a través de Stripe. Aceptamos tarjetas de crédito/débito y otros métodos disponibles en la plataforma.</p></div>
+      <div><h2 class="heading-lg text-[#050505] mb-4">Proceso de Compra</h2><p class="body-md text-[#555555] leading-relaxed">Al realizar tu compra recibirás un email de confirmación con los detalles de tu pedido. El estado de tu envío se puede consultar en nuestra página de seguimiento de pedidos.</p></div>
+      <div><h2 class="heading-lg text-[#050505] mb-4">Cancelaciones</h2><p class="body-md text-[#555555] leading-relaxed">Puedes cancelar tu pedido antes de que sea enviado. Contáctanos en Discord dentro de las primeras 24 horas para procesar la cancelación y reembolso.</p></div>
+    </div>
+  </section>
   <Footer />
 </Base>

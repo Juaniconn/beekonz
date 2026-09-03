@@ -4,139 +4,57 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Base title="Política de Privacidad | Beekonz" description="Política de privacidad de Beekonz. Conoce cómo protegemos y usamos tu información personal.">
+<Base title="Política de Privacidad | Beekonz Trackers">
   <Header />
 
-  <main class="bg-white">
-    <!-- Hero -->
-    <section class="bg-[#2E0F12] text-white pt-32 pb-16">
-      <div class="container mx-auto px-4 text-center">
-        <p class="text-[#EAD08E] text-button-cap uppercase tracking-widest mb-4">Legal</p>
-        <h1 class="text-display-xxl font-display font-bold mb-4">
-          Política de <span class="text-[#EAD08E]">Privacidad</span>
-        </h1>
-        <p class="text-body-lg text-[#d4b8b9] max-w-2xl mx-auto">
-          Tu privacidad es importante para nosotros. Conoce cómo protegemos tu información.
-        </p>
-      </div>
-    </section>
+  <section class="pt-40 pb-20 bg-[#050505]">
+    <div class="container max-w-3xl">
+      <p class="caption text-[#EAD08E] tracking-widest uppercase mb-4">Legal</p>
+      <h1 class="display-lg text-white mb-6">Política de Privacidad</h1>
+      <p class="body-lg text-[#a0a0a0]">Última actualización: Septiembre 2026</p>
+    </div>
+  </section>
 
-    <!-- Content -->
-    <section class="py-16">
-      <div class="max-w-3xl mx-auto px-4 prose-legal">
-        <div class="space-y-10">
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              1. Información que Recopilamos
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
-              Cuando realizas una compra o te comunicas con nosotros, podemos recopilar la siguiente información:
-            </p>
-            <ul class="list-disc pl-6 space-y-2 text-body-md text-[#4A2C2C]">
-              <li>Nombre completo</li>
-              <li>Dirección de envío</li>
-              <li>Correo electrónico</li>
-              <li>Número de teléfono</li>
-              <li>Información de pago (procesada de forma segura por Stripe)</li>
-            </ul>
-          </div>
+  <section class="section bg-white">
+    <div class="container max-w-3xl prose prose-invert">
+      <div class="space-y-8">
+        <div>
+          <h2 class="heading-lg text-[#050505] mb-4">1. Información que recopilamos</h2>
+          <p class="body-md text-[#555555] leading-relaxed">
+            Cuando realizas una compra a través de nuestros enlaces de Stripe, recopilamente únicamente la información necesaria para procesar tu pedido: nombre, email y dirección de envío. No almacenamos datos de tarjetas de crédito — Stripe maneja todos los pagos de forma segura.
+          </p>
+        </div>
 
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              2. Uso de la Información
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
-              Utilizamos tu información personal para los siguientes fines:
-            </p>
-            <ul class="list-disc pl-6 space-y-2 text-body-md text-[#4A2C2C]">
-              <li>Procesar y enviar tus pedidos</li>
-              <li>Comunicarte el estado de tu envío</li>
-              <li>Brindar soporte técnico cuando lo solicites</li>
-              <li>Mejorar nuestros productos y servicio</li>
-              <li>Enviar comunicaciones sobre tu pedido (no spam publicitario)</li>
-            </ul>
-          </div>
+        <div>
+          <h2 class="heading-lg text-[#050505] mb-4">2. Uso de la información</h2>
+          <p class="body-md text-[#555555] leading-relaxed">
+            Utilizamos tu información exclusivamente para: procesar y enviar tu pedido, enviar actualizaciones por email sobre tu orden, y responder a tus mensajes de soporte en Discord.
+          </p>
+        </div>
 
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              3. Protección de Datos
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
-              Implementamos medidas de seguridad técnicas y organizativas para proteger tu información personal contra acceso no autorizado, alteración, divulgación o destrucción.
-            </p>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
-              <strong>No compartimos, vendemos ni cedemos tu información personal a terceros.</strong> Los pagos son procesados de forma segura por Stripe, que cumple con los estándares más altos de seguridad de la industria (PCI DSS Nivel 1).
-            </p>
-          </div>
+        <div>
+          <h2 class="heading-lg text-[#050505] mb-4">3. Compartir con terceros</h2>
+          <p class="body-md text-[#555555] leading-relaxed">
+            No vendemos, comerciamos ni transferimos tu información personal a terceros. Solo compartimos datos con servicios necesarios para operar (Stripe para pagos, servicios de envío para entregas).
+          </p>
+        </div>
 
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              4. Cookies y Tecnologías Similares
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
-              Nuestro sitio web utiliza cookies estrictamente necesarias para su funcionamiento. No utilizamos cookies de seguimiento, analíticas ni publicitarias.
-            </p>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
-              Puedes configurar tu navegador para rechazar cookies, aunque esto podría afectar la funcionalidad del sitio.
-            </p>
-          </div>
+        <div>
+          <h2 class="heading-lg text-[#050505] mb-4">4. Seguridad</h2>
+          <p class="body-md text-[#555555] leading-relaxed">
+            Implementamos medidas de seguridad adecuadas para proteger tu información. Los pagos son procesados por Stripe (nivel 1 PCI DSS), el estándar más alto de seguridad en la industria.
+          </p>
+        </div>
 
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              5. Tus Derechos
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
-              De acuerdo con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, tienes derecho a:
-            </p>
-            <ul class="list-disc pl-6 space-y-2 text-body-md text-[#4A2C2C]">
-              <li>Acceder a tus datos personales que poseemos</li>
-              <li>Rectificar tus datos si son inexactos o incompletos</li>
-              <li>Cancelar tus datos cuando consideres que no son necesarios</li>
-              <li>Oponerte al tratamiento de tus datos para fines específicos</li>
-            </ul>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mt-4">
-              Para ejercer estos derechos, contáctanos en <a href="mailto:redes@beekonz.shop" class="text-[#2E0F12] underline hover:text-[#EAD08E]">redes@beekonz.shop</a>.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              6. Transferencia de Datos
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
-              Tu información puede ser transferida y almacenada en servidores ubicados en México y Estados Unidos. Al utilizar nuestros servicios, consientes esta transferencia. Nos aseguramos de que cualquier transferencia cumpla con los estándares de protección de datos aplicables.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              7. Cambios a esta Política
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed">
-              Nos reservamos el derecho de modificar esta política de privacidad en cualquier momento. Los cambios serán publicados en esta página con la fecha de actualización. Te recomendamos revisar periódicamente esta política.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="text-display-md font-display font-bold text-[#2E0F12] mb-4 pb-2 border-b border-[#EAD08E]/30">
-              8. Contacto
-            </h2>
-            <p class="text-body-md text-[#4A2C2C] leading-relaxed mb-4">
-              Para cualquier duda sobre esta política de privacidad o el tratamiento de tus datos personales, contáctanos:
-            </p>
-            <div class="bg-[#F8F4F5] rounded-xl p-6 space-y-2">
-              <p class="text-body-md text-[#2E0F12]"><strong>Email:</strong> <a href="mailto:redes@beekonz.shop" class="underline hover:text-[#EAD08E]">redes@beekonz.shop</a></p>
-              <p class="text-body-md text-[#2E0F12]"><strong>Discord:</strong> <a href="https://discord.gg/ekr3ERWJQ6" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#EAD08E]">https://discord.gg/ekr3ERWJQ6</a></p>
-            </div>
-          </div>
-
-          <p class="text-caption text-[#8b6b6e] pt-8 border-t border-[#EAD08E]/30">
-            Última actualización: Septiembre 2025
+        <div>
+          <h2 class="heading-lg text-[#050505] mb-4">5. Contacto</h2>
+          <p class="body-md text-[#555555] leading-relaxed">
+            Si tienes preguntas sobre esta política, contáctanos en Discord o por email a redes@beekonz.shop.
           </p>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <Footer />
 </Base>
