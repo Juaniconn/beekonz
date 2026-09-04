@@ -1,41 +1,75 @@
 "use client";
 
-import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
-import type { Mesh } from "three";
+import { useRef, useEffect } from "react";
+import { useFrame, useLoader } from "@react-three/fiber";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import type { Mesh, Group } from "three";
+import * as THREE from "three";
 
 interface Model3DProps {
-  color?: string;
   autoRotate?: boolean;
   float?: boolean;
 }
 
 export function Model3D({
-  color = "#EAD08E",
   autoRotate = true,
   float = true,
 }: Model3DProps) {
-  const meshRef = useRef<Mesh>(null);
-  // Placeholder: cargar modelo GLB cuando esté disponible
-  // const { scene } = useGLTF("/models/tracker.glb");
+  const groupRef = useRef<Group>(null);
+  const gltf = useLoader(GLTFLoader, "/models/tracker.glb");
 
-  useFrame((state, delta) => {
-    if (meshRef.current) {
+  useEffect(() => {
+    if (!gltf || !groupRef.current) return;
+
+    // Escalar y centrar el modelo (igual que el script original)
+    const model = gltf.scene.clone();
+
+    // Aplicar materiales
+    model.traverse((child) => {
+      const mesh = child as Mesh;
+      if (mesh.isMesh) {
+        mesh.castShadow = true;
+        mesh.receiveShadow = true;
+        const mat = mesh.material as THREE.MeshStandardMaterial;
+        if (mat && "metalness" in mat) {
+          mat.metalness = Math.max(mat.metalness ?? 0, 0.45);
+          mat.roughness = Math.min(mat.roughness ?? 1, 0.55);
+          mat.envMapIntensity = 1.1;
+          mat.needsUpdate = true;
+        }
+      }
+    });
+
+    // Escalar
+    const box = new THREE.Box3().setFromObject(model);
+    const size = new THREE.Vector3();
+    box.getSize(size);
+    const maxDim = Math.max(size.x, size.y, size.z) || 1;
+    const scale = 2.0 / maxDim;
+    model.scale.setScalar(scale);
+
+    // Centrar
+    const centeredBox = new THREE.Box3().setFromObject(model);
+    const center = new THREE.Vector3();
+    centeredBox.getCenter(center);
+    model.position.sub(center);
+
+    // Limpiar previo y agregar
+    groupRef.current.clear();
+    groupRef.current.add(model);
+  }, [gltf]);
+
+  useFrame((state) => {
+    if (groupRef.current) {
       if (autoRotate) {
-        meshRef.current.rotation.y += delta * 0.3;
+        groupRef.current.rotation.y += 0.005;
       }
       if (float) {
-        meshRef.current.position.y =
+        groupRef.current.position.y =
           Math.sin(state.clock.elapsedTime) * 0.1;
       }
     }
   });
 
-  return (
-    <mesh ref={meshRef}>
-      {/* Placeholder geométrico - reemplazar con modelo GLB real */}
-      <boxGeometry args={[1, 0.3, 0.5]} />
-      <meshStandardMaterial color={color} metalness={0.8} roughness={0.2} />
-    </mesh>
-  );
+  return <group ref={groupRef} />;
 }

@@ -5,14 +5,12 @@ import { OrbitControls, Environment } from "@react-three/drei";
 import { Model3D } from "./Model3D";
 
 interface SceneProps {
-  modelColor?: string;
   autoRotate?: boolean;
   float?: boolean;
   showControls?: boolean;
 }
 
 export function Scene({
-  modelColor,
   autoRotate = true,
   float = true,
   showControls = false,
@@ -21,7 +19,7 @@ export function Scene({
     <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
       <ambientLight intensity={0.3} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-      <Model3D color={modelColor} autoRotate={autoRotate} float={float} />
+      <Model3D autoRotate={autoRotate} float={float} />
       {showControls && <OrbitControls enableZoom={true} />}
       <Environment preset="city" />
     </Canvas>
