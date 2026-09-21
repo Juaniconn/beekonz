@@ -1,0 +1,433 @@
+---
+import Base from "../layouts/Base.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE, PACKS, FACE_TRACKING, FEATURES, GALLERY, TESTIMONIALS, FAQ } from "../data/store";
+---
+
+<Base>
+  <Header />
+
+  <main>
+    <!-- ═══════════ HERO — Idéntico a Magnet Lover ═══════════ -->
+    <section class="min-h-screen flex flex-col justify-center relative overflow-hidden" style="background: radial-gradient(ellipse at 50% 30%, rgba(234, 208, 142, 0.03) 0%, transparent 60%);">
+      <div class="grid-pattern absolute inset-0 opacity-20"></div>
+      
+      <div class="container relative z-10">
+        <!-- Badge -->
+        <div class="mb-8">
+          <span class="text-[11px] text-[#EAD08E] font-bold tracking-[0.15em] uppercase">Music industry merch</span>
+        </div>
+
+        <!-- Título MASIVO -->
+        <h1 class="text-[80px] md:text-[120px] lg:text-[180px] font-bold text-white leading-[0.85] tracking-[-0.04em] mb-6">
+          FULL BODY<br>
+          TRACKING
+        </h1>
+
+        <!-- Subtítulo pegado -->
+        <p class="text-[24px] md:text-[32px] font-semibold text-[#a0a0a0] tracking-[-0.02em] max-w-xl mb-12">
+          Merchthatmakesmoresense
+        </p>
+
+        <!-- Scroll indicator -->
+        <div class="flex items-center gap-4 mt-16">
+          <span class="text-[11px] text-[#666666] font-bold tracking-[0.1em] uppercase">SCROLL</span>
+          <span class="text-[#EAD08E]">//</span>
+          <span class="text-[11px] text-[#666666] font-bold tracking-[0.1em] uppercase">SCROLL</span>
+          <span class="text-[#EAD08E]">//</span>
+          <span class="text-[11px] text-[#666666] font-bold tracking-[0.1em] uppercase">SCROLL</span>
+          <span class="text-[#EAD08E]">//</span>
+          <span class="text-[11px] text-[#666666] font-bold tracking-[0.1em] uppercase">SCROLL</span>
+          <span class="text-[#EAD08E]">//</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ GALLERY GRID — 6 imágenes ═══════════ -->
+    <section class="py-20">
+      <div class="container">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="aspect-square bg-gradient-to-br from-[#EAD08E]/10 to-transparent rounded-2xl flex items-center justify-center overflow-hidden">
+            <img src="/images/product-green-dTzah6of.jpg" alt="Tracker Verde" class="w-full h-full object-cover rounded-2xl" />
+          </div>
+          <div class="aspect-square bg-gradient-to-br from-[#EAD08E]/10 to-transparent rounded-2xl flex items-center justify-center overflow-hidden">
+            <img src="/images/product-black-bee-BplQLYeK.jpg" alt="Tracker Negro" class="w-full h-full object-cover rounded-2xl" />
+          </div>
+          <div class="aspect-square bg-gradient-to-br from-[#EAD08E]/10 to-transparent rounded-2xl flex items-center justify-center overflow-hidden">
+            <img src="/images/product-yellow-hub-CmbgLX1G.jpg" alt="Tracker Amarillo" class="w-full h-full object-cover rounded-2xl" />
+          </div>
+          <div class="aspect-square bg-gradient-to-br from-[#EAD08E]/10 to-transparent rounded-2xl flex items-center justify-center overflow-hidden">
+            <img src="/images/product-purple-bee-CR0KfKti.jpg" alt="Tracker Púrpura" class="w-full h-full object-cover rounded-2xl" />
+          </div>
+          <div class="aspect-square bg-gradient-to-br from-[#EAD08E]/10 to-transparent rounded-2xl flex items-center justify-center overflow-hidden">
+            <img src="/images/product-jester-CSXE6ics.jpg" alt="Tracker Jester" class="w-full h-full object-cover rounded-2xl" />
+          </div>
+          <div class="aspect-square bg-gradient-to-br from-[#EAD08E]/10 to-transparent rounded-2xl flex items-center justify-center overflow-hidden">
+            <img src="/images/product-pastel-C1YtYMW4.jpg" alt="Tracker Pastel" class="w-full h-full object-cover rounded-2xl" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ STATS MARQUEE ═══════════ -->
+    <section class="py-8 overflow-hidden" style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+      <div class="animate-marquee whitespace-nowrap flex items-center gap-16">
+        <span class="text-[40px] md:text-[56px] font-bold text-white">50,000+ HORAS TRACKEADAS</span>
+        <span class="text-[#EAD08E] text-2xl">//</span>
+        <span class="text-[40px] md:text-[56px] font-bold text-white">32 ESTADOS</span>
+        <span class="text-[#EAD08E] text-2xl">//</span>
+        <span class="text-[40px] md:text-[56px] font-bold text-white">12 PAÍSES</span>
+        <span class="text-[#EAD08E] text-2xl">//</span>
+        <span class="text-[40px] md:text-[56px] font-bold text-white">100% VRCHAT</span>
+        <span class="text-[#EAD08E] text-2xl">//</span>
+        <span class="text-[40px] md:text-[56px] font-bold text-white">50,000+ HORAS TRACKEADAS</span>
+        <span class="text-[#EAD08E] text-2xl">//</span>
+        <span class="text-[40px] md:text-[56px] font-bold text-white">32 ESTADOS</span>
+        <span class="text-[#EAD08E] text-2xl">//</span>
+        <span class="text-[40px] md:text-[56px] font-bold text-white">12 PAÍSES</span>
+        <span class="text-[#EAD08E] text-2xl">//</span>
+        <span class="text-[40px] md:text-[56px] font-bold text-white">100% VRCHAT</span>
+        <span class="text-[#EAD08E] text-2xl">//</span>
+      </div>
+    </section>
+
+    <!-- ═══════════ ML — 001 — Why Beekonz? ═══════════ -->
+    <section class="py-32 relative">
+      <div class="text-[120px] md:text-[180px] font-bold text-white/[0.03] leading-[0.8] tracking-[-0.05em] absolute top-0 left-0 pointer-events-none">ML—001</div>
+      
+      <div class="container relative z-10">
+        <div class="grid lg:grid-cols-12 gap-16 items-start">
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <span class="text-[11px] text-[#EAD08E] font-bold tracking-[0.15em] uppercase">Why Beekonz?</span>
+            </div>
+            <h2 class="text-[40px] md:text-[56px] font-bold text-white leading-[1.05] tracking-[-0.02em]">
+              The Situation
+            </h2>
+            <p class="text-[18px] text-[#a0a0a0] leading-[1.7]">
+              Modern VRChat creators need trackers that maximize their potential, and fans want something of substance that lasts.
+            </p>
+            <p class="text-[24px] md:text-[32px] font-semibold text-white leading-[1.3]">
+              But, only 20% of people buy trackers at live shows
+            </p>
+            <p class="text-[18px] text-[#a0a0a0] leading-[1.7]">
+              Traditional trackers are bulky, pricey and easy to pass over, while cheaper options end up forgotten in a drawer. Beekonz trackers are affordable, memorable and a daily reminder of the experience, all while taking up less space and delivering better margins for creators.
+            </p>
+          </div>
+
+          <div class="lg:col-span-7 relative">
+            <div class="aspect-[4/3] bg-gradient-to-br from-[#EAD08E]/5 to-transparent rounded-2xl flex items-center justify-center glow">
+              <div class="text-center">
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full bg-[#EAD08E]/10 flex items-center justify-center animate-float">
+                  <svg class="w-24 h-24 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                </div>
+                <p class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase">Modelo 3D Interactivo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ML — 002 — Practical Benefits ═══════════ -->
+    <section class="py-32 relative" style="background: linear-gradient(180deg, transparent 0%, rgba(234, 208, 142, 0.015) 50%, transparent 100%);">
+      <div class="text-[120px] md:text-[180px] font-bold text-white/[0.03] leading-[0.8] tracking-[-0.05em] absolute top-0 left-0 pointer-events-none">ML—002</div>
+      
+      <div class="container relative z-10">
+        <div class="grid lg:grid-cols-12 gap-16 items-start">
+          <div class="lg:col-span-7 relative lg:order-1">
+            <div class="aspect-[4/3] bg-gradient-to-br from-[#EAD08E]/5 to-transparent rounded-2xl flex items-center justify-center glow">
+              <div class="text-center">
+                <div class="w-48 h-48 mx-auto mb-6 rounded-full bg-[#EAD08E]/10 flex items-center justify-center animate-float">
+                  <svg class="w-24 h-24 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <p class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase">Face Tracking Device</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 space-y-8 lg:order-2">
+            <div>
+              <span class="text-[11px] text-[#EAD08E] font-bold tracking-[0.15em] uppercase">Practical Benefits</span>
+            </div>
+            <h2 class="text-[40px] md:text-[56px] font-bold text-white leading-[1.05] tracking-[-0.02em]">
+              For Creators
+            </h2>
+            <p class="text-[18px] text-[#a0a0a0] leading-[1.7]">
+              A profitable, practical addition for creators. Beekonz trackers give creators a high-margin, low-complexity item that travels easily, sells in volume, and strengthens the fan relationship.
+            </p>
+            
+            <div class="space-y-6 pt-4">
+              <div>
+                <h3 class="text-[20px] font-semibold text-white mb-2">Profit Density</h3>
+                <p class="text-[16px] text-[#a0a0a0] leading-[1.6]">Exceptional profit density. Trackers generate dramatically more profit per cubic inch than apparel.</p>
+              </div>
+              <div>
+                <h3 class="text-[20px] font-semibold text-white mb-2">Practicality</h3>
+                <p class="text-[16px] text-[#a0a0a0] leading-[1.6]">Operationally effortless. They simplify logistics and merch table flow.</p>
+              </div>
+              <div>
+                <h3 class="text-[20px] font-semibold text-white mb-2">Additive Revenue</h3>
+                <p class="text-[16px] text-[#a0a0a0] leading-[1.6]">Additive revenue, not replacement. Complements existing merch rather than compete with it.</p>
+              </div>
+            </div>
+
+            <div class="pt-6">
+              <a href="#precios" class="btn-primary">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ML — 003 — Space vs Profit ═══════════ -->
+    <section class="py-32 relative">
+      <div class="text-[120px] md:text-[180px] font-bold text-white/[0.03] leading-[0.8] tracking-[-0.05em] absolute top-0 left-0 pointer-events-none">ML—003</div>
+      
+      <div class="container relative z-10">
+        <div class="text-center mb-20">
+          <span class="text-[11px] text-[#EAD08E] font-bold tracking-[0.15em] uppercase">Space vs Profit</span>
+          <h2 class="text-[40px] md:text-[56px] font-bold text-white mt-6">See how much more you could be making</h2>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-3 gap-8 mb-12">
+            <div class="text-center">
+              <h3 class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase mb-4">Per T-Shirt</h3>
+              <div class="text-[48px] font-bold text-white">1</div>
+              <div class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase mt-2">Quantity</div>
+              <div class="text-[32px] font-bold text-[#EAD08E] mt-4">$28</div>
+              <div class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase mt-2">Profit</div>
+            </div>
+            <div class="text-center">
+              <div class="text-[80px] font-bold text-[#EAD08E] my-8">VS</div>
+            </div>
+            <div class="text-center">
+              <h3 class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase mb-4">Per Trackers</h3>
+              <div class="text-[48px] font-bold text-white">167</div>
+              <div class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase mt-2">Quantity</div>
+              <div class="text-[32px] font-bold text-[#EAD08E] mt-4">$1,503</div>
+              <div class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase mt-2">Profit</div>
+            </div>
+          </div>
+          <p class="text-center text-[#666666] text-[14px]">These numbers are averages and are calculated based on actual volumetric measurements.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ABOUT US ═══════════ -->
+    <section class="py-32" style="background: linear-gradient(180deg, transparent 0%, rgba(234, 208, 142, 0.015) 50%, transparent 100%);">
+      <div class="container">
+        <div class="grid lg:grid-cols-12 gap-16 items-center">
+          <div class="lg:col-span-7">
+            <div class="aspect-[4/3] bg-gradient-to-br from-[#EAD08E]/5 to-transparent rounded-2xl flex items-center justify-center glow">
+              <div class="text-center">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-[#EAD08E]/10 flex items-center justify-center">
+                  <img src="/images/Beekonz_White_Logo.png" alt="Beekonz" class="w-16 h-16" />
+                </div>
+                <p class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase">We are Beekonz</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-[11px] text-[#EAD08E] font-bold tracking-[0.15em] uppercase">About Us</span>
+            <h2 class="text-[40px] md:text-[56px] font-bold text-white leading-[1.05] tracking-[-0.02em]">
+              We're on a mission to empower creators with more efficient merchandise.
+            </h2>
+            <p class="text-[18px] text-[#a0a0a0] leading-[1.7]">
+              Because some of our best memories are standing in a crowd watching the creators we love.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FEATURES — 3 Columnas ═══════════ -->
+    <section class="py-32">
+      <div class="container">
+        <div class="text-center mb-20">
+          <span class="text-[11px] text-[#EAD08E] font-bold tracking-[0.15em] uppercase">Why Choose Us</span>
+          <h2 class="text-[40px] md:text-[56px] font-bold text-white mt-6">Built for creators</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.02]">
+            <div class="w-16 h-16 rounded-full bg-[#EAD08E]/10 flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            </div>
+            <h3 class="text-[20px] font-semibold text-white mb-3">Premium Quality</h3>
+            <p class="text-[16px] text-[#a0a0a0] leading-[1.6]">Premium quality that matches the creator's brand. Photo-quality materials with substantial feel.</p>
+          </div>
+
+          <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.02]">
+            <div class="w-16 h-16 rounded-full bg-[#EAD08E]/10 flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <h3 class="text-[20px] font-semibold text-white mb-3">Collaboration</h3>
+            <p class="text-[16px] text-[#a0a0a0] leading-[1.6]">Creative flexibility with real collaboration. We work directly with creators to bring their vision to life.</p>
+          </div>
+
+          <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.02]">
+            <div class="w-16 h-16 rounded-full bg-[#EAD08E]/10 flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-[#EAD08E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="text-[20px] font-semibold text-white mb-3">Tour-Friendly</h3>
+            <p class="text-[16px] text-[#a0a0a0] leading-[1.6]">A touring-friendly, scalable partner. Fast turnaround, easy scaling, and reliable delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRICING ═══════════ -->
+    <section id="precios" class="py-32" style="background: linear-gradient(180deg, transparent 0%, rgba(234, 208, 142, 0.015) 50%, transparent 100%);">
+      <div class="container">
+        <div class="text-center mb-20">
+          <span class="text-[11px] text-[#EAD08E] font-bold tracking-[0.15em] uppercase">Pricing</span>
+          <h2 class="text-[40px] md:text-[56px] font-bold text-white mt-6">Choose your configuration</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {PACKS.map((pack, i) => (
+            <div class={[
+              "text-center p-8 rounded-2xl border",
+              pack.recommended ? "border-[#EAD08E]/30 bg-[#EAD08E]/5 scale-105" : "border-white/10 bg-white/[0.02]"
+            ]}>
+              {pack.recommended && (
+                <div class="text-[#EAD08E] text-xs font-semibold uppercase tracking-wider mb-4">⭐ Recomendado</div>
+              )}
+              <div class="text-[64px] font-bold text-white mb-1">{pack.trackers}</div>
+              <div class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase mb-4">Trackers</div>
+              <h3 class="text-[20px] font-semibold text-white mb-2">{pack.name}</h3>
+              <p class="text-[14px] text-[#a0a0a0] mb-6">{pack.tagline}</p>
+              <div class="text-[36px] font-bold text-white mb-1">{pack.price}</div>
+              <p class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase mb-6">MXN</p>
+              <ul class="space-y-3 mb-8 text-left">
+                {pack.includes.map((item) => (
+                  <li class="flex items-center gap-3 text-[14px] text-[#a0a0a0]">
+                    <span class="w-5 h-5 rounded-full bg-[#EAD08E]/15 flex items-center justify-center text-[#EAD08E] text-xs">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a href={pack.stripe} target="_blank" rel="noopener" class={pack.recommended ? "btn-primary w-full" : "btn-secondary w-full"}>
+                Comprar Ahora
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ TESTIMONIOS ═══════════ -->
+    <section class="py-32">
+      <div class="container">
+        <div class="text-center mb-20">
+          <span class="text-[11px] text-[#EAD08E] font-bold tracking-[0.15em] uppercase">Testimonios</span>
+          <h2 class="text-[40px] md:text-[56px] font-bold text-white mt-6">What our users say</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          {TESTIMONIALS.map((t, i) => (
+            <div class="p-8 rounded-2xl border border-white/10 bg-white/[0.02]">
+              <div class="flex items-center gap-1 mb-4">
+                {[...Array(5)].map(() => (
+                  <svg class="w-4 h-4 text-[#EAD08E]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                ))}
+              </div>
+              <p class="text-[16px] text-white mb-6 italic leading-[1.6]">"{t.quote}"</p>
+              <div class="flex items-center gap-3">
+                <img src={t.img} alt={t.name} class="w-10 h-10 rounded-full object-cover border-2 border-[#EAD08E]/20" />
+                <div>
+                  <p class="text-[14px] font-semibold text-white">{t.name}</p>
+                  <p class="text-[12px] text-[#a0a0a0]">{t.role} · {t.country}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FAQ ═══════════ -->
+    <section class="py-32" style="background: linear-gradient(180deg, transparent 0%, rgba(234, 208, 142, 0.015) 50%, transparent 100%);">
+      <div class="container max-w-3xl">
+        <div class="text-center mb-20">
+          <span class="text-[11px] text-[#EAD08E] font-bold tracking-[0.15em] uppercase">FAQ</span>
+          <h2 class="text-[40px] md:text-[56px] font-bold text-white mt-6">Do you have questions?</h2>
+        </div>
+
+        <div class="space-y-4">
+          {FAQ.map((f, i) => (
+            <details class="p-6 rounded-2xl border border-white/10 bg-white/[0.02]">
+              <summary class="flex cursor-pointer list-none items-center justify-between font-medium text-white text-[18px] [&::-webkit-details-marker]:hidden">
+                {f.q}
+                <span class="w-8 h-8 rounded-full bg-[#EAD08E]/10 flex items-center justify-center text-[#EAD08E] text-lg transition group-open:rotate-45">+</span>
+              </summary>
+              <p class="mt-4 text-[16px] text-[#a0a0a0] leading-[1.6]">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACT FORM ═══════════ -->
+    <section class="py-32">
+      <div class="container max-w-2xl">
+        <div class="text-center mb-12">
+          <span class="text-[11px] text-[#EAD08E] font-bold tracking-[0.15em] uppercase">Get in Touch</span>
+          <h2 class="text-[40px] md:text-[56px] font-bold text-white mt-6">Leave us a message</h2>
+          <p class="text-[16px] text-[#a0a0a0] mt-4">and we'll get back to you as soon as we can.</p>
+        </div>
+
+        <form class="space-y-6">
+          <div>
+            <label class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase block mb-2">Name</label>
+            <input type="text" class="w-full p-4 rounded-xl border border-white/10 bg-white/[0.02] text-white text-[16px] focus:border-[#EAD08E] focus:outline-none transition-colors" placeholder="Your name" />
+          </div>
+          <div>
+            <label class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase block mb-2">Email</label>
+            <input type="email" class="w-full p-4 rounded-xl border border-white/10 bg-white/[0.02] text-white text-[16px] focus:border-[#EAD08E] focus:outline-none transition-colors" placeholder="your@email.com" />
+          </div>
+          <div>
+            <label class="text-[11px] text-[#a0a0a0] font-bold tracking-[0.1em] uppercase block mb-2">Message</label>
+            <textarea rows="4" class="w-full p-4 rounded-xl border border-white/10 bg-white/[0.02] text-white text-[16px] focus:border-[#EAD08E] focus:outline-none transition-colors resize-none" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ═══════════ CTA FINAL ═══════════ -->
+    <section class="py-32 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#EAD08E]/5 via-transparent to-[#EAD08E]/5"></div>
+      <div class="container relative z-10 text-center">
+        <div class="max-w-2xl mx-auto">
+          <h2 class="text-[40px] md:text-[56px] font-bold text-white mb-6">Take your VR to the <span style="color: #EAD08E;">Next Level</span></h2>
+          <p class="text-[18px] text-[#a0a0a0] mb-10">More than 150 VR creators already trust Beekonz. Be part of the movement.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={PACKS[1].stripe} target="_blank" rel="noopener" class="btn-primary">
+              Buy Now
+            </a>
+            <a href={SITE.discord} target="_blank" rel="noopener" class="btn-secondary">
+              Join Discord
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <!-- Botón flotante Discord -->
+  <a
+    href={SITE.discord}
+    target="_blank"
+    rel="noopener"
+    aria-label="Join our Discord"
+    class="fixed right-5 bottom-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#EAD08E] shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl animate-pulse-glow"
+  >
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="#000000"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3c-.2.4-.5.9-.6 1.3a18.3 18.3 0 0 0-5.6 0C9 3.9 8.7 3.4 8.5 3a19.7 19.7 0 0 0-4.9 1.5A20.4 20.4 0 0 0 .1 18.1a19.9 19.9 0 0 0 6 3c.5-.6.9-1.3 1.3-2-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1 .4.7.8 1.4 1.3 2a19.8 19.8 0 0 0 6-3A20.3 20.3 0 0 0 20.3 4.4ZM8.1 15.3c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm7.8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z"/></svg>
+  </a>
+</Base>

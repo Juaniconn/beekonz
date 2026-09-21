@@ -1,0 +1,6 @@
+# Beekonz Shop — redirecciones 301 (rutas Astro v1 → Next.js v2)
+# Evita 404 en links viejos indexados o compartidos.
+
+Redirect 301 /especificaciones /especificaciones-tecnicas/
+Redirect 301 /garantia-reembolsos /garantia-devoluciones/
+Redirect 301 /privacidad /politica-privacidad/
