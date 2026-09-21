@@ -39,13 +39,13 @@ export function Footer() {
             </h3>
             <p className="text-muted">Recibe ofertas y lanzamientos</p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
             <input
               type="email"
               placeholder="tu@email.com"
-              className="px-4 py-2 bg-background border border-border rounded-lg focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              className="px-4 py-2 bg-background border border-border rounded-lg focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent w-full sm:w-auto"
             />
-            <Button>Suscribir</Button>
+            <Button className="w-full sm:w-auto">Suscribir</Button>
           </div>
         </div>
 

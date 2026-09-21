@@ -45,7 +45,7 @@ export function Model3D({
     const size = new THREE.Vector3();
     box.getSize(size);
     const maxDim = Math.max(size.x, size.y, size.z) || 1;
-    const scale = 2.0 / maxDim;
+    const scale = 2.8 / maxDim;
     model.scale.setScalar(scale);
 
     // Centrar

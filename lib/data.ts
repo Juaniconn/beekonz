@@ -1,99 +1,157 @@
+export const stats = [
+  { value: "81,814+", label: "Horas Trackeadas" },
+  { value: "53", label: "Estados Enviados" },
+  { value: "20", label: "Países" },
+  { value: "100%", label: "Listo VRChat" },
+];
+
 export const products = [
   {
     id: "starter",
-    name: "Starter Pack",
+    name: "Starter Hive",
     price: 5999,
     highlighted: false,
-    features: ["6 trackers", "Dongle", "Cable USB-C"],
-    cta: "Comprar Starter",
+    trackers: 6,
+    tagline: "Perfecto para comenzar con Full Body Tracking.",
+    stripe: "https://buy.stripe.com/eVq28sf2dbwhfIX3Rj7g40o",
+    features: [
+      "6 Trackers Beekonz LSM6DSV",
+      "1 Dongle Holyiot nRF52840",
+      "6 Straps elásticas premium",
+      "Peso 10g · 35–45h batería",
+      "Colores: Blanco, Negro, Rojo",
+    ],
+    cta: "Comprar Starter Hive",
   },
   {
     id: "advanced",
-    name: "Advanced Pack",
+    name: "Advanced Hive",
     price: 7499,
     highlighted: true,
-    features: ["8 trackers", "Dongle", "Cable USB-C", "Face tracker"],
-    cta: "Comprar Advanced",
+    trackers: 8,
+    tagline: "Ideal para VRChat FBT completo.",
+    stripe: "https://buy.stripe.com/3cI9AUbQ10RDeETdrT7g40r",
+    features: [
+      "8 Trackers Beekonz LSM6DSV",
+      "1 Dongle Holyiot nRF52840",
+      "8 Straps elásticas premium",
+      "Peso 10g · Latencia 25–35ms",
+      "Colores: Blanco, Negro, Rojo",
+    ],
+    cta: "Comprar Advanced Hive",
   },
   {
     id: "pro",
-    name: "Pro Pack",
+    name: "Pro Hive",
     price: 8999,
     highlighted: false,
-    features: ["10 trackers", "2 Dongles", "Cables USB-C", "Face tracker"],
-    cta: "Comprar Pro",
+    trackers: 10,
+    tagline: "Para creadores, bailarines y setups avanzados.",
+    stripe: "https://buy.stripe.com/28EfZi9HTcAlfIX73v7g40p",
+    features: [
+      "10 Trackers Beekonz LSM6DSV",
+      "1 Dongle Holyiot nRF52840",
+      "10 Straps elásticas premium",
+      "Peso 10g · Máxima precisión",
+      "Colores: Blanco, Negro, Rojo",
+    ],
+    cta: "Comprar Pro Hive",
   },
   {
     id: "face",
-    name: "Face Tracking",
+    name: "Beekonz Face Tracking",
     price: 2499,
     highlighted: false,
-    features: ["Face tracker", "Cable USB-C"],
-    cta: "Comprar Face",
+    trackers: 1,
+    tagline:
+      "Tracking facial en tiempo real para VRChat con software Babble.",
+    stripe: "https://buy.stripe.com/9B628s7zL43PgN13Rj7g40u",
+    features: [
+      "Dispositivo de Face Tracking",
+      "Montura para headset VR",
+      "Cable USB-C",
+      "Compatible con software Babble",
+      "Plug & play · USB-C",
+    ],
+    cta: "Comprar Face Tracking",
   },
 ];
 
 export const testimonials = [
   {
     id: 1,
-    quote: "Tracking más preciso que mi propio cuerpo",
-    name: "Carlos VR",
-    role: "@carlosvr",
-    country: "🇲🇽",
+    quote:
+      "Precisión increíble. Nunca tuve mejor tracking en VRChat. Los movimientos se sienten naturales y fluidos.",
+    name: "Carlos Mendoza",
+    role: "Creador de contenido VR",
+    country: "🇲🇽 México",
   },
   {
     id: 2,
-    quote: "Setup en 10 minutos, funciona perfecto",
-    name: "María Track",
-    role: "@mariatrack",
-    country: "🇪🇸",
+    quote:
+      "El envío llegó rapidísimo y el soporte en Discord es excelente. ¡24/7 de verdad!",
+    name: "Sofía Ramírez",
+    role: "Bailarina VR",
+    country: "🇦🇷 Argentina",
   },
   {
     id: 3,
-    quote: "Mi audience en VRChat nota la diferencia",
-    name: "DJ Motion",
-    role: "@djmotion",
-    country: "🇺🇸",
-  },
-  {
-    id: 4,
-    quote: "La mejor inversión para mi setup",
-    name: "Streamer Pro",
-    role: "@streamerpro",
-    country: "🇨🇴",
+    quote:
+      "Ligero, cómodo y estable. Puedo bailar horas sin que se muevan. Súper recomendado.",
+    name: "Diego Torres",
+    role: "Entusiasta VRChat",
+    country: "🇨🇴 Colombia",
   },
 ];
 
 export const faqItems = [
   {
     id: 1,
-    question: "¿Qué es Full Body Tracking?",
+    question: "¿Es compatible con SlimeVR?",
     answer:
-      "Full Body Tracking permite que tus movimientos reales se reflejen en tiempo real en tu avatar de VRChat, incluyendo caderas, piernas y pies.",
+      "Sí, al 100%. Nuestros trackers usan protocolo SlimeVR nativo y funcionan con VRChat, SteamVR, NeosVR y ChilloutVR.",
   },
   {
     id: 2,
-    question: "¿Es compatible con VRChat?",
+    question: "¿Cuánto dura la batería?",
     answer:
-      "Sí, nuestros trackers son 100% compatibles con VRChat a través de SteamVR y Wi-Fi directo.",
+      "Entre 35 y 45 horas de uso continuo por carga, según intensidad de uso.",
   },
   {
     id: 3,
-    question: "¿Cuánto dura la batería?",
+    question: "¿Cuánto pesa cada tracker?",
     answer:
-      "Cada tracker tiene entre 35 y 45 horas de batería, dependiendo del uso y la intensidad de seguimiento.",
+      "Aproximadamente 10 gramos. Los olvidarás que los llevas puestos.",
   },
   {
     id: 4,
-    question: "¿Necesito base stations?",
+    question: "¿Qué incluye cada paquete?",
     answer:
-      "No, nuestros trackers usan sensores inerciales (IMU) y no requieren base stations externos.",
+      "Los trackers del pack elegido, un dongle Holyiot nRF52840 y las straps elásticas premium correspondientes.",
   },
   {
     id: 5,
-    question: "¿Funciona con Quest standalone?",
+    question: "¿Tienen soporte técnico?",
     answer:
-      "Sí, compatible con Meta Quest 2/3/Pro en modo standalone vía Wi-Fi.",
+      "Sí, soporte dedicado 24/7 en Discord, en español.",
+  },
+  {
+    id: 6,
+    question: "¿Hacen envíos internacionales?",
+    answer:
+      "Sí, enviamos a más de 20 países. Entregas internacionales en 5–7 días hábiles.",
+  },
+  {
+    id: 7,
+    question: "¿Funciona con VRChat?",
+    answer:
+      "Sí, está listo para VRChat con sincronización perfecta vía SteamVR.",
+  },
+  {
+    id: 8,
+    question: "¿Puedo pedir colores personalizados?",
+    answer:
+      "Sí, contáctanos en Discord para crear tu set personalizado con los colores que quieras.",
   },
 ];
 
